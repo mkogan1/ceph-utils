@@ -31,7 +31,7 @@ while [ true ]; do
     echo $'\n>>>>>>>> cosbench ready >>>>>>>>>'
     date
     #sleep 30
-	../cosbench/cli.sh submit $AN 2>/dev/null
+	../../cosbench/cli.sh submit $AN 2>/dev/null
 
 	ITBEGIN01=$((ITBEGIN01+ITINC01))
     WCNT=$((WCNT+1))
