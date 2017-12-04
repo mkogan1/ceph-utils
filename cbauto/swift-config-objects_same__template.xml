@@ -21,11 +21,11 @@
   <workflow>
 
     <workstage name="init">
-      <work type="init" workers="100" config="containers=r(1,100)" />
+      <work type="init" workers="100" config="containers=r(1,1000)" />
     </workstage>
 
     <workstage name="prepare">
-      <work type="prepare" workers="100" config="containers=r(1,100);objects=r(1,10);sizes=c(64)KB" />
+      <work type="prepare" workers="100" config="containers=r(1,1000);objects=r(1,10);sizes=c(64)KB" />
     </workstage>
 
 <!--
@@ -38,11 +38,11 @@
 -->
 
     <workstage name="cleanup">
-      <work type="cleanup" workers="100" config="containers=r(1,100);objects=r(1,10)" />
+      <work type="cleanup" workers="100" config="containers=r(1,1000);objects=r(1,10)" />
     </workstage>
 
     <workstage name="dispose">
-      <work type="dispose" workers="100" config="containers=r(1,100)" />
+      <work type="dispose" workers="100" config="containers=r(1,1000)" />
     </workstage>
   </workflow>
 
