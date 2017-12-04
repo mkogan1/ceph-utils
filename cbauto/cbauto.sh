@@ -24,7 +24,7 @@ while [ true ]; do
 
 	# wait until cosbench is free to take a workload
 	echo ">> Waiting for cosbench to be ready for a new workload..."
-	until [ $(../cosbench/cli.sh info 2>/dev/null | grep -c 'Total: 0 active workloads') -eq 1 ]; do
+	until [ $(../../cosbench/cli.sh info 2>/dev/null | grep -c 'Total: 0 active workloads') -eq 1 ]; do
 		echo -n "."
 		sleep 2
 	done
