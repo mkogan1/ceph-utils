@@ -25,7 +25,7 @@
     </workstage>
 
     <workstage name="prepare">
-      <work type="prepare" workers="100" config="containers=r(1,1);objects=r(1,1);sizes=c(64)KB" />
+      <work type="prepare" workers="100" config="containers=r(1,1);objects=r(1,1);sizes=c(5)GB" />
     </workstage>
 
 <!--
@@ -36,15 +36,13 @@
       </work>
     </workstage>
 -->
-<!--
+
     <workstage name="cleanup">
       <work type="cleanup" workers="100" config="containers=r(1,1);objects=r(1,1)" />
     </workstage>
-
     <workstage name="dispose">
       <work type="dispose" workers="100" config="containers=r(1,1)" />
     </workstage>
--->
 
   </workflow>
 </workload>
