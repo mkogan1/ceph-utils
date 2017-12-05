@@ -20,19 +20,19 @@ while [ true ]; do
     CP=$(which ceph)
     if [[ $? -eq 0 ]]; then 
         PF=$($CP df | grep -A 1 SIZE | tail -1 | awk '{ print $4 }' | cut -d . -f 1)
-        echo ">> Checing purge - percent full=$PF %"
+        echo ">> Checing purge - percent full= $PF %"
         #exit 1
-        if [[ $PF -gt 90 ]]; then
+        if [[ $PF -gt 85 ]]; then
             echo "   >> Purging ..."
             rados purge default.rgw.data.root --yes-i-really-really-mean-it &
             rados purge default.rgw.buckets.data --yes-i-really-really-mean-it &
             rados purge default.rgw.buckets.index --yes-i-really-really-mean-it &
             rados purge default.rgw.meta --yes-i-really-really-mean-it &
             rados purge default.rgw.users.uid --yes-i-really-really-mean-it &
-            rados purge default.rgw.gc --yes-i-really-really-mean-it &
-            rados purge default.rgw.log --yes-i-really-really-mean-it &
-            echo "   >> Waiting to complete..."
+            echo "   >> Waiting to complete main cleanup..."
             wait
+            rados purge default.rgw.gc --yes-i-really-really-mean-it
+            rados purge default.rgw.log --yes-i-really-really-mean-it
             echo "   >> Purging complete"
         fi
     fi
