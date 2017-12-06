@@ -22,17 +22,16 @@ while [ true ]; do
         PF=$($CP df | grep -A 1 SIZE | tail -1 | awk '{ print $4 }' | cut -d . -f 1)
         echo ">> Checing purge - percent full= $PF %"
         #exit 1
-        if [[ $PF -gt 85 ]]; then
+        if [[ $PF -ge 79 ]]; then
             echo "   >> Purging ..."
-            rados purge default.rgw.data.root --yes-i-really-really-mean-it &
-            rados purge default.rgw.buckets.data --yes-i-really-really-mean-it &
-            rados purge default.rgw.buckets.index --yes-i-really-really-mean-it &
-            rados purge default.rgw.meta --yes-i-really-really-mean-it &
-            rados purge default.rgw.users.uid --yes-i-really-really-mean-it &
-            echo "   >> Waiting to complete main cleanup..."
-            wait
-            rados purge default.rgw.gc --yes-i-really-really-mean-it
-            rados purge default.rgw.log --yes-i-really-really-mean-it
+            pushd ../../cosbench
+            ./stop-all.sh
+            popd
+            ../scripts/rados_purge.sh
+            #../scripts/swift_init.sh
+            pushd ../../cosbench
+            ./start-all.sh
+            popd
             echo "   >> Purging complete"
         fi
     fi
