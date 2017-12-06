@@ -1,5 +1,6 @@
 #!/bin/bash -x
 ceph pg set_full_ratio 0.99
+sleep 1
 
 rados purge default.rgw.data.root --yes-i-really-really-mean-it &
 rados purge default.rgw.buckets.data --yes-i-really-really-mean-it &
