@@ -13,7 +13,6 @@ fi
 pool=${2:-"default.rgw.buckets.index"}
 list=`${CEPH_DIR}rados -p $pool ls`
 
-(
 echo "object size_keys(kB) size_values(kB) total(kB) nr_keys nr_values"
 for obj in $list; do
     RES=$(${CEPH_DIR}rados -p $pool listomapvals $obj | awk '
@@ -32,4 +31,3 @@ for obj in $list; do
 
     echo -e "${obj} $((SIZEKEYS/1024)) $((SIZEVALUES/1024)) $(( (SIZEKEYS+SIZEVALUES)/1024 )) ${NUMKEYS} ${NUMVALUES}"
 done
-)
