@@ -18,7 +18,7 @@ while [ true ]; do
     echo $'\n----------------------------------------'
     # check if should purge
     CP=$(which ceph)
-    if [[ $? -eq 0 ]]; then 
+    if [[ $? -eq 0 ]]; then
         PF=$($CP df | grep -A 1 SIZE | tail -1 | awk '{ print $4 }' | cut -d . -f 1)
         echo ">> Checing purge - percent full= $PF %"
         #exit 1

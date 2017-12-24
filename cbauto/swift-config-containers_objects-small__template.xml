@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<workload name="swift-config-containers__template.xml" description="sample benchmark for swift">
+<workload name="swift-config-containers_objects__template.xml" description="sample benchmark for swift">
 
   <storage type="swift" />
 
@@ -11,7 +11,8 @@
   <!-- silvertip -->
   <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://192.168.39.156:8000/auth/v1.0" />
   <!-- linode -->
-  <!--  <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://50.116.58.103:8080/auth/v1.0" />-->
+  <!--<auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://50.116.58.103:8080/auth/v1.0" />-->
+
 
   <!-- Keystone Authentication
   <auth type="keystone" config="username=tester;password=testing;tenant_name=test;auth_url=http://127.0.0.1:5000/v2.0;service=swift service;region=regionOne" />
@@ -24,30 +25,28 @@
   <workflow>
 
     <workstage name="init">
-      <work type="init" workers="100" config="containers=r(#ITBEGIN01#,#ITEND01#)" />
+      <work type="init" workers="100" config="containers=r(1,3000)" />
     </workstage>
 
     <workstage name="prepare">
-      <work type="prepare" workers="100" config="containers=r(#ITBEGIN01#,#ITEND01#);objects=r(1,1);sizes=c(8)KB" />
+      <work type="prepare" workers="100" config="containers=r(1,3000);objects=r(#ITBEGIN01#,#ITEND01#);sizes=c(4)KB" />
     </workstage>
 
-<!--
     <workstage name="main">
-      <work name="main" workers="8" runtime="300">
-        <operation type="read" ratio="80" config="containers=u(1,32);objects=u(1,50)" />
-        <operation type="write" ratio="20" config="containers=u(1,32);objects=u(51,100);sizes=c(64)KB" />
+      <work name="main" workers="100" runtime="10">
+        <operation type="read" ratio="20" config="containers=u(1,3000);objects=u(#ITBEGIN01#,#ITEND01#)" />
+        <operation type="write" ratio="80" config="containers=u(1,3000);objects=u(#ITBEGIN01#,#ITEND01#);sizes=c(4)KB" />
       </work>
     </workstage>
--->
-<!--
+
     <workstage name="cleanup">
-      <work type="cleanup" workers="10" config="containers=r(1,5000);objects=r(1,1)" />
+      <work type="cleanup" workers="100" config="containers=r(1,3000);objects=r(#ITBEGIN01#,#ITEND01#)" />
     </workstage>
 
     <workstage name="dispose">
-      <work type="dispose" workers="10" config="containers=r(1,5000)" />
+      <work type="dispose" workers="100" config="containers=r(1,3000)" />
     </workstage>
--->
+
   </workflow>
 
 </workload>
