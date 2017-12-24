@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Tip: run with "$0 | column -t"
+# REfrences: http://ceph.com/geen-categorie/get-omap-keyvalue-size/
+#            http://cephnotes.ksperis.com/blog/2015/06/25/get-omap-key-slash-value-sizeA
 
 CEPH_DIR=${1:-"./bin"}
 if [  -f "${CEPH_DIR}/rados" ]; then
