@@ -2,16 +2,16 @@
 <workload name="swift-config-containers__template.xml" description="sample benchmark for swift">
 
   <storage type="swift" />
-  
+
   <!-- Storage policies feature: http://docs.openstack.org/developer/swift/overview_architecture.html
 	<storage type="swift" config="policy=gold" />
   -->
- 
+
   <!-- MODIFY ME -->
   <!-- silvertip -->
-  <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://192.168.39.156:8000/auth/v1.0" />
+  <!--  <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://192.168.39.156:8000/auth/v1.0" /> -->
   <!-- linode -->
-  <!--  <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://50.116.58.103:8080/auth/v1.0" />-->
+  <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://50.116.58.103:8080/auth/v1.0" />
 
   <!-- Keystone Authentication
   <auth type="keystone" config="username=tester;password=testing;tenant_name=test;auth_url=http://127.0.0.1:5000/v2.0;service=swift service;region=regionOne" />

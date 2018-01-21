@@ -1,7 +1,8 @@
-#!/bin/bash -x 
+#!/bin/bash -x
 
-if [ -f ./bin/radosgw-admin ]; then
-	RA=./bin/radosgw-admin
+CEPH_DIR=${1:-"./bin"}
+if [ -f "$CEPH_DIR/radosgw-admin" ]; then
+	RA="$CEPH_DIR/radosgw-admin"
 else
 	RA=radosgw-admin
 fi
