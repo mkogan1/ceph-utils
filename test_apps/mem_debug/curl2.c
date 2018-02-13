@@ -40,7 +40,7 @@ int doit()
 	curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1L);
 	curl_easy_setopt(curl, CURLOPT_ERRORBUFFER, error_buf);
 	curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, my_receive_http_data);
-	curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
+	//curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
 	rc = curl_easy_perform(curl);
 	if (rc != CURLE_OK) {
 		fprintf(stderr,"curl_easy_perform failed, %s\n",
