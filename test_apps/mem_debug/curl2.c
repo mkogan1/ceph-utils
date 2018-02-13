@@ -1,12 +1,14 @@
 // gcc -lcurl -g3 curl2.c -o curl2
-// time valgrind --tool=massif ./curl2
+// debuginfo-install curl nss
+// time valgrind --tool=massif --max-snapshots=200 ./curl2
 
 #include <stdio.h>
 #include <curl/curl.h>
 
 char *my_method = "GET";
-//char *my_url = "https://acanthodes.eng.arb.redhat.com:35357/v3";
-char *my_url = "https://bugzilla.redhat.com";
+char *my_url = "https://acanthodes.eng.arb.redhat.com:35357/v3";
+//char *my_url = "https://bugzilla.redhat.com";
+//char *my_url = "https://google.com";
 
 
 uint
@@ -38,7 +40,7 @@ int doit()
 	curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1L);
 	curl_easy_setopt(curl, CURLOPT_ERRORBUFFER, error_buf);
 	curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, my_receive_http_data);
-    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
+	curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
 	rc = curl_easy_perform(curl);
 	if (rc != CURLE_OK) {
 		fprintf(stderr,"curl_easy_perform failed, %s\n",
