@@ -45,7 +45,7 @@ int doit()
 	if (rc != CURLE_OK) {
 		fprintf(stderr,"curl_easy_perform failed, %s\n", curl_easy_strerror(rc));
 		r |= 2;
-		curl_easy_reset(curl);
+		//curl_easy_reset(curl);
 		goto Done;
 	}
 	curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &http_status);
