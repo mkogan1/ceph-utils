@@ -5,7 +5,9 @@
 #include <curl/curl.h>
 
 char *my_method = "GET";
-char *my_url = "https://acanthodes.eng.arb.redhat.com:35357/v3";
+//char *my_url = "https://acanthodes.eng.arb.redhat.com:35357/v3";
+char *my_url = "https://bugzilla.redhat.com";
+
 
 uint
 my_receive_http_data(char *in, uint size, uint num, void *h)
