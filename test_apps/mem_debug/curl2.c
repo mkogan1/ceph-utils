@@ -1,18 +1,17 @@
 // gcc -lcurl -g3 curl2.c -o curl2
-// debuginfo-install curl nss
+// debuginfo-install curl nss openssl
 // time valgrind --tool=massif --max-snapshots=200 ./curl2
 
 #include <stdio.h>
 #include <curl/curl.h>
 
 char *my_method = "GET";
-char *my_url = "https://acanthodes.eng.arb.redhat.com:35357/v3";
+//char *my_url = "https://acanthodes.eng.arb.redhat.com:35357/v3";
 //char *my_url = "https://bugzilla.redhat.com";
-//char *my_url = "https://google.com";
+char *my_url = "https://google.com";
 
 
-uint
-my_receive_http_data(char *in, uint size, uint num, void *h)
+uint my_receive_http_data(char *in, uint size, uint num, void *h)
 {
 	uint r;
 	r = size * num;
