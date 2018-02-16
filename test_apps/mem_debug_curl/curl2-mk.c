@@ -1,17 +1,16 @@
 // gcc -lcurl -g3 curl2.c -o curl2
 // debuginfo-install curl nss openssl
-// time valgrind --tool=massif --max-snapshots=200 ./curl2
-
+// time valgrind --tool=massif --time-unit=B --max-snapshots=200 ./curl2
 #include <stdio.h>
 #include <curl/curl.h>
 
 char *my_method = "GET";
 //char *my_url = "https://acanthodes.eng.arb.redhat.com:35357/v3";
-//char *my_url = "https://bugzilla.redhat.com";
-char *my_url = "https://google.com";
+char *my_url = "https://localhost:4433";
+//char *my_url = "https://google.com";
 
-
-uint my_receive_http_data(char *in, uint size, uint num, void *h)
+uint
+my_receive_http_data(char *in, uint size, uint num, void *h)
 {
 	uint r;
 	r = size * num;
@@ -35,16 +34,18 @@ int doit()
 	}
 	curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, my_method);
 	curl_easy_setopt(curl, CURLOPT_URL, my_url);
+    curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
 	curl_easy_setopt(curl, CURLOPT_NOPROGRESS, 1L);
 	curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1L);
 	curl_easy_setopt(curl, CURLOPT_ERRORBUFFER, error_buf);
 	curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, my_receive_http_data);
-	//curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
+	curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
+    curl_easy_setopt(curl, CURLOPT_CAINFO, "./server.crt");
 	rc = curl_easy_perform(curl);
 	if (rc != CURLE_OK) {
-		fprintf(stderr,"curl_easy_perform failed, %s\n", curl_easy_strerror(rc));
+		fprintf(stderr,"curl_easy_perform failed, %s\n",
+            curl_easy_strerror(rc));
 		r |= 2;
-		//curl_easy_reset(curl);
 		goto Done;
 	}
 	curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &http_status);
