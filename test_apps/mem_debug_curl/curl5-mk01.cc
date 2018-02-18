@@ -1,4 +1,4 @@
-// time valgrind --tool=massif --time-unit=B --max-snapshots=200 ./curl5-mk01 -t 32 -m 8 1024 https://localhost:4433
+// time valgrind --tool=massif --time-unit=B --max-snapshots=200 ./curl5-mk01 -C server.crt -t 32 -m 8 4096 https://localhost:4433
 // g++ -g3 -lcurl -lpthread -std=c++11 curl5-mk01.cc -o curl5-mk01
 
 /*
@@ -273,7 +273,6 @@ doit(int id, struct doit_stats *ds)
 	curl_easy_setopt(curl, CURLOPT_ERRORBUFFER, error_buf);
 	curl_easy_setopt(curl, CURLOPT_WRITEDATA, (void*)recvarg);
 	curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, my_receive_http_data);
-    curl_easy_setopt(curl, CURLOPT_CAINFO, "./server.crt");
 	if (Vflag) {
 		curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
 	}
