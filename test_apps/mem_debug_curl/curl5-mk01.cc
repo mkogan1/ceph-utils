@@ -1,5 +1,7 @@
-// time valgrind --tool=massif --time-unit=B --max-snapshots=200 ./curl5-mk01 -C server.crt -t 32 -m 8 4096 https://localhost:4433
 // g++ -g3 -lcurl -lpthread -std=c++11 curl5-mk01.cc -o curl5-mk01
+// time valgrind --tool=massif --time-unit=B --max-snapshots=200 ./curl5-mk01 -C ./server.crt -t 32 -m 8 4096 https://localhost:4433
+// -m 1 == no reuse
+// time valgrind --tool=massif --time-unit=B --max-snapshots=200 ./curl5-mk01 -C ./server.crt -t 32 -m 1 4096 https://localhost:4433
 
 /*
 building
@@ -38,6 +40,7 @@ c++ -o curl5.gnutls -g curl5.cc -lcurl-gnutls -lpthread -std=c++11
 #include <iostream>
 #include <curl/curl.h>
 #include <stdio.h>
+#include <unistd.h>
 
 const char *my_method = "GET";
 const char *my_url;
@@ -91,7 +94,7 @@ get_curl_handle()
 		saved_curl.erase(saved_curl.begin());
 		++reuses;
 	}
-	pthread_mutex_unlock(&saved_mutex);
+	//pthread_mutex_unlock(&saved_mutex);
 	if (curl) {
 	} else if ((h = curl_easy_init())) {
 		++carrier_allocs;
@@ -99,9 +102,11 @@ get_curl_handle()
 		curl->h = h;
 		curl->uses = 0;
 		++easy_inits_made;
+        printf("+"); fflush(stdout);
 	} else {
 		// curl = 0;
 	}
+	pthread_mutex_unlock(&saved_mutex);
 	return curl;
 }
 
@@ -116,14 +121,16 @@ release_curl_handle_now(struct curl_carrier *curl)
 void
 release_curl_handle(struct curl_carrier *curl)
 {
+	pthread_mutex_lock(&saved_mutex);
 	if (++curl->uses >= multi_count) {
 		release_curl_handle_now(curl);
 	} else {
-		pthread_mutex_lock(&saved_mutex);
+		//pthread_mutex_lock(&saved_mutex);
 		clock_gettime(CLOCK_MONOTONIC_RAW, curl->lastuse);
 		saved_curl.insert(saved_curl.begin(), 1, curl);
-		pthread_mutex_unlock(&saved_mutex);
+		//pthread_mutex_unlock(&saved_mutex);
 	}
+    pthread_mutex_unlock(&saved_mutex);
 }
 
 int cleaner_shutdown;
@@ -266,6 +273,7 @@ doit(int id, struct doit_stats *ds)
 	if (!ca)
 		return 1;
 	curl = ca->h;
+    printf("."); fflush(stdout);
 	curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, my_method);
 	curl_easy_setopt(curl, CURLOPT_URL, my_url);
 	curl_easy_setopt(curl, CURLOPT_NOPROGRESS, 1L);
@@ -324,6 +332,16 @@ process()
 			break;
 		}
 		r |= doit(i, ds);
+
+        if ((i+1) % 100 == 0) {
+            pthread_mutex_lock(&saved_mutex);
+            printf ("curl global cleanup - locaked\n");
+            sleep(1);
+            curl_global_cleanup();
+            curl_global_init(CURL_GLOBAL_DEFAULT);
+            pthread_mutex_unlock(&saved_mutex);
+            printf ("curl global cleanup - unlocked\n");
+        }
 	}
 	if (pthread_mutex_lock(&time_mutex) < 0) {
 		std::cerr << "lock failed " << errno << std::endl;
