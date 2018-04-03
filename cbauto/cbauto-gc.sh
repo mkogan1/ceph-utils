@@ -1,11 +1,12 @@
 #!/bin/bash
 
-# INSTRUCTIONS: change the IP address below to the IP of the rgw and copy the /root/.ssh/id_rsa file from the jumphost to this dorectory
+# INSTRUCTIONS: change the IP address below to the IP of the rgw and 
+# copy the /root/.ssh/id_rsa file from the jumphost to the ~/ directory
 RGWHOST=192.168.205.149
 
 echo "checking that the RGW host at ip: $RGWHOST"
 echo "is accessible vis ssh to call radosgw-admin gc process.."
-ssh -i ./id_rsa $RGWHOST radosgw-admin --version
+ssh -i ~/id_rsa $RGWHOST radosgw-admin --version
 read -p "if the Ceph version is shown, press <enter> to continue"
 
 
@@ -27,13 +28,13 @@ while [ true ]; do
     echo $'\n----------------------------------------'
     # check if should purge
     if [[ $? -eq 0 ]]; then
-        PF=$(ssh -i ./id_rsa $RGWHOST ceph df | grep -A 1 SIZE | tail -1 | awk '{ print $4 }' | cut -d . -f 1)
+        PF=$(ssh -i ~/id_rsa $RGWHOST ceph df | grep -A 1 SIZE | tail -1 | awk '{ print $4 }' | cut -d . -f 1)
         echo ">> Checing GC - percent full= $PF %"
         #exit 1
         if [[ $PF -ge 50 ]]; then
             echo "   >> GC process ..."
             #radosgw-admin gc process --include-all
-            ssh -i ./id_rsa $RGWHOST radosgw-admin gc process --include-all &> /tmp/radosgw-admin.log
+            ssh -i ~/id_rsa $RGWHOST radosgw-admin gc process --include-all &> /tmp/radosgw-admin.log
             echo "   >> GC complete"
         fi
     fi
