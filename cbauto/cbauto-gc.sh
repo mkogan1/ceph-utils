@@ -34,7 +34,7 @@ while [ true ]; do
         if [[ $PF -ge 50 ]]; then
             echo "   >> GC process ..."
             #radosgw-admin gc process --include-all
-            ssh -i ~/id_rsa $RGWHOST radosgw-admin gc process --include-all &> /tmp/radosgw-admin.log
+            time ssh -i ~/id_rsa $RGWHOST radosgw-admin gc process --include-all &> /tmp/radosgw-admin.log
             echo "   >> GC complete"
         fi
     fi
