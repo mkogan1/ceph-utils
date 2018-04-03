@@ -6,7 +6,7 @@ RGWHOST=192.168.205.149
 echo "checking that the RGW host at ip: $RGWHOST"
 echo "is accessible vis ssh to call radosgw-admin gc process.."
 ssh -i ./id_rsa $RGWHOST radosgw-admin --version
-read -p "if the Ceph -admin version is shown, press <enter> to continue"
+read -p "if the Ceph version is shown, press <enter> to continue"
 
 
 if [ -z "$1" ] && [ -z "$2" ] && [ -z "$3" ]; then
@@ -26,9 +26,8 @@ WCNT=1
 while [ true ]; do
     echo $'\n----------------------------------------'
     # check if should purge
-    CP=$(which ceph)
     if [[ $? -eq 0 ]]; then
-        PF=$($CP df | grep -A 1 SIZE | tail -1 | awk '{ print $4 }' | cut -d . -f 1)
+        PF=$(ssh -i ./id_rsa $RGWHOST ceph df | grep -A 1 SIZE | tail -1 | awk '{ print $4 }' | cut -d . -f 1)
         echo ">> Checing GC - percent full= $PF %"
         #exit 1
         if [[ $PF -ge 50 ]]; then
