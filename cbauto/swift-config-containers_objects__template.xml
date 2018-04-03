@@ -9,9 +9,9 @@
 
   <!-- MODIFY ME -->
   <!-- silvertip -->
-  <!--  <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://192.168.39.156:8000/auth/v1.0" />-->
+  <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://192.168.39.156:8000/auth/v1.0" />
   <!-- linode -->
-  <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://50.116.58.103:8080/auth/v1.0" />
+  <!--<auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://50.116.58.103:8080/auth/v1.0" />-->
 
 
   <!-- Keystone Authentication
@@ -31,13 +31,14 @@
     <workstage name="prepare">
       <work type="prepare" workers="100" config="containers=r(1,3000);objects=r(#ITBEGIN01#,#ITEND01#);sizes=c(343)KB" />
     </workstage>
-
+ <!--
     <workstage name="main">
       <work name="main" workers="100" runtime="60">
         <operation type="read" ratio="20" config="containers=u(1,3000);objects=u(#ITBEGIN01#,#ITEND01#)" />
         <operation type="write" ratio="80" config="containers=u(1,3000);objects=u(#ITBEGIN01#,#ITEND01#);sizes=c(343)KB" />
       </work>
     </workstage>
+-->
 <!--
     <workstage name="cleanup">
       <work type="cleanup" workers="100" config="containers=r(1,3000);objects=r(1,1)" />
