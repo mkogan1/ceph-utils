@@ -29,10 +29,10 @@ TN=$1
 ITBEGIN01=$2
 ITINC01=$3
 
-echo "Checking that the RGW host at IP: $RGWHOST"
-echo "is accessible vis ssh to call radosgw-admin gc process...\n"
+echo -e "\nChecking that the RGW host at IP: $RGWHOST"
+echo -e "is accessible vis ssh to call radosgw-admin gc process...\n"
 ssh -i ~/id_rsa $RGWHOST radosgw-admin --version
-read -p "\nIf the Ceph version is shown, press <Enter> to continue"
+read -p "If the Ceph version is shown, press <Enter> to continue"
 
 echo ">> Running with template: $TN"
 AN=$(echo -n "/tmp/$TN" | sed 's/__template.xml/__auto.xml/')
