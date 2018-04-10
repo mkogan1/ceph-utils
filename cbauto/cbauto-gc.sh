@@ -3,13 +3,24 @@
 # INSTRUCTIONS: change the IP address below to the IP of the rgw and 
 # copy the /root/.ssh/id_rsa file from the jumphost to the ~/ directory
 RGWHOST=192.168.205.149
-
-echo "checking that the RGW host at ip: $RGWHOST"
-echo "is accessible vis ssh to call radosgw-admin gc process.."
-ssh -i ~/id_rsa $RGWHOST radosgw-admin --version
-read -p "if the Ceph version is shown, press <enter> to continue"
+# perform gc betwwen loops if ceph df disk usage above percent
+GCPCT=50
 
 
+function ceph_cleanup() {
+    echo "   >> GC process ..."
+    time ssh -i ~/id_rsa $RGWHOST radosgw-admin gc process --include-all &> /tmp/radosgw-admin.log
+    echo "   >> GC complete"
+    echo "   >> Purge..."
+    time ssh -i ~/id_rsa $RGWHOST rados purge default.rgw.buckets.data --yes-i-really-really-mean-it
+    time ssh -i ~/id_rsa $RGWHOST rados purge default.rgw.buckets.index --yes-i-really-really-mean-it
+    echo "   >> Purge complete"
+}
+
+
+########
+# MAIN #
+########
 if [ -z "$1" ] && [ -z "$2" ] && [ -z "$3" ]; then
     echo "missing  paramis: template filename, bktbegin, bktinc"
 	exit 1
@@ -18,10 +29,17 @@ TN=$1
 ITBEGIN01=$2
 ITINC01=$3
 
+echo "Checking that the RGW host at IP: $RGWHOST"
+echo "is accessible vis ssh to call radosgw-admin gc process...\n"
+ssh -i ~/id_rsa $RGWHOST radosgw-admin --version
+read -p "\nIf the Ceph version is shown, press <Enter> to continue"
+
 echo ">> Running with template: $TN"
 AN=$(echo -n "/tmp/$TN" | sed 's/__template.xml/__auto.xml/')
 echo ">>              auto xml: $AN"
 #exit 1;
+
+ceph_cleanup
 
 WCNT=1
 while [ true ]; do
@@ -31,11 +49,8 @@ while [ true ]; do
         PF=$(ssh -i ~/id_rsa $RGWHOST ceph df | grep -A 1 SIZE | tail -1 | awk '{ print $4 }' | cut -d . -f 1)
         echo ">> Checing GC - percent full= $PF %"
         #exit 1
-        if [[ $PF -ge 50 ]]; then
-            echo "   >> GC process ..."
-            #radosgw-admin gc process --include-all
-            time ssh -i ~/id_rsa $RGWHOST radosgw-admin gc process --include-all &> /tmp/radosgw-admin.log
-            echo "   >> GC complete"
+        if [[ $PF -ge $GCPCT ]]; then
+            ceph_cleanup
         fi
     fi
 
