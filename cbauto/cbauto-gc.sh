@@ -17,6 +17,16 @@ function ceph_cleanup() {
     echo "   >> Purge complete"
 }
 
+function wait_for_cosbench_idle() {
+    # wait until cosbench is free to take a workload
+    echo ">> Waiting for cosbench to complete the running workload..."
+    until [ $(../../cosbench/cli.sh info 2>/dev/null | grep -c 'Total: 0 active workloads') -eq 1 ]; do
+        echo -n "."
+        sleep 2
+    done
+    echo $'\n>>>>>>>> cosbench ready >>>>>>>>>'
+}
+
 
 ########
 # MAIN #
@@ -41,6 +51,7 @@ AN=$(echo -n "/tmp/$TN" | sed 's/__template.xml/__auto.xml/')
 echo ">>              auto xml: $AN"
 #exit 1;
 
+wait_for_cosbench_idle
 ceph_cleanup
 
 WCNT=1
@@ -64,16 +75,11 @@ while [ true ]; do
 	sed --in-place "s/#ITBEGIN01#/$ITBEGIN01/g" $AN
 	sed --in-place "s/#ITEND01#/$ITEND01/g" $AN
 
-	# wait until cosbench is free to take a workload
-	echo ">> Waiting for cosbench to complete the running workload..."
-	until [ $(../../cosbench/cli.sh info 2>/dev/null | grep -c 'Total: 0 active workloads') -eq 1 ]; do
-		echo -n "."
-		sleep 2
-	done
-    echo $'\n>>>>>>>> cosbench ready >>>>>>>>>'
     date
     #sleep 30
 	../../cosbench/cli.sh submit $AN 2>/dev/null
+
+    wait_for_cosbench_idle
 
 	ITBEGIN01=$((ITBEGIN01+ITINC01))
     WCNT=$((WCNT+1))
