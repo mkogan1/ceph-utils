@@ -19,12 +19,12 @@ function ceph_cleanup() {
 
 function wait_for_cosbench_idle() {
     # wait until cosbench is free to take a workload
-    echo ">> Waiting for cosbench to complete the running workload..."
+    echo ">>>>>> Waiting for cosbench to complete the running workload..."
     until [ $(../../cosbench/cli.sh info 2>/dev/null | grep -c 'Total: 0 active workloads') -eq 1 ]; do
         echo -n "."
         sleep 2
     done
-    echo $'\n>>>>>>>> cosbench ready >>>>>>>>>'
+    echo $'\n>>>>>> cosbench ready >>>>>>>'
 }
 
 
