@@ -46,11 +46,11 @@
     <workstage name="cleanup">
       <work type="cleanup" workers="90" config="containers=r(1,2000);objects=r(#ITBEGIN01#,#ITEND01#)" />
     </workstage>
-<!--
+
     <workstage name="dispose">
       <work type="dispose" workers="90" config="containers=r(1,2000)" />
     </workstage>
--->
+
   </workflow>
 
 </workload>
