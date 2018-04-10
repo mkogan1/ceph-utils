@@ -9,7 +9,7 @@
 
   <!-- MODIFY ME -->
   <!-- silvertip -->
-  <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://192.168.205.149:8000/auth/v1.0" />
+  <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://192.168.205.149:8080/auth/v1.0" />
   <!-- linode -->
   <!--<auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://50.116.58.103:8080/auth/v1.0" />-->
 
