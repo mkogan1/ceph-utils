@@ -32,7 +32,9 @@ ITINC01=$3
 echo -e "\nChecking that the RGW host at IP: $RGWHOST"
 echo -e "is accessible vis ssh to call radosgw-admin gc process...\n"
 ssh -i ~/id_rsa $RGWHOST radosgw-admin --version
+echo -e "\b"
 read -p "If the Ceph version is shown, press <Enter> to continue"
+echo -e "\b"
 
 echo ">> Running with template: $TN"
 AN=$(echo -n "/tmp/$TN" | sed 's/__template.xml/__auto.xml/')

@@ -50,7 +50,7 @@
     <workstage name="dispose">
       <work type="dispose" workers="90" config="containers=r(1,2000)" />
     </workstage>
-->>
+-->
   </workflow>
 
 </workload>
