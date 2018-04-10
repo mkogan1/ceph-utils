@@ -25,15 +25,15 @@
   <workflow>
 
     <workstage name="init">
-      <work type="init" workers="100" config="containers=r(1,2000)" />
+      <work type="init" workers="90" config="containers=r(1,2000)" />
     </workstage>
 
     <workstage name="prepare">
-      <work type="prepare" workers="100" config="containers=r(1,2000);objects=r(#ITBEGIN01#,#ITEND01#);sizes=c(343)KB" />
+      <work type="prepare" workers="90" config="containers=r(1,2000);objects=r(#ITBEGIN01#,#ITEND01#);sizes=c(343)KB" />
     </workstage>
 
     <workstage name="main">
-      <work name="main" workers="100" runtime="600">
+      <work name="main" workers="90" runtime="600">
         <operation type="write" ratio="24" config="containers=u(1,2000);objects=u(#ITBEGIN01#,#ITEND01#);sizes=c(32)KB" />
         <operation type="write" ratio="1" config="containers=u(1,2000);objects=u(#ITBEGIN01#,#ITEND01#);sizes=c(1)GB" />
         <operation type="read" ratio="25" config="containers=u(1,2000);objects=u(#ITBEGIN01#,#ITEND01#)" />
@@ -44,11 +44,11 @@
 
 <!--
     <workstage name="cleanup">
-      <work type="cleanup" workers="100" config="containers=r(1,2000);objects=r(#ITBEGIN01#,#ITEND01#)" />
+      <work type="cleanup" workers="90" config="containers=r(1,2000);objects=r(#ITBEGIN01#,#ITEND01#)" />
     </workstage>
 
     <workstage name="dispose">
-      <work type="dispose" workers="100" config="containers=r(1,2000)" />
+      <work type="dispose" workers="90" config="containers=r(1,2000)" />
     </workstage>
 -->
   </workflow>
