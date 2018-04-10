@@ -8,13 +8,18 @@ GCPCT=50
 
 
 function ceph_cleanup() {
-    echo "   >> GC process ..."
+    echo ">>>>> GC process ..."
     time ssh -i ~/id_rsa $RGWHOST radosgw-admin gc process --include-all &> /tmp/radosgw-admin.log
-    echo "   >> GC complete"
-    echo "   >> Purge..."
+    echo ">>>>> GC complete"
+    echo ">>>>> Purge..."
+    time ssh -i ~/id_rsa $RGWHOST rados purge default.rgw.data.root --yes-i-really-really-mean-it
     time ssh -i ~/id_rsa $RGWHOST rados purge default.rgw.buckets.data --yes-i-really-really-mean-it
     time ssh -i ~/id_rsa $RGWHOST rados purge default.rgw.buckets.index --yes-i-really-really-mean-it
-    echo "   >> Purge complete"
+    time ssh -i ~/id_rsa $RGWHOST rados purge default.rgw.gc --yes-i-really-really-mean-it
+    time ssh -i ~/id_rsa $RGWHOST rados purge default.rgw.log --yes-i-really-really-mean-it
+    echo ">>>>> Purge sleep..."
+    sleep 30
+    echo ">>>>> Purge complete"
 }
 
 function wait_for_cosbench_idle() {
@@ -57,15 +62,6 @@ ceph_cleanup
 WCNT=1
 while [ true ]; do
     echo $'\n----------------------------------------'
-    # check if should purge
-    if [[ $? -eq 0 ]]; then
-        PF=$(ssh -i ~/id_rsa $RGWHOST ceph df | grep -A 1 SIZE | tail -1 | awk '{ print $4 }' | cut -d . -f 1)
-        echo ">> Checing GC - percent full= $PF %"
-        #exit 1
-        if [[ $PF -ge $GCPCT ]]; then
-            ceph_cleanup
-        fi
-    fi
 
 	ITEND01=$((ITBEGIN01+ITINC01-1))
     echo ">> Preparing workload #$WCNT :"
@@ -78,8 +74,16 @@ while [ true ]; do
     date
     #sleep 30
 	../../cosbench/cli.sh submit $AN 2>/dev/null
-
+    echo ""
     wait_for_cosbench_idle
+
+    # check if should purge
+    PF=$(ssh -i ~/id_rsa $RGWHOST ceph df | grep -A 1 SIZE | tail -1 | awk '{ print $4 }' | cut -d . -f 1)
+    echo ">> Checing GC - percent full= $PF %"
+    #exit 1
+    if [[ $PF -ge $GCPCT ]]; then
+        ceph_cleanup
+    fi
 
 	ITBEGIN01=$((ITBEGIN01+ITINC01))
     WCNT=$((WCNT+1))
