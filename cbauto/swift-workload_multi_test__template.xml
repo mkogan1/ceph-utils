@@ -29,13 +29,13 @@
     </workstage>
 
     <workstage name="prepare">
-      <work type="prepare" workers="90" config="containers=r(1,2000);objects=r(#ITBEGIN01#,#ITEND01#);sizes=c(343)KB" />
+      <work type="prepare" workers="90" config="containers=r(1,1000);objects=r(#ITBEGIN01#,#ITEND01#);sizes=c(343)KB" />
     </workstage>
 
     <workstage name="main">
       <work name="main" workers="90" runtime="600">
-        <operation type="write" ratio="24" config="containers=u(1,2000);objects=u(#ITBEGIN01#,#ITEND01#);sizes=c(32)KB" />
-        <operation type="write" ratio="1" config="containers=u(1,2000);objects=u(#ITBEGIN01#,#ITEND01#);sizes=c(1)GB" />
+        <operation type="write" ratio="24" config="containers=u(1001,2000);objects=u(#ITBEGIN01#,#ITEND01#);sizes=c(32)KB" />
+        <operation type="write" ratio="1" config="containers=u(1001,2000);objects=u(#ITBEGIN01#,#ITEND01#);sizes=c(1)GB" />
         <operation type="read" ratio="25" config="containers=u(1,2000);objects=u(#ITBEGIN01#,#ITEND01#)" />
         <operation type="list" ratio="25" config="containers=u(1,2000);objects=u(#ITBEGIN01#,#ITEND01#)" />
         <operation type="delete" ratio="25" config="containers=u(1,2000);objects=u(#ITBEGIN01#,#ITEND01#)" />
