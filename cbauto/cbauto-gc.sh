@@ -4,7 +4,7 @@
 # copy the /root/.ssh/id_rsa file from the jumphost to the ~/ directory
 RGWHOST=192.168.205.149
 # perform gc betwwen loops if ceph df disk usage above percent
-GCPCT=50
+GCPCT=25
 
 
 function ceph_cleanup() {
@@ -83,6 +83,7 @@ while [ true ]; do
     #exit 1
     if [[ $PF -ge $GCPCT ]]; then
         ceph_cleanup
+        sleep 30
     fi
 
 	ITBEGIN01=$((ITBEGIN01+ITINC01))
