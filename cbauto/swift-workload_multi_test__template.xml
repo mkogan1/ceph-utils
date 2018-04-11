@@ -34,11 +34,11 @@
 
     <workstage name="main">
       <work name="main" workers="90" runtime="1800">
-        <operation type="read" ratio="35" config="containers=u(1,1000);objects=u(#ITBEGIN01#,#ITEND01#)" />
-        <operation type="write" ratio="14" config="containers=u(1,2000);objects=u(#ITBEGIN01#,#ITEND01#);sizes=c(343)KB" />
-        <operation type="write" ratio="1" config="containers=u(1,2000);objects=u(#ITBEGIN01#,#ITEND01#);sizes=c(1)GB" />
-        <operation type="list" ratio="25" config="containers=u(1,1000);objects=u(#ITBEGIN01#,#ITEND01#)" />
-        <operation type="delete" ratio="25" config="containers=u(1001,2000);objects=u(#ITBEGIN01#,#ITEND01#)" />
+        <operation type="read" ratio="35" config="containers=u(1,2000);objects=u(#ITBEGIN01#,#ITEND01#)" />
+        <operation type="write" ratio="1" config="containers=u(1,50);objects=u(#ITBEGIN01#,#ITEND01#);sizes=c(1)GB" />
+        <operation type="write" ratio="14" config="containers=u(51,2000);objects=u(#ITBEGIN01#,#ITEND01#);sizes=c(343)KB" />
+        <operation type="list" ratio="25" config="containers=u(1,2000);objects=u(#ITBEGIN01#,#ITEND01#)" />
+        <operation type="delete" ratio="25" config="containers=u(1,2000);objects=u(#ITBEGIN01#,#ITEND01#)" />
       </work>
     </workstage>
 
