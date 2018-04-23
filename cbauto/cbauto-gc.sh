@@ -12,15 +12,19 @@ GCPCT=25
 
 function ceph_cleanup() {
     echo ">>>>> GC process ..."
+    set -x
     time ssh -i ./key/id_rsa $RGWHOST radosgw-admin gc process --include-all &> /tmp/radosgw-admin.log
+    set +x
     echo ">>>>> GC complete"
     echo ">>>>> Purge..."
+    set -x
     time ssh -i ./key/id_rsa $RGWHOST rados purge default.rgw.data.root --yes-i-really-really-mean-it
     time ssh -i ./key/id_rsa $RGWHOST rados purge default.rgw.buckets.data --yes-i-really-really-mean-it
     time ssh -i ./key/id_rsa $RGWHOST rados purge default.rgw.buckets.index --yes-i-really-really-mean-it
     time ssh -i ./key/id_rsa $RGWHOST rados purge default.rgw.gc --yes-i-really-really-mean-it
     time ssh -i ./key/id_rsa $RGWHOST rados purge default.rgw.log --yes-i-really-really-mean-it
-    echo ">>>>> Purge sleep..."
+    set +x
+    echo ">>>>> Purge settle sleep..."
     sleep 30
     echo ">>>>> Purge complete"
 }
