@@ -1,22 +1,25 @@
 #!/bin/bash
 
-# INSTRUCTIONS: change the IP address below to the IP of the rgw and 
-# copy the /root/.ssh/id_rsa file from the jumphost to the ~/ directory
-RGWHOST=192.168.205.149
+# INSTRUCTIONS: change the IP address below to the IP of the rgw and
+# copy the /root/.ssh/id_rsa file from the jumphost to the ./key directory
+if [ ! -n "${RGWHOST}" ]; then
+   #RGWHOST=192.168.205.149  ## sasl
+   RGWHOST=b08-h31-1029p  ## bagl
+fi
 # perform gc betwwen loops if ceph df disk usage above percent
 GCPCT=25
 
 
 function ceph_cleanup() {
     echo ">>>>> GC process ..."
-    time ssh -i ~/id_rsa $RGWHOST radosgw-admin gc process --include-all &> /tmp/radosgw-admin.log
+    time ssh -i ./key/id_rsa $RGWHOST radosgw-admin gc process --include-all &> /tmp/radosgw-admin.log
     echo ">>>>> GC complete"
     echo ">>>>> Purge..."
-    time ssh -i ~/id_rsa $RGWHOST rados purge default.rgw.data.root --yes-i-really-really-mean-it
-    time ssh -i ~/id_rsa $RGWHOST rados purge default.rgw.buckets.data --yes-i-really-really-mean-it
-    time ssh -i ~/id_rsa $RGWHOST rados purge default.rgw.buckets.index --yes-i-really-really-mean-it
-    time ssh -i ~/id_rsa $RGWHOST rados purge default.rgw.gc --yes-i-really-really-mean-it
-    time ssh -i ~/id_rsa $RGWHOST rados purge default.rgw.log --yes-i-really-really-mean-it
+    time ssh -i ./key/id_rsa $RGWHOST rados purge default.rgw.data.root --yes-i-really-really-mean-it
+    time ssh -i ./key/id_rsa $RGWHOST rados purge default.rgw.buckets.data --yes-i-really-really-mean-it
+    time ssh -i ./key/id_rsa $RGWHOST rados purge default.rgw.buckets.index --yes-i-really-really-mean-it
+    time ssh -i ./key/id_rsa $RGWHOST rados purge default.rgw.gc --yes-i-really-really-mean-it
+    time ssh -i ./key/id_rsa $RGWHOST rados purge default.rgw.log --yes-i-really-really-mean-it
     echo ">>>>> Purge sleep..."
     sleep 30
     echo ">>>>> Purge complete"
@@ -46,7 +49,7 @@ ITINC01=$3
 
 echo -e "\nChecking that the RGW host at IP: $RGWHOST"
 echo -e "is accessible vis ssh to call radosgw-admin gc process...\n"
-ssh -i ~/id_rsa $RGWHOST radosgw-admin --version
+ssh -i ./key/id_rsa $RGWHOST radosgw-admin --version
 echo -e "\b"
 read -p "If the Ceph version is shown, press <Enter> to continue"
 echo -e "\b"
@@ -84,7 +87,7 @@ while [ true ]; do
 
     # check if should purge (if objects names are incrementing)
     if [[ $ITINC01 -ne 0  ]]; then
-        PF=$(ssh -i ~/id_rsa $RGWHOST ceph df | grep -A 1 SIZE | tail -1 | awk '{ print $4 }' | cut -d . -f 1)
+        PF=$(ssh -i ./key/id_rsa $RGWHOST ceph df | grep -A 1 SIZE | tail -1 | awk '{ print $4 }' | cut -d . -f 1)
         echo ">> Checing GC - percent full= $PF %"
         #exit 1
         if [[ $PF -ge $GCPCT ]]; then
