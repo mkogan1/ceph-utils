@@ -31,12 +31,12 @@ function ceph_cleanup() {
 
 function wait_for_cosbench_idle() {
     # wait until cosbench is free to take a workload
-    echo ">>>>>> Waiting for cosbench to complete the running workload..."
+    echo ">> Waiting for cosbench to complete the running workload..."
     until [ "$(../../cosbench/cli.sh info 2>/dev/null | grep -c 'Total: 0 active workloads')" -eq 1 ]; do
         echo -n "."
         sleep 2
     done
-    echo $'\n>>>>>> cosbench ready >>>>>>>'
+    echo $'\n>> cosbench ready >>>>>>>'
 }
 
 
@@ -56,15 +56,20 @@ echo -e "is accessible vis ssh to call radosgw-admin gc process...\n"
 ssh -i ./key/id_rsa $RGWHOST radosgw-admin --version
 echo -e "\b"
 read -p "If the Ceph version is shown, press <Enter> to continue"
-echo -e "\b"
+echo -e "\b\n"
 
 echo ">> Running with template: $TN"
 AN=$(echo -n "/tmp/$TN" | sed 's/__template.xml/__auto.xml/')
 echo ">>              auto xml: $AN"
+echo -e "\n"
 #exit 1;
 
 wait_for_cosbench_idle
-ceph_cleanup
+PF=$(ssh -i ./key/id_rsa $RGWHOST ceph df | grep -A 1 SIZE | tail -1 | awk '{ print $4 }' | cut -d . -f 1)
+echo ">> Checing GC - percent full= $PF %"
+if [[ $PF -ge $GCPCT ]]; then
+    ceph_cleanup
+fi
 
 WCNT=1
 while [ true ]; do
@@ -83,6 +88,7 @@ while [ true ]; do
     sed --in-place "s/#ITEND01#/$ITEND01/g" "$AN"
     #exit 1
 
+    echo ""
     date
     #sleep 30
     ../../cosbench/cli.sh submit "$AN" 2>/dev/null

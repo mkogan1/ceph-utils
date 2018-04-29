@@ -13,7 +13,7 @@
   <!-- linode -->
   <!--<auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://50.116.58.103:8080/auth/v1.0" />-->
   <!-- bagl -->
-  <auth caching="true" type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://172.16.76.112:8080/auth/v1.0" />
+  <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://172.16.76.112:8080/auth/v1.0" />
 
   <!-- Keystone Authentication
   <auth type="keystone" config="username=tester;password=testing;tenant_name=test;auth_url=http://127.0.0.1:5000/v2.0;service=swift service;region=regionOne" />
@@ -24,33 +24,29 @@
   -->
 
   <workflow>
-
+    <!--
     <workstage name="init">
       <work type="init" workers="90" config="containers=r(1,20)" />
     </workstage>
 
     <workstage name="prepare">
-      <work type="prepare" workers="200" config="containers=r(1,20);objects=r(#ITBEGIN01#,#ITEND01#);sizes=c(8)KB" />
+      <work type="prepare" workers="2000" config="containers=r(1,20);objects=r(1000000,1009999);sizes=c(8)KB" />
     </workstage>
-
+-->
     <workstage name="main">
       <!--<work name="main" workers="1000" runtime="1800">-->
-      <!--<work name="main" workers="100" runtime="240">-->
-      <!--<work name="main" workers="10000" runtime="240">-->
-      <work name="main" rampup="10" workers="10000" runtime="240">
-        <!--      <work name="main" rampup="10" workers="1000" runtime="240">-->
-        <operation type="read" ratio="60" config="containers=u(5,20);objects=u(#ITBEGIN01#,#ITEND01#)" />
-        <operation type="write" ratio="21" config="containers=u(11,20);objects=u(#ITBEGIN01#,#ITEND01#);sizes=c(64)KB" />
-        <!--        <operation type="write" ratio="20" config="containers=u(11,20);objects=u(#ITBEGIN01#,#ITEND01#);sizes=c(64)KB" />
-        <operation type="write" ratio="1" config="containers=u(11,20);objects=u(#ITBEGIN01#,#ITEND01#);sizes=c(1)GB" />-->
-        <operation type="list" ratio="15" config="containers=u(5,20);objects=u(#ITBEGIN01#,#ITEND01#)" />
-        <operation type="delete" ratio="4" config="containers=u(1,4);objects=u(#ITBEGIN01#,#ITEND01#)" />
+        <!--<work name="main" workers="100" runtime="240">-->
+      <work name="main" workers="10000" runtime="240">
+        <operation type="read" ratio="75" config="containers=u(5,20);objects=u(1000000,1009999)" />
+        <operation type="write" ratio="10" config="containers=u(1,20);objects=u(1000000,5000000);sizes=c(8)KB" />
+        <operation type="list" ratio="15" config="containers=u(5,20);objects=u(1000000,1009999)" />
+        <!--<operation type="delete" ratio="4" config="containers=u(1,4);objects=u(1000000,5009999)" />-->
       </work>
     </workstage>
 
 <!--
     <workstage name="cleanup">
-      <work type="cleanup" workers="90" config="containers=r(1,20);objects=r(#ITBEGIN01#,#ITEND01#)" />
+      <work type="cleanup" workers="90" config="containers=r(1,20);objects=r(1000000,1009999)" />
     </workstage>
 
     <workstage name="dispose">
