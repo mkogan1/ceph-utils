@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <workload name="s3-config-t23379.xml" description="sample benchmark for s3">
 
-	<storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://rhs-cli-05:8080;path_style_access=true" />
+	<storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://172.16.0.5:8080;path_style_access=true" />
 
   <workflow>
 
