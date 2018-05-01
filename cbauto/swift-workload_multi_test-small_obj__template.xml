@@ -38,10 +38,10 @@
       <!--<work name="main" workers="100" runtime="240">-->
       <!--<work name="main" workers="10000" runtime="240">-->
       <work name="main" rampup="10" workers="10000" runtime="240">
-        <!--      <work name="main" rampup="10" workers="1000" runtime="240">-->
+        <!--<work name="main" rampup="10" workers="1000" runtime="240">-->
         <operation type="read" ratio="60" config="containers=u(5,20);objects=u(#ITBEGIN01#,#ITEND01#)" />
         <operation type="write" ratio="21" config="containers=u(11,20);objects=u(#ITBEGIN01#,#ITEND01#);sizes=c(64)KB" />
-        <!--        <operation type="write" ratio="20" config="containers=u(11,20);objects=u(#ITBEGIN01#,#ITEND01#);sizes=c(64)KB" />
+        <!--<operation type="write" ratio="20" config="containers=u(11,20);objects=u(#ITBEGIN01#,#ITEND01#);sizes=c(64)KB" />
         <operation type="write" ratio="1" config="containers=u(11,20);objects=u(#ITBEGIN01#,#ITEND01#);sizes=c(1)GB" />-->
         <operation type="list" ratio="15" config="containers=u(5,20);objects=u(#ITBEGIN01#,#ITEND01#)" />
         <operation type="delete" ratio="4" config="containers=u(1,4);objects=u(#ITBEGIN01#,#ITEND01#)" />
