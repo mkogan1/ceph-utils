@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<workload name="s3-config-T23379-c3.xml" description="sample benchmark for s3">
+<workload name="s3-config-BZ1520200-c3.xml" description="sample benchmark for s3">
 
-	<storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://172.16.0.7:8080;path_style_access=true" />
+  <!-- mellanox -->
+  <!--<storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://172.16.0.7:8080;path_style_access=true" />-->
+  <!-- 1gig -->
+  <storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://rhs-cli-07:8080;path_style_access=true" />
 
   <workflow>
 
     <workstage name="init">
-      <work type="init" workers="1" config="cprefix=s3cosbench;containers=r(3,3)" />
+      <work type="init" workers="1" config="cprefix=s3cosbench;containers=r(30,30)" />
     </workstage>
 
     <workstage name="prepare">
-      <work type="prepare" workers="30" config="cprefix=s3cosbench;content=zero;containers=r(3,3);objects=r(1000000,9000000);sizes=c(32)KB" />
+      <work type="prepare" workers="30" config="cprefix=s3cosbench;content=zero;containers=r(30,30);objects=r(1000000,9000000);sizes=c(32)KB" />
       <!--<work type="prepare" workers="90" config="cprefix=s3cosbench;containers=r(1,1);objects=r(1000001,9000000);sizes=c(2)KB" />-->
     </workstage>
 
