@@ -7,7 +7,9 @@ if [ ! -n "${RGWHOST}" ]; then
    RGWHOST=b08-h31-1029p  ## bagl
 fi
 # perform gc betwwen loops if ceph df disk usage above percent
-GCPCT=25
+if [ ! -n "${GCPCT}" ]; then
+  GCPCT=25
+fi
 
 
 function ceph_cleanup() {
@@ -44,7 +46,7 @@ function wait_for_cosbench_idle() {
 # MAIN #
 ########
 if [ -z "$1" ] && [ -z "$2" ] && [ -z "$3" ]; then
-    echo "missing  paramis: template filename, bktbegin, bktinc"
+    echo "missing  paramis: template filename, objbegin, objinc"
     exit 1
 fi
 TN=$1
