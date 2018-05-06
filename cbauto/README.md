@@ -12,22 +12,27 @@ Fwatures
 ### Pre-requisites: ###
 Testest with [COSBench version v0.4.2 release candidate 4](https://github.com/intel-cloud/cosbench/releases/tag/v0.4.2.c4)
 
+_COSBench:_
 COSBench must be started before cbauto is run (`start-all.sh`)
 
 cbauto looks for COSBbench installation at `../../cosbench` directory :\
 `#  ls -l ../../cosbench`\
 `lrwxrwxrwx. 1 root root 8 Feb 22 10:51 ../../cosbench -> 0.4.2.c4`
 
+_Rados f=gateway ssh access:_
+Radosgw host and ssh key need to be provided in order to free storage space automatically:\
 
-### Usage: ###
-Radosgw host and ssh key nned to be provided in order to free storage space.
-evironment vars:
-`RGWHOST` to the/a host that is running radosgw
+_Evironment vars:_\
+`RGWHOST` to the/a host that is running radosgw\
 example: `export RGWHOST=b08-h31-1029p`
 
-ssh key:\
+_ssh key:_\
  perform ssh-cppy-id to the RGWHOST or\
  copy `id_rsa` ssh key file from other machine like jumphost which has done ssh-copy-id to the RGWHOST to the `./key` directory
+
+
+### Usage: ###
+
 
 comamnd line parameters
 
