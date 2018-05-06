@@ -49,16 +49,36 @@ For example in `swift-workload_multi_test-small_obj__template.xml`
 `<auth caching="true" type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://b08-h31-1029p:8080/auth/v1.0" />
 ```
 
+## Usage Example: ##
+
 _Comamnd line parameters:_
 
-cbauto requires 3 command line parameters: \
+cbauto requires 3 command line parameters: 
 * cosbench workload templeta filename\
-* bucket iterator begin\
-* bucket iterator increment\
+* object iterator begin\
+* object iterator increment\
+
+_For example:_
+`export RGWHOST=b08-h31-1029p`\
+`./cbauto-gc.sh swift-workload_multi_test-small_obj__template.xml 1000000 10000`\
+
+In the teplate file named `swift-workload_multi_test-small_obj__template.xml`\
+every instance of `#ITBEGIN01#` and `#ITEND01#` like in the snippet below
+``` xml
+<workstage name="prepare">
+    <work type="prepare" workers="90" config="containers=r(1,20);objects=r(#ITBEGIN01#,#ITEND01#);sizes=c(8)KB" />
+</workstage>
+```
+will be replaced on the 1st utteration with:\
+```xml
+<work type="prepare" workers="90" config="containers=r(1,20);objects=r(1000000,1009999);sizes=c(8)KB" />
+```
+and on the next iteration with:\
+```xml
+<work type="prepare" workers="90" config="containers=r(1,20);objects=r(1010000,1019999);sizes=c(8)KB" />
+```
+etc, etc going forward until <ctrl>-c used to break out of the script.
 
 
-
-
-### Examples: ####
 
 
