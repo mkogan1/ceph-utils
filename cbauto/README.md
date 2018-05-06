@@ -6,7 +6,7 @@ The cbauto utility automates submitting workloads to [COSBench](https://github.c
 in an infinite loop with the intention of stress testing Ceph storage performance/memory usage.
 
 Fwatures
-* Monitor the storage `%RAW USED` and perform a gc & purge to free space.
+* Monitor the storage `ceph df` `%RAW USED` between iterations and free space if necesary.
 
 
 ### Pre-requisites: ###
@@ -20,14 +20,21 @@ cbauto looks for COSBbench installation at `../../cosbench` directory :\
 
 
 ### Usage: ###
-Radosgw host and ssh key nned to be provided 
+Radosgw host and ssh key nned to be provided in order to free storage space.
 evironment vars:
 `RGWHOST` to the/a host that is running radosgw
 example: `export RGWHOST=b08-h31-1029p`
 
-ssh key:
-create a link `id_rsa` ssh key which was ssh-copy-id to the RGWHOST
+ssh key:\
+ perform ssh-cppy-id to the RGWHOST or\
+ copy `id_rsa` ssh key file from other machine like jumphost which has done ssh-copy-id to the RGWHOST to the `./key` directory
 
 comamnd line parameters
+
+
+Additional environment vars:
+export GCPCT to configure the percentage of `%RAW USED` above which to trigger freeing of space.\
+Example: `export GCPCT=25`
+
 
 ### Examples: ####
