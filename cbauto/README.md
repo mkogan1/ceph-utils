@@ -33,21 +33,32 @@ example: `export RGWHOST=b08-h31-1029p`
 _Ceph user:_\
 Create S3 and/or Swift user to be used by the workload.
 
-### Usage: ###
 
-_Template files:_\
-The cbauto repo contains several workload sample files.\
-In the workload sample file edit the `auth` line and configure the user, password and the radosgw host,\
-For example:\
-`vim swift-workload_multi_test-small_obj__template.xml`\
-`<auth caching="true" type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://b08-h31-1029p:8080/auth/v1.0" />`
-
-_Comamnd line parameters:_\
-
-
-_Additional environment vars:_\
+_Additional environment vars:_
 export GCPCT to configure the percentage of `%RAW USED` above which to trigger freeing of space.\
 Example: `export GCPCT=25`
 
 
+### Usage: ###
+
+_COSBench workload template files:_\
+The cbauto repo contains several workload sample files.\
+In the workload sample file edit the `auth` line and configure the user, password and the radosgw host,\
+For example in `swift-workload_multi_test-small_obj__template.xml`
+```xml
+`<auth caching="true" type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://b08-h31-1029p:8080/auth/v1.0" />
+```
+
+_Comamnd line parameters:_
+
+cbauto requires 3 command line parameters: \
+* cosbench workload templeta filename\
+* bucket iterator begin\
+* bucket iterator increment\
+
+
+
+
 ### Examples: ####
+
+
