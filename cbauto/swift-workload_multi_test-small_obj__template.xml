@@ -13,7 +13,7 @@
   <!-- linode -->
   <!--<auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://50.116.58.103:8080/auth/v1.0" />-->
   <!-- bagl -->
-  <auth caching="true" type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://172.16.76.112:8080/auth/v1.0" />
+  <auth caching="true" type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://172.16.0.5:8080/auth/v1.0" />
 
   <!-- Keystone Authentication
   <auth type="keystone" config="username=tester;password=testing;tenant_name=test;auth_url=http://127.0.0.1:5000/v2.0;service=swift service;region=regionOne" />
