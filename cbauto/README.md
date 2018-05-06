@@ -77,12 +77,14 @@ and on the next iteration with:
 ```xml
 <work type="prepare" workers="90" config="containers=r(1,20);objects=r(1010000,1019999);sizes=c(8)KB" />
 ```
-etc, etc going forward until `<ctrl>-c` is pressed to break out of the script.\
+etc, etc going forward until `<ctrl>-c` is pressed to break out of the script.
 
-The itterators can be utilized to create verious workloads, like\
+The itterators can be utilized to create verious workloads, like -
 * Large number of objects in one bucket
 * Large number of bucket
 * Various mixed combinations of objects and buckets
+
+See sample workloads for some examples.
 
 
 ### Refrences ###
