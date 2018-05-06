@@ -77,7 +77,7 @@ and on the next iteration with:
 ```xml
 <work type="prepare" workers="90" config="containers=r(1,20);objects=r(1010000,1019999);sizes=c(8)KB" />
 ```
-etc, etc going forward until <ctrl>-c used to break out of the script.
+etc, etc going forward until `<ctrl>-c` is pressed to break out of the script.
 
 
 
