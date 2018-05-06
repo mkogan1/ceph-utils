@@ -20,13 +20,13 @@ cbauto looks for COSBbench installation at `../../cosbench` directory :\
 `lrwxrwxrwx. 1 root root 8 Feb 22 10:51 ../../cosbench -> 0.4.2.c4`
 
 _Rados gateway ssh access:_\
-Radosgw host and ssh key need to be provided in order to free storage space automatically:\
+Radosgw host and ssh key need to be provided in order to free storage space automatically:
 
-_Evironment vars:_\
+  + _Evironment vars:_\
 `RGWHOST` to the/a host that is running radosgw\
 example: `export RGWHOST=b08-h31-1029p`
 
-_ssh key:_\
+ + _ssh key:_\
  perform ssh-cppy-id to the RGWHOST or\
  copy `id_rsa` ssh key file from other machine like jumphost which has done ssh-copy-id to the RGWHOST to the `./key` directory
 
