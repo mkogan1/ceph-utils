@@ -63,17 +63,17 @@ _For example:_
 `./cbauto-gc.sh swift-workload_multi_test-small_obj__template.xml 1000000 10000`\
 
 In the teplate file named `swift-workload_multi_test-small_obj__template.xml`\
-every instance of `#ITBEGIN01#` and `#ITEND01#` like in the snippet below
+every instance of `#ITBEGIN01#` and `#ITEND01#` like in the snippet below:
 ``` xml
 <workstage name="prepare">
     <work type="prepare" workers="90" config="containers=r(1,20);objects=r(#ITBEGIN01#,#ITEND01#);sizes=c(8)KB" />
 </workstage>
 ```
-will be replaced on the 1st utteration with:\
+will be replaced on the 1st itteration with:
 ```xml
 <work type="prepare" workers="90" config="containers=r(1,20);objects=r(1000000,1009999);sizes=c(8)KB" />
 ```
-and on the next iteration with:\
+and on the next iteration with:
 ```xml
 <work type="prepare" workers="90" config="containers=r(1,20);objects=r(1010000,1019999);sizes=c(8)KB" />
 ```
