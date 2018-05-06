@@ -19,7 +19,7 @@ cbauto looks for COSBbench installation at `../../cosbench` directory :\
 `#  ls -l ../../cosbench`\
 `lrwxrwxrwx. 1 root root 8 Feb 22 10:51 ../../cosbench -> 0.4.2.c4`
 
-_Rados f=gateway ssh access:_
+_Rados gateway ssh access:_\
 Radosgw host and ssh key need to be provided in order to free storage space automatically:\
 
 _Evironment vars:_\
