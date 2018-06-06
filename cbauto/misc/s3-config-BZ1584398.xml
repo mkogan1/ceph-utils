@@ -10,7 +10,8 @@
     </workstage>
 
     <workstage name="prepare">
-      <work type="prepare" workers="20" interval="5" rampup="5" config="content=zero;cprefix=s3cosbench;containers=r(1,1);objects=r(1,55426452);sizes=c(1)B" />
+      <!--<work type="prepare" workers="20" interval="5" rampup="5" config="content=zero;cprefix=s3cosbench;containers=r(1,1);objects=r(1,55426452);sizes=c(1)B" />-->
+      <work type="prepare" workers="20" interval="5" rampup="5" config="content=zero;cprefix=s3cosbench;containers=r(1,1);objects=r(1,4000000);sizes=c(1)B" />
     </workstage>
 
     <!--
