@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<workload name="s3-config-T23379-c1.xml" description="sample benchmark for s3">
+<workload name="s3-config-T23379.xml" description="sample benchmark for s3">
 
-	<storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://172.16.0.5:8080;path_style_access=true" />
+	<storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://172.16.0.7:8080;path_style_access=true" />
 
   <workflow>
 
     <workstage name="init">
-      <work type="init" workers="1" config="cprefix=s3cosbench;containers=r(4,4)" />
+      <work type="init" workers="1" config="cprefix=s3cosbench;containers=r(1,1)" />
     </workstage>
 
     <workstage name="prepare">
-      <work type="prepare" workers="30" config="cprefix=s3cosbench;content=zero;containers=r(4,4);objects=r(1000000,9000000);sizes=c(32)KB" />
-      <!--<work type="prepare" workers="90" config="cprefix=s3cosbench;containers=r(1,1);objects=r(1000001,9000000);sizes=c(2)KB" />-->
+      <!--<work type="prepare" workers="30" config="cprefix=s3cosbench;content=zero;rampup=15;containers=r(1,1);objects=r(1,100000000);sizes=c(32)KB" />-->
+      <!--<work type="prepare" workers="30" config="cprefix=s3cosbench;content=zero;rampup=15;containers=r(1,1);objects=r(1,100000000);sizes=h(16|32|100)KB" />-->
+      <!--<work type="prepare" workers="90" config="cprefix=s3cosbench;content=zero;rampup=30;containers=r(1,1);objects=r(1,100000000);sizes=c(32)KB" />-->
+      <!--<work type="prepare" workers="18" interval="1" rampup="5" config="content=zero;cprefix=s3cosbench;containers=r(1,1);objects=r(1,100000000);sizes=c(1)KB" />-->
+      <work type="prepare" workers="20" interval="5" rampup="5" config="content=zero;cprefix=s3cosbench;containers=r(1,1);objects=r(1,100000000);sizes=c(1)KB" />
     </workstage>
 
     <!--
