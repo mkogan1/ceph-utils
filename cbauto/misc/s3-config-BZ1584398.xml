@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <workload name="s3-config-BZ1584398.xml" description="sample benchmark for s3">
 
-	<storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://172.16.0.7:8080;path_style_access=true" />
+  <!-- SASL -->
+	<!-- <storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://172.16.0.7:8080;path_style_access=true" /> -->
+  <!-- silvertip -->
+  <storage type="s3" config="accesskey=0555b35654ad1656d804;secretkey=h7GhxuBLTrlhVUyxSPUKUV8r/2EI4ngqJxD7iBdBYLhwluN30JaT3Q==;endpoint=http://192.168.39.252:8080;path_style_access=true" />
 
   <workflow>
 
@@ -10,8 +13,8 @@
     </workstage>
 
     <workstage name="prepare">
-      <!--<work type="prepare" workers="20" interval="5" rampup="5" config="content=zero;cprefix=s3cosbench;containers=r(1,1);objects=r(1,55426452);sizes=c(1)B" />-->
-      <work type="prepare" workers="20" interval="5" rampup="5" config="content=zero;cprefix=s3cosbench;containers=r(1,1);objects=r(1,55000000);sizes=c(1)B" />
+      <work type="prepare" workers="4" interval="5" rampup="5" config="content=zero;cprefix=s3cosbench;containers=r(1,1);objects=r(1,55426452);sizes=c(1)B" />
+      <!-- <work type="prepare" workers="20" interval="5" rampup="5" config="content=zero;cprefix=s3cosbench;containers=r(1,1);objects=r(1,55000000);sizes=c(1)B" /> -->
       <!--<work type="prepare" workers="20" interval="5" rampup="5" config="content=zero;cprefix=s3cosbench;containers=r(1,1);objects=r(1,4000000);sizes=c(1)B" />-->
     </workstage>
 
