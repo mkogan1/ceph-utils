@@ -11,7 +11,7 @@
     </workstage>
 
     <workstage name="prepare">
-      <work type="prepare" workers="10" config="cprefix=s3testqwer01;containers=r(1,1);objects=r(1,50000);sizes=c(4)MB" />
+      <work type="prepare" workers="10" config="content=zero;cprefix=s3testqwer01;containers=r(1,1);objects=r(1,50000);sizes=c(4)MB" />
     </workstage>
 <!--
     <workstage name="main">
