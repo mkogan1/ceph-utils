@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<workload name="s3-config-50Kobj_4M-T18260.xml" description="sample benchmark for s3">
+
+  <!--<storage type="s3" config="accesskey=S7BFFK4WKDABVJPB46ZJ;secretkey=bFXnsfz7uOcfBEqzbYMQaFQq9BAPuCQCTiYyoWA6;endpoint=http://45.33.68.29:8080;path_style_access=true" />-->
+  <storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://192.168.39.252:8001;path_style_access=true" />
+
+  <workflow>
+
+    <workstage name="init">
+      <work type="init" workers="1" config="cprefix=s3testqwer01;containers=r(1,1)" />
+    </workstage>
+
+    <workstage name="prepare">
+      <work type="prepare" workers="10" config="cprefix=s3testqwer01;containers=r(1,1);objects=r(1,50000);sizes=c(4)MB" />
+    </workstage>
+<!--
+    <workstage name="main">
+      <work name="main" workers="8" runtime="600">
+              <operation type="read" ratio="100" config="cprefix=s3testqwer02;containers=u(1,2);objects=u(1,50000)" />
+      </work>
+    </workstage>
+
+    <workstage name="cleanup">
+      <work type="cleanup" workers="1" config="cprefix=s3testqwer02;containers=r(1,2);objects=r(1,50000)" />
+    </workstage>
+
+    <workstage name="dispose">
+      <work type="dispose" workers="1" config="cprefix=s3testqwer02;containers=r(1,2)" />
+    </workstage>
+-->
+  </workflow>
+
+</workload>
