@@ -13,7 +13,8 @@
     </workstage>
 
     <workstage name="prepare">
-      <work type="prepare" workers="4" interval="5" rampup="5" config="content=zero;cprefix=s3cosbench;containers=r(1,1);objects=r(1,2000);sizes=h(1|1|50,64|64|15,8192|8192|15,65536|65536|15,1048576|1048576|5)KB" />
+      <!-- <work type="prepare" workers="16" interval="5" rampup="5" config="content=zero;cprefix=s3cosbench;containers=r(1,9000);objects=r(1,2000);sizes=h(1|1|50,64|64|15,8192|8192|15,65536|65536|15,1048576|1048576|5)KB" /> -->
+      <work type="prepare" workers="16" interval="5" rampup="5" config="content=zero;cprefix=s3cosbench;containers=r(1,9000);objects=r(1,2000);sizes=c(4)KB" />
     </workstage>
 
     <!--
