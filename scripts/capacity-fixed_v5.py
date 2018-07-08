@@ -20,6 +20,9 @@ sum_of_all_kb = 0 # capacity usage by all users
 sum_of_limited_users = 0 # number of users with quota
 sum_of_all_users = 0 # number of all users
 
+#debug_tbs = 2147483647
+#debug_tbs = 536870912000
+
 '''
 This method add escape character(\) to the user name for users contains $ and \
 '''
@@ -54,8 +57,8 @@ def check_user(user_id):
     if res_user_check > 0:
         print("User info error detected, please report with the output of:\nradosgw-admin user check --uid=\"" + str(user_id) + "\"")
         #exit(1)
-    if not user_id.isalnum():
-        print("User info error detected, uid is not alphanumeric - uid=\"" + str(user_id) + "\"")
+    #if not user_id.isalnum():
+        #print("User info error detected, uid is not alphanumeric - uid=\"" + str(user_id) + "\"")
         #exit(1)
 
 
@@ -91,17 +94,20 @@ for quota in quotas:
         sum_of_limited_kb += (int(used_size['stats']['total_bytes_rounded']) / 1024)  # used size in kb
         sum_of_limited_kb_notrounded += (int(used_size['stats']['total_bytes']) / 1024)  # used size in kb
         sum_of_limited_kb_bkts += int("0" + run_cmd_output_not_json("sum=`radosgw-admin bucket stats | jq '.[] | select(.owner==\"" + str(user_id) + "\") | .usage[\"rgw.main\"].size_kb' | egrep -v null | tr '\n' '+' | sed -e 's/+$//g'`; echo \"$sum\" | bc"))
+        #sum_of_limited_kb_bkts += int(debug_tbs)
         # print("#DEBUG# sum_of_limited_kb=", sum_of_limited_kb, "user_id=", user_id)
+        # print("#DEBUG# sum_of_limited_kb_bkts=", sum_of_limited_kb_bkts, "user_id=", user_id)
 
 sum_of_all_kb = sum_of_limited_kb + sum_of_not_limited_kb
 sum_of_all_kb_notrounded = sum_of_limited_kb_notrounded + sum_of_not_limited_kb_notrounded
 sum_of_all_kb_bkts = sum_of_limited_kb_bkts + sum_of_not_limited_kb_bkts
 
-print '\n'
-print("#DEBUG# sum_of_all_kb_bkts=", sum_of_all_kb_bkts)
+print('\n')
 #print("#DEBUG# sum_of_all_kb=", sum_of_all_kb, " sum_of_all_kb_notrounded=", sum_of_all_kb_notrounded, " sum of all (rounded - not rounded)KB =", sum_of_all_kb-sum_of_all_kb_notrounded)
-print '\n'
+#print("#DEBUG# sum_of_all_kb_bkts=", sum_of_all_kb_bkts)
+print('\n')
 
 sum_of_limited_users = sum_of_all_users - sum_of_unlimited_users
-print (json.dumps({'sum_of_unlimited_users':int(sum_of_unlimited_users),'sum_in_kb_of_quotas':int(sum_in_kb_of_quotas),'sum_of_not_limited_kb':int(sum_of_not_limited_kb),'sum_of_limited_kb':int(sum_of_limited_kb),'sum_of_all_kb':int(sum_of_all_kb),'sum_of_limited_users':int(sum_of_limited_users),'sum_of_all_users':int(sum_of_all_users)}))
+#print (json.dumps({'sum_of_unlimited_users':int(sum_of_unlimited_users),'sum_in_kb_of_quotas':int(sum_in_kb_of_quotas),'sum_of_not_limited_kb':int(sum_of_not_limited_kb),'sum_of_limited_kb':int(sum_of_limited_kb),'sum_of_all_kb':int(sum_of_all_kb),'sum_of_limited_users':int(sum_of_limited_users),'sum_of_all_users':int(sum_of_all_users)}))
+print (json.dumps({'sum_of_unlimited_users':int(sum_of_unlimited_users),'sum_in_kb_of_quotas':int(sum_in_kb_of_quotas),'sum_of_not_limited_kb':int(sum_of_not_limited_kb_bkts),'sum_of_limited_kb':int(sum_of_limited_kb_bkts),'sum_of_all_kb':int(sum_of_all_kb_bkts),'sum_of_limited_users':int(sum_of_limited_users),'sum_of_all_users':int(sum_of_all_users)}))
 
