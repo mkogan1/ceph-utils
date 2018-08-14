@@ -10,7 +10,8 @@ echo "----------------------------------------------"
 read -p "Press [enter] to continue"
 
 
-MON=3 OSD=1 MDS=0 MGR=1 RGW=1 ../src/mstart.sh c2 -d -n --bluestore -o bluestore_block_size=536870912000 -o rgw_dynamic_resharding=false -o rgw_cache_expiry_interval=0 | ccze -A -onolookups
+MON=3 OSD=1 MDS=0 MGR=1 RGW=1 ../src/mstart.sh c2 -n --bluestore -o bluestore_block_size=536870912000 -o rgw_dynamic_resharding=false -o rgw_cache_expiry_interval=0 | ccze -A -onolookups
+#MON=3 OSD=1 MDS=0 MGR=1 RGW=1 ../src/mstart.sh c2 -d -n --bluestore -o bluestore_block_size=536870912000 -o rgw_dynamic_resharding=false -o rgw_cache_expiry_interval=0 | ccze -A -onolookups
 ##-- ALT [1] --##
 #MON=3 OSD=1 MDS=0 MGR=1 RGW=1 ../src/mstart.sh c2 -d -n --bluestore -o bluestore_block_size=536870912000 -o rgw_dynamic_resharding=false -o rgw_cache_enabled=false -o rgw_cache_expiry_interval=0 | ccze -A -onolookups
 ##-- ALT [2] (filestore) --##
