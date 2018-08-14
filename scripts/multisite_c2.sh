@@ -34,6 +34,7 @@ echo "----------------------------------------------"
 #../src/mrgw.sh c2 8002 --debug-rgw=20 --debug-ms=1 --rgw-zone=us-west
 ../src/mrgw.sh c2 8002 --debug-rgw=20 --debug-ms=0 --debug_rgw_sync=20 --rgw-zone=us-west
 
+../src/mrun c2 ceph tell "osd.*" injectargs --debug-objclass 20
 
 echo "----------------------------------------------"
 ps -ef | grep --color "[r]adosgw" 
