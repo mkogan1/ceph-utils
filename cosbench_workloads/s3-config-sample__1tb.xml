@@ -6,28 +6,29 @@
   <workflow>
 
     <workstage name="init">
-      <work type="init" workers="1" config="cprefix=s3testqwer;containers=r(1,2)" />
+      <work type="init" workers="1" config="cprefix=cosbenchtbs;containers=r(1,2)" />
     </workstage>
 
     <workstage name="prepare">
-      <!-- <work type="prepare" workers="1" config="content=zero;cprefix=s3testqwer;containers=r(1,2);objects=r(1,10);sizes=c(1)MB" /> -->
-      <!-- <work type="prepare" workers="10" config="content=zero;cprefix=s3testqwer;containers=r(1,1);objects=r(1,10000000);sizes=c(1)KB" /> -->
-      <work type="prepare" workers="2" config="content=zero;cprefix=s3testqwer;containers=r(1,1);objects=r(10000001,55000000);sizes=c(4)KB" />
+      <!-- 1 GB -->
+      <!-- <work type="prepare" workers="3" config="content=zero;cprefix=cosbenchtbs;containers=r(1,1);objects=r(1,2000);sizes=c(512)KB" /> -->
+      <!-- 1 TB -->
+      <work type="prepare" workers="16" config="content=zero;cprefix=cosbenchtbs;containers=r(2,2);objects=r(1,2000000);sizes=c(512)KB" />
     </workstage>
     <!--
     <workstage name="main">
       <work name="main" workers="10" runtime="300">
-        <operation type="read" ratio="80" config="cprefix=s3testqwer;containers=u(1,2);objects=u(1,10)" />
-        <operation type="write" ratio="20" config="content=zero;cprefix=s3testqwer;containers=u(1,2);objects=u(11,20);sizes=c(64)KB" />
+        <operation type="read" ratio="80" config="cprefix=cosbenchtbs;containers=u(1,2);objects=u(1,10)" />
+        <operation type="write" ratio="20" config="content=zero;cprefix=cosbenchtbs;containers=u(1,2);objects=u(11,20);sizes=c(64)KB" />
       </work>
     </workstage>
     
     <workstage name="cleanup">
-      <work type="cleanup" workers="1" config="cprefix=s3testqwer;containers=r(1,2);objects=r(1,20)" />
+      <work type="cleanup" workers="1" config="cprefix=cosbenchtbs;containers=r(1,2);objects=r(1,20)" />
     </workstage>
 
     <workstage name="dispose">
-      <work type="dispose" workers="1" config="cprefix=s3testqwer;containers=r(1,2)" />
+      <work type="dispose" workers="1" config="cprefix=cosbenchtbs;containers=r(1,2)" />
     </workstage>
     -->
   </workflow>

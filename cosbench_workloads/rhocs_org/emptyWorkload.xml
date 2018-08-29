@@ -2,7 +2,8 @@
 <workload name="emptyCluster" description="empty RGW registry testing">
 
 <!-- Authentication and Endpoint -->
-  <storage type="s3" config="accesskey=W5G37JBGLMBJZNDA6PAC; secretkey=NKcszcQZkEPYOFOFoAQUr3OGXYA3dHYNzVFRDwl8; endpoint=http://ip-172-16-26-142.us-east-2.compute.internal:32067; path_style_access=true" retry="3"/>
+  <!-- <storage type="s3" config="accesskey=W5G37JBGLMBJZNDA6PAC; secretkey=NKcszcQZkEPYOFOFoAQUr3OGXYA3dHYNzVFRDwl8; endpoint=http://ip-172-16-26-142.us-east-2.compute.internal:32067; path_style_access=true" retry="3"/> -->
+	<storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://andromeda05.sales.lab.tlv.redhat.com:8080;path_style_access=true" />
 
   <workflow>
 
