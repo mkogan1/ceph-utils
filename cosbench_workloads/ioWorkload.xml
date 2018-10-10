@@ -11,7 +11,8 @@
 <!-- Use operation mix & object sizes as defined in vars.shinc	 -->
 
     <workstage name="MAIN">
-        <work name="hybrid" workers="115" runtime="86400" >
+        <!--<work name="hybrid" workers="115" runtime="86400" >-->
+        <work name="hybrid" workers="90" runtime="86400" >
 	    <operation name="readOP" type="read" ratio="60" config="containers=u(1,5);objects=u(1,400000)" />
             <operation name="listOP" type="list" ratio="10" config="containers=u(1,5);objects=u(1,400000)" />
             <operation name="writeOP" type="write" ratio="16" config="content=zero; containers=u(1,5);objects=u(400001,4000000);sizes=h(1|1|50,64|64|15,8192|8192|15,65536|65536|15,1048576|1048576|5)KB" />
