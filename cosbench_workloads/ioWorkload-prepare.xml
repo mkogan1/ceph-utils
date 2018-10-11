@@ -10,8 +10,12 @@
 
 <!-- PREPARE the objects for the Use operation mix & object sizes as defined in vars.shinc	 -->
 
+    <workstage name="init">
+      <work type="init" workers="90" config="containers=r(1,5)" />
+    </workstage>
+
     <workstage name="prepare">
-      <work type="prepare" workers="90" config="containers=u(1,5);objects=u(1,4000000);sizes=c(4)KB" />
+      <work type="prepare" workers="90" config="containers=r(1,5);objects=r(1,4000000);sizes=c(4)KB" />
     </workstage>
 
   </workflow>
