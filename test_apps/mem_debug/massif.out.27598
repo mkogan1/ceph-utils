@@ -1,0 +1,3020 @@
+desc: (none)
+cmd: ./curl2
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=44770115
+mem_heap_B=893582
+mem_heap_extra_B=215330
+mem_stacks_B=0
+heap_tree=peak
+n14: 893582 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n7: 317320 0x60DFDF7: CRYPTO_zalloc (in /usr/lib64/libcrypto.so.1.1.0g)
+  n2: 95840 0x6011895: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 90320 0x600F35F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 45264 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 45264 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 45264 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 45264 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 45264 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 45264 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 45264 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+           n1: 45264 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+            n1: 45264 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+             n1: 45264 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 45264 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 45264 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 45264 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 45264 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 45264 0x400BA6: doit (curl2.c:40)
+                   n1: 45264 0x400C55: process (curl2.c:60)
+                    n0: 45264 0x400C97: main (curl2.c:70)
+    n2: 45056 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 24816 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 24816 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 24816 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 24816 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 24816 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 24816 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 24816 0x614DD8A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 24816 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 24816 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 24816 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 24816 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 24816 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 24816 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 24816 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 24816 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 24816 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 24816 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 24816 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n1: 24816 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 24816 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 24816 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                          n1: 24816 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                           n1: 24816 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                            n1: 24816 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 24816 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 24816 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+     n1: 20240 0x600FDA4: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 20240 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 20240 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 20240 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 20240 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 20240 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 20240 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 20240 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 20240 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 20240 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 20240 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 20240 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 20240 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 20240 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 20240 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 20240 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 20240 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 20240 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 20240 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 20240 0x400BA6: doit (curl2.c:40)
+                         n1: 20240 0x400C55: process (curl2.c:60)
+                          n0: 20240 0x400C97: main (curl2.c:70)
+   n0: 5520 in 2 places, all below massif's threshold (1.00%)
+  n0: 66728 in 37 places, all below massif's threshold (1.00%)
+  n3: 55312 0x602DD6B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 43968 0x602E2BE: BN_bin2bn (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 43968 0x601355D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 43968 0x600E73F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 43968 0x600F5C8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 43968 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 43968 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 43968 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 43968 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 43968 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 43968 0x6107E9D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 43968 0x614E188: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 43968 0x614E283: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 43968 0x600F57F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 43968 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 43968 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 43968 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 43968 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 43968 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 43968 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 43968 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n1: 43968 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 43968 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 43968 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                          n1: 43968 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                           n1: 43968 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                            n1: 43968 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 43968 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 43968 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+    n0: 0 in 8 places, all below massif's threshold (1.00%)
+   n1: 11344 0x602DFD2: BN_copy (in /usr/lib64/libcrypto.so.1.1.0g)
+    n0: 11344 in 18 places, all below massif's threshold (1.00%)
+   n0: 0 in 10 places, all below massif's threshold (1.00%)
+  n2: 38040 0x600712B: ASN1_STRING_type_new (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 34752 0x60115A8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 34752 0x601183B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 34752 0x6011796: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n2: 34752 0x601190D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 24816 0x600F35F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 24816 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 24816 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 24816 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 24816 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 24816 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 24816 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 24816 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 24816 0x614DD8A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 24816 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 24816 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 24816 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 24816 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 24816 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 24816 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 24816 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n1: 24816 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 24816 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 24816 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                          n1: 24816 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                           n1: 24816 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                            n1: 24816 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                             n1: 24816 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 24816 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+       n0: 9936 in 2 places, all below massif's threshold (1.00%)
+   n0: 3288 in 1 place, below massif's threshold (1.00%)
+  n1: 24360 0x61346A5: CRYPTO_THREAD_lock_new (in /usr/lib64/libcrypto.so.1.1.0g)
+   n0: 24360 in 21 places, all below massif's threshold (1.00%)
+  n1: 20160 0x610AA2D: RSA_new_method (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 20160 0x61089EB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 20160 0x601186B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 20160 0x600F35F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 20160 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 20160 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 20160 0x6107E9D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 20160 0x614E188: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 20160 0x614E283: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 20160 0x600F57F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 20160 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 20160 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 20160 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 20160 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 20160 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 20160 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 20160 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 20160 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 20160 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 20160 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 20160 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n1: 20160 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 20160 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                         n1: 20160 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                          n1: 20160 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                           n1: 20160 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                            n1: 20160 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 20160 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 20160 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+  n1: 16880 0x6133F8D: OPENSSL_sk_new (in /usr/lib64/libcrypto.so.1.1.0g)
+   n0: 16880 in 15 places, all below massif's threshold (1.00%)
+ n1: 105465 0x601303E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 105465 0x600F85C: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 105465 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 105465 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 105465 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 105465 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 105465 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 105465 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 105465 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 105465 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 105465 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 105465 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+             n1: 105465 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 105465 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 105465 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 105465 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 105465 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 105465 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 105465 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 105465 0x400BA6: doit (curl2.c:40)
+                     n1: 105465 0x400C55: process (curl2.c:60)
+                      n0: 105465 0x400C97: main (curl2.c:70)
+ n1: 91157 0x5FFDD8C: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 91157 0x600EAF6: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 91157 0x600F5C8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 91157 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 91157 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n2: 91157 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 46362 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 46362 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 46362 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 46362 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 46362 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 46362 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 46362 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 46362 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 46362 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 46362 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 46362 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 46362 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 46362 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 46362 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 46362 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 46362 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 46362 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 46362 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                         n1: 46362 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                          n1: 46362 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                           n1: 46362 0x400BA6: doit (curl2.c:40)
+                            n1: 46362 0x400C55: process (curl2.c:60)
+                             n0: 46362 0x400C97: main (curl2.c:70)
+       n1: 44795 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 44795 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 44795 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 44795 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 44795 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 44795 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 44795 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 44795 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 44795 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 44795 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 44795 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 44795 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 44795 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 44795 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 44795 0x400BA6: doit (curl2.c:40)
+                      n1: 44795 0x400C55: process (curl2.c:60)
+                       n0: 44795 0x400C97: main (curl2.c:70)
+ n2: 70488 0x60DDD34: OPENSSL_LH_insert (in /usr/lib64/libcrypto.so.1.1.0g)
+  n2: 63168 0x60B760B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 58272 0x60B78EC: ERR_load_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+    n0: 58272 in 59 places, all below massif's threshold (1.00%)
+   n0: 4896 in 4 places, all below massif's threshold (1.00%)
+  n0: 7320 in 3 places, all below massif's threshold (1.00%)
+ n3: 62496 0x603F026: BUF_MEM_grow (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 40648 0x614DE34: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 40648 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 40648 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 40648 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 40648 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 40648 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 40648 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 40648 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 40648 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 40648 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 40648 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 40648 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 40648 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 40648 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 40648 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 40648 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 40648 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 40648 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 40648 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 40648 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 40648 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 40648 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 40648 0x400BA6: doit (curl2.c:40)
+                         n1: 40648 0x400C55: process (curl2.c:60)
+                          n0: 40648 0x400C97: main (curl2.c:70)
+  n1: 21848 0x5D4B9F1: ??? (in /usr/lib64/libssl.so.1.1.0g)
+   n1: 21848 0x5D4396F: SSL_do_handshake (in /usr/lib64/libssl.so.1.1.0g)
+    n1: 21848 0x4E91F2A: ??? (in /usr/lib64/libcurl.so.4.4.0)
+     n1: 21848 0x4E93F2E: ??? (in /usr/lib64/libcurl.so.4.4.0)
+      n1: 21848 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+       n1: 21848 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+        n1: 21848 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+         n1: 21848 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+          n1: 21848 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+           n1: 21848 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+            n1: 21848 0x400BA6: doit (curl2.c:40)
+             n1: 21848 0x400C55: process (curl2.c:60)
+              n0: 21848 0x400C97: main (curl2.c:70)
+  n0: 0 in 6 places, all below massif's threshold (1.00%)
+ n1: 41856 0x4E53CBD: ??? (in /usr/lib64/libcurl.so.4.4.0)
+  n2: 41856 0x4E65472: curl_easy_init (in /usr/lib64/libcurl.so.4.4.0)
+   n1: 20928 0x400A91: doit (curl2.c:29)
+    n1: 20928 0x400C55: process (curl2.c:60)
+     n0: 20928 0x400C97: main (curl2.c:70)
+   n1: 20928 0x4E6C90F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+    n1: 20928 0x4E65795: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+     n1: 20928 0x400BA6: doit (curl2.c:40)
+      n1: 20928 0x400C55: process (curl2.c:60)
+       n0: 20928 0x400C97: main (curl2.c:70)
+ n0: 39134 in 76 places, all below massif's threshold (1.00%)
+ n2: 35544 0x6007018: ASN1_STRING_set (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 33760 0x600ED1D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 33760 0x600F5C8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 33760 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 33760 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n2: 33760 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n2: 29888 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 18964 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 18964 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 18964 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 18964 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 18964 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 18964 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 18964 0x614DD8A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 18964 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 18964 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 18964 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 18964 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 18964 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 18964 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 18964 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 18964 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n1: 18964 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 18964 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 18964 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                          n1: 18964 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                           n1: 18964 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                            n1: 18964 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 18964 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 18964 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+        n0: 10924 in 1 place, below massif's threshold (1.00%)
+       n0: 3872 in 1 place, below massif's threshold (1.00%)
+  n0: 1784 in 3 places, all below massif's threshold (1.00%)
+ n1: 32770 0x4E53CF8: ??? (in /usr/lib64/libcurl.so.4.4.0)
+  n2: 32770 0x4E65472: curl_easy_init (in /usr/lib64/libcurl.so.4.4.0)
+   n1: 16385 0x400A91: doit (curl2.c:29)
+    n1: 16385 0x400C55: process (curl2.c:60)
+     n0: 16385 0x400C97: main (curl2.c:70)
+   n1: 16385 0x4E6C90F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+    n1: 16385 0x4E65795: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+     n1: 16385 0x400BA6: doit (curl2.c:40)
+      n1: 16385 0x400C55: process (curl2.c:60)
+       n0: 16385 0x400C97: main (curl2.c:70)
+ n1: 29328 0x614DA68: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 29328 0x614DED8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 29328 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 29328 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 29328 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 29328 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 29328 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 29328 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 29328 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 29328 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 29328 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 29328 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 29328 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 29328 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 29328 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 29328 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 29328 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 29328 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 29328 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 29328 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 29328 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 29328 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 29328 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 29328 0x400BA6: doit (curl2.c:40)
+                         n1: 29328 0x400C55: process (curl2.c:60)
+                          n0: 29328 0x400C97: main (curl2.c:70)
+ n2: 18432 0x60DDCDA: OPENSSL_LH_insert (in /usr/lib64/libcrypto.so.1.1.0g)
+  n2: 16384 0x60B760B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 16384 0x60B78EC: ERR_load_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 16384 0x604803A: ERR_load_CMS_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 16384 0x60B88DC: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 16384 0x60DBFC7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 16384 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+        n1: 16384 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 16384 0x60DC309: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 16384 0x60B7EC4: ERR_get_state (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 16384 0x60B7FFB: ERR_clear_error (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 16384 0x60DBEB7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 16384 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+              n1: 16384 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 16384 0x60DC55C: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 16384 0x4E9437C: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 16384 0x4E651D3: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n0: 16384 0x400C8D: main (curl2.c:69)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 3 places, all below massif's threshold (1.00%)
+  n0: 2048 in 3 places, all below massif's threshold (1.00%)
+ n1: 16712 0x5D324BA: ??? (in /usr/lib64/libssl.so.1.1.0g)
+  n1: 16712 0x5D32637: ??? (in /usr/lib64/libssl.so.1.1.0g)
+   n1: 16712 0x5D4B437: ??? (in /usr/lib64/libssl.so.1.1.0g)
+    n1: 16712 0x5D4396F: SSL_do_handshake (in /usr/lib64/libssl.so.1.1.0g)
+     n1: 16712 0x4E91F2A: ??? (in /usr/lib64/libcurl.so.4.4.0)
+      n1: 16712 0x4E93F2E: ??? (in /usr/lib64/libcurl.so.4.4.0)
+       n1: 16712 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+        n1: 16712 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+         n1: 16712 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+          n1: 16712 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+           n1: 16712 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+            n1: 16712 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+             n1: 16712 0x400BA6: doit (curl2.c:40)
+              n1: 16712 0x400C55: process (curl2.c:60)
+               n0: 16712 0x400C97: main (curl2.c:70)
+ n1: 16560 0x5D325B0: ??? (in /usr/lib64/libssl.so.1.1.0g)
+  n1: 16560 0x5D3264D: ??? (in /usr/lib64/libssl.so.1.1.0g)
+   n1: 16560 0x5D4B437: ??? (in /usr/lib64/libssl.so.1.1.0g)
+    n1: 16560 0x5D4396F: SSL_do_handshake (in /usr/lib64/libssl.so.1.1.0g)
+     n1: 16560 0x4E91F2A: ??? (in /usr/lib64/libcurl.so.4.4.0)
+      n1: 16560 0x4E93F2E: ??? (in /usr/lib64/libcurl.so.4.4.0)
+       n1: 16560 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+        n1: 16560 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+         n1: 16560 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+          n1: 16560 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+           n1: 16560 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+            n1: 16560 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+             n1: 16560 0x400BA6: doit (curl2.c:40)
+              n1: 16560 0x400C55: process (curl2.c:60)
+               n0: 16560 0x400C97: main (curl2.c:70)
+ n1: 16320 0x6134097: OPENSSL_sk_insert (in /usr/lib64/libcrypto.so.1.1.0g)
+  n0: 16320 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=369352738
+mem_heap_B=834321
+mem_heap_extra_B=218511
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=596849282
+mem_heap_B=281433
+mem_heap_extra_B=74991
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=853253709
+mem_heap_B=345834
+mem_heap_extra_B=92054
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=1156292798
+mem_heap_B=641364
+mem_heap_extra_B=167580
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=1365317736
+mem_heap_B=455999
+mem_heap_extra_B=120817
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=1666371418
+mem_heap_B=710449
+mem_heap_extra_B=185167
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=1896600701
+mem_heap_B=192497
+mem_heap_extra_B=54383
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=2215613743
+mem_heap_B=833073
+mem_heap_extra_B=218095
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=2561678271
+mem_heap_B=483677
+mem_heap_extra_B=128267
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=2924153582
+mem_heap_B=489173
+mem_heap_extra_B=129747
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=3131333412
+mem_heap_B=266923
+mem_heap_extra_B=71749
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=3416191455
+mem_heap_B=533580
+mem_heap_extra_B=144588
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=3671236297
+mem_heap_B=198768
+mem_heap_extra_B=54440
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=3964286272
+mem_heap_B=266923
+mem_heap_extra_B=71749
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=4257236861
+mem_heap_B=340236
+mem_heap_extra_B=91172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=4592023422
+mem_heap_B=531269
+mem_heap_extra_B=140595
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=5010633691
+mem_heap_B=154148
+mem_heap_extra_B=56260
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=5261781300
+mem_heap_B=882739
+mem_heap_extra_B=222413
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=5512872496
+mem_heap_B=834881
+mem_heap_extra_B=218791
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=5784775054
+mem_heap_B=482159
+mem_heap_extra_B=127473
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=6077424200
+mem_heap_B=545243
+mem_heap_extra_B=143765
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=6296940642
+mem_heap_B=598513
+mem_heap_extra_B=157167
+mem_stacks_B=0
+heap_tree=detailed
+n12: 598513 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n7: 201488 0x60DFDF7: CRYPTO_zalloc (in /usr/lib64/libcrypto.so.1.1.0g)
+  n2: 60200 0x6011895: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 56720 0x600F35F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 28536 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+     n2: 28536 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 28536 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 28536 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 28536 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 28536 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 28536 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+           n1: 28536 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+            n1: 28536 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+             n1: 28536 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 28536 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 28536 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 28536 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 28536 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 28536 0x400BA6: doit (curl2.c:40)
+                   n1: 28536 0x400C55: process (curl2.c:60)
+                    n0: 28536 0x400C97: main (curl2.c:70)
+      n0: 0 in 2 places, all below massif's threshold (1.00%)
+    n2: 28184 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 15264 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 15264 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 15264 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 15264 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 15264 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 15264 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 15264 0x614DD8A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 15264 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 15264 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 15264 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 15264 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 15264 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 15264 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 15264 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 15264 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n2: 15264 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 15264 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 15264 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n1: 15264 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 15264 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 15264 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                          n1: 15264 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                           n1: 15264 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                            n1: 15264 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 15264 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 15264 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n0: 0 in 1 place, below massif's threshold (1.00%)
+     n1: 12920 0x600FDA4: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 12920 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 12920 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 12920 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 12920 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 12920 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n2: 12920 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 12920 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 12920 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 12920 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 12920 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 12920 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 12920 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 12920 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 12920 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 12920 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 12920 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 12920 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 12920 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 12920 0x400BA6: doit (curl2.c:40)
+                         n1: 12920 0x400C55: process (curl2.c:60)
+                          n0: 12920 0x400C97: main (curl2.c:70)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 3480 in 2 places, all below massif's threshold (1.00%)
+  n0: 43864 in 61 places, all below massif's threshold (1.00%)
+  n2: 35064 0x602DD6B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 27360 0x602E2BE: BN_bin2bn (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 27216 0x601355D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 27216 0x600E73F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 27216 0x600F5C8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 27216 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 27216 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 27216 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 27216 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 27216 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 27216 0x6107E9D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 27216 0x614E188: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 27216 0x614E283: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 27216 0x600F57F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 27216 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 27216 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 27216 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 27216 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 27216 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 27216 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 27216 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n2: 27216 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 27216 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 27216 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                          n1: 27216 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                           n1: 27216 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                            n1: 27216 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 27216 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 27216 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                        n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 144 in 10 places, all below massif's threshold (1.00%)
+   n0: 7704 in 12 places, all below massif's threshold (1.00%)
+  n2: 23616 0x600712B: ASN1_STRING_type_new (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 21528 0x60115A8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 21528 0x601183B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 21528 0x6011796: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n2: 21528 0x601190D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 15264 0x600F35F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 15264 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 15264 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 15264 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 15264 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 15264 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 15264 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 15264 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 15264 0x614DD8A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 15264 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 15264 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 15264 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 15264 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 15264 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 15264 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 15264 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n1: 15264 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n2: 15264 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 15264 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                          n1: 15264 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                           n1: 15264 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                            n1: 15264 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                             n1: 15264 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 15264 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                         n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 6264 in 2 places, all below massif's threshold (1.00%)
+   n0: 2088 in 4 places, all below massif's threshold (1.00%)
+  n1: 15512 0x61346A5: CRYPTO_THREAD_lock_new (in /usr/lib64/libcrypto.so.1.1.0g)
+   n0: 15512 in 21 places, all below massif's threshold (1.00%)
+  n1: 12432 0x610AA2D: RSA_new_method (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 12432 0x61089EB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 12432 0x601186B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 12432 0x600F35F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 12432 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 12432 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 12432 0x6107E9D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 12432 0x614E188: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 12432 0x614E283: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 12432 0x600F57F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 12432 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 12432 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 12432 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 12432 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 12432 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 12432 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 12432 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n2: 12432 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 12432 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 12432 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 12432 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n1: 12432 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 12432 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                         n1: 12432 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                          n1: 12432 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                           n1: 12432 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                            n1: 12432 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 12432 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 12432 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                    n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 10800 0x6133F8D: OPENSSL_sk_new (in /usr/lib64/libcrypto.so.1.1.0g)
+   n0: 10800 in 18 places, all below massif's threshold (1.00%)
+ n2: 70488 0x60DDD34: OPENSSL_LH_insert (in /usr/lib64/libcrypto.so.1.1.0g)
+  n2: 63168 0x60B760B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 58272 0x60B78EC: ERR_load_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+    n0: 58272 in 59 places, all below massif's threshold (1.00%)
+   n0: 4896 in 4 places, all below massif's threshold (1.00%)
+  n0: 7320 in 3 places, all below massif's threshold (1.00%)
+ n1: 65224 0x601303E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 65224 0x600F85C: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 65224 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 65224 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 65224 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 65224 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+       n2: 65224 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 65224 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 65224 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 65224 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 65224 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 65224 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+             n1: 65224 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 65224 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 65224 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 65224 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 65224 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 65224 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 65224 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 65224 0x400BA6: doit (curl2.c:40)
+                     n1: 65224 0x400C55: process (curl2.c:60)
+                      n0: 65224 0x400C97: main (curl2.c:70)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 56643 0x5FFDD8C: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 56643 0x600EAF6: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 56643 0x600F5C8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 56643 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 56643 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n2: 56643 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 28851 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 28851 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 28851 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 28851 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 28851 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 28851 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 28851 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+              n2: 28851 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 28851 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 28851 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 28851 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 28851 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 28851 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 28851 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 28851 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 28851 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 28851 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 28851 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                         n1: 28851 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                          n1: 28851 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                           n1: 28851 0x400BA6: doit (curl2.c:40)
+                            n1: 28851 0x400C55: process (curl2.c:60)
+                             n0: 28851 0x400C97: main (curl2.c:70)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+       n1: 27792 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+        n2: 27792 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 27792 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 27792 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 27792 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 27792 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 27792 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 27792 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 27792 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 27792 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 27792 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 27792 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 27792 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 27792 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 27792 0x400BA6: doit (curl2.c:40)
+                      n1: 27792 0x400C55: process (curl2.c:60)
+                       n0: 27792 0x400C97: main (curl2.c:70)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 41856 0x4E53CBD: ??? (in /usr/lib64/libcurl.so.4.4.0)
+  n2: 41856 0x4E65472: curl_easy_init (in /usr/lib64/libcurl.so.4.4.0)
+   n1: 20928 0x400A91: doit (curl2.c:29)
+    n1: 20928 0x400C55: process (curl2.c:60)
+     n0: 20928 0x400C97: main (curl2.c:70)
+   n1: 20928 0x4E6C90F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+    n1: 20928 0x4E65795: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+     n1: 20928 0x400BA6: doit (curl2.c:40)
+      n1: 20928 0x400C55: process (curl2.c:60)
+       n0: 20928 0x400C97: main (curl2.c:70)
+ n0: 34827 in 101 places, all below massif's threshold (1.00%)
+ n1: 32770 0x4E53CF8: ??? (in /usr/lib64/libcurl.so.4.4.0)
+  n2: 32770 0x4E65472: curl_easy_init (in /usr/lib64/libcurl.so.4.4.0)
+   n1: 16385 0x400A91: doit (curl2.c:29)
+    n1: 16385 0x400C55: process (curl2.c:60)
+     n0: 16385 0x400C97: main (curl2.c:70)
+   n1: 16385 0x4E6C90F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+    n1: 16385 0x4E65795: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+     n1: 16385 0x400BA6: doit (curl2.c:40)
+      n1: 16385 0x400C55: process (curl2.c:60)
+       n0: 16385 0x400C97: main (curl2.c:70)
+ n2: 26640 0x603F026: BUF_MEM_grow (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 24440 0x614DE34: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 24440 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 24440 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 24440 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 24440 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 24440 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 24440 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 24440 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 24440 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n2: 24440 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 24440 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 24440 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 24440 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 24440 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 24440 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 24440 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 24440 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 24440 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 24440 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 24440 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 24440 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 24440 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 24440 0x400BA6: doit (curl2.c:40)
+                         n1: 24440 0x400C55: process (curl2.c:60)
+                          n0: 24440 0x400C97: main (curl2.c:70)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 2200 in 7 places, all below massif's threshold (1.00%)
+ n2: 21977 0x6007018: ASN1_STRING_set (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 20811 0x600ED1D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 20811 0x600F5C8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 20811 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 20811 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n2: 20811 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n2: 18367 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 11224 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 11224 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 11224 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 11224 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 11224 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 11224 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 11224 0x614DD8A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 11224 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 11224 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 11224 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 11224 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 11224 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 11224 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 11224 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 11224 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n2: 11224 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 11224 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 11224 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                          n1: 11224 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                           n1: 11224 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                            n1: 11224 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 11224 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 11224 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                        n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 7143 in 1 place, below massif's threshold (1.00%)
+       n0: 2444 in 1 place, below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 1166 in 5 places, all below massif's threshold (1.00%)
+ n2: 18432 0x60DDCDA: OPENSSL_LH_insert (in /usr/lib64/libcrypto.so.1.1.0g)
+  n2: 16384 0x60B760B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 16384 0x60B78EC: ERR_load_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 16384 0x604803A: ERR_load_CMS_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 16384 0x60B88DC: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 16384 0x60DBFC7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 16384 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+        n1: 16384 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 16384 0x60DC309: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 16384 0x60B7EC4: ERR_get_state (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 16384 0x60B7FFB: ERR_clear_error (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 16384 0x60DBEB7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 16384 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+              n1: 16384 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 16384 0x60DC55C: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 16384 0x4E9437C: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 16384 0x4E651D3: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n0: 16384 0x400C8D: main (curl2.c:69)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 3 places, all below massif's threshold (1.00%)
+  n0: 2048 in 3 places, all below massif's threshold (1.00%)
+ n1: 17608 0x614DA68: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 17608 0x614DED8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 17608 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 17608 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 17608 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 17608 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 17608 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 17608 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 17608 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 17608 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n2: 17608 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 17608 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 17608 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 17608 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 17608 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 17608 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 17608 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 17608 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 17608 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 17608 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 17608 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 17608 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 17608 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 17608 0x400BA6: doit (curl2.c:40)
+                         n1: 17608 0x400C55: process (curl2.c:60)
+                          n0: 17608 0x400C97: main (curl2.c:70)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 10560 0x6134097: OPENSSL_sk_insert (in /usr/lib64/libcrypto.so.1.1.0g)
+  n0: 10560 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=24
+#-----------
+time=6662731059
+mem_heap_B=679656
+mem_heap_extra_B=178352
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=6955375050
+mem_heap_B=747533
+mem_heap_extra_B=193939
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=7394337554
+mem_heap_B=832945
+mem_heap_extra_B=218031
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=7687005149
+mem_heap_B=880270
+mem_heap_extra_B=221842
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=7906865025
+mem_heap_B=543121
+mem_heap_extra_B=147087
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=8199513038
+mem_heap_B=225041
+mem_heap_extra_B=60143
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=8345870230
+mem_heap_B=255968
+mem_heap_extra_B=69520
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=8711693849
+mem_heap_B=339901
+mem_heap_extra_B=90955
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=9004325730
+mem_heap_B=404791
+mem_heap_extra_B=107857
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=9296960620
+mem_heap_B=468345
+mem_heap_extra_B=124287
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=9506029978
+mem_heap_B=286357
+mem_heap_extra_B=76123
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=9819613696
+mem_heap_B=817694
+mem_heap_extra_B=211970
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=10237702501
+mem_heap_B=448123
+mem_heap_extra_B=118973
+mem_stacks_B=0
+heap_tree=detailed
+n13: 448123 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n7: 127568 0x60DFDF7: CRYPTO_zalloc (in /usr/lib64/libcrypto.so.1.1.0g)
+  n2: 37840 0x6011895: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 35680 0x600F35F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n2: 17968 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 9648 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 9648 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 9648 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 9648 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 9648 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 9648 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 9648 0x614DD8A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 9648 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 9648 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 9648 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 9648 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 9648 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 9648 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 9648 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 9648 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n2: 9648 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 9648 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 9648 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n1: 9648 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 9648 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 9648 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                          n1: 9648 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                           n1: 9648 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                            n1: 9648 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 9648 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 9648 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n0: 0 in 1 place, below massif's threshold (1.00%)
+     n1: 8320 0x600FDA4: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 8320 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 8320 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 8320 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 8320 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 8320 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n2: 8320 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 8320 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 8320 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 8320 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 8320 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 8320 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 8320 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 8320 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 8320 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 8320 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 8320 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 8320 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 8320 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 8320 0x400BA6: doit (curl2.c:40)
+                         n1: 8320 0x400C55: process (curl2.c:60)
+                          n0: 8320 0x400C97: main (curl2.c:70)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 17712 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+     n2: 17712 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 17712 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 17712 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 17712 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 17712 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 17712 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+           n1: 17712 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+            n1: 17712 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+             n1: 17712 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 17712 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 17712 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 17712 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 17712 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 17712 0x400BA6: doit (curl2.c:40)
+                   n1: 17712 0x400C55: process (curl2.c:60)
+                    n0: 17712 0x400C97: main (curl2.c:70)
+      n0: 0 in 2 places, all below massif's threshold (1.00%)
+   n0: 2160 in 2 places, all below massif's threshold (1.00%)
+  n0: 28464 in 61 places, all below massif's threshold (1.00%)
+  n2: 21896 0x602DD6B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 16752 0x602E2BE: BN_bin2bn (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 16752 0x601355D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 16752 0x600E73F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 16752 0x600F5C8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 16752 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 16752 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 16752 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 16752 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 16752 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 16752 0x6107E9D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 16752 0x614E188: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 16752 0x614E283: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 16752 0x600F57F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 16752 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 16752 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 16752 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 16752 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 16752 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 16752 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 16752 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n2: 16752 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 16752 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 16752 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                          n1: 16752 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                           n1: 16752 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                            n1: 16752 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 16752 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 16752 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                        n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 0 in 10 places, all below massif's threshold (1.00%)
+   n0: 5144 in 12 places, all below massif's threshold (1.00%)
+  n2: 14832 0x600712B: ASN1_STRING_type_new (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 13536 0x60115A8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 13536 0x601183B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 13536 0x6011796: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n2: 13536 0x601190D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 9648 0x600F35F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 9648 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 9648 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 9648 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 9648 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 9648 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 9648 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 9648 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 9648 0x614DD8A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 9648 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 9648 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 9648 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 9648 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 9648 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 9648 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 9648 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n1: 9648 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n2: 9648 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 9648 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                          n1: 9648 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                           n1: 9648 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                            n1: 9648 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                             n1: 9648 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 9648 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                         n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 3888 in 2 places, all below massif's threshold (1.00%)
+   n0: 1296 in 4 places, all below massif's threshold (1.00%)
+  n1: 9968 0x61346A5: CRYPTO_THREAD_lock_new (in /usr/lib64/libcrypto.so.1.1.0g)
+   n0: 9968 in 21 places, all below massif's threshold (1.00%)
+  n1: 7728 0x610AA2D: RSA_new_method (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 7728 0x61089EB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 7728 0x601186B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 7728 0x600F35F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 7728 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 7728 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 7728 0x6107E9D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 7728 0x614E188: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 7728 0x614E283: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 7728 0x600F57F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 7728 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 7728 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 7728 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 7728 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 7728 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 7728 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 7728 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n2: 7728 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 7728 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 7728 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 7728 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n1: 7728 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 7728 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                         n1: 7728 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                          n1: 7728 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                           n1: 7728 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                            n1: 7728 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 7728 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 7728 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                    n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 6840 0x6133F8D: OPENSSL_sk_new (in /usr/lib64/libcrypto.so.1.1.0g)
+   n0: 6840 in 18 places, all below massif's threshold (1.00%)
+ n3: 70488 0x60DDD34: OPENSSL_LH_insert (in /usr/lib64/libcrypto.so.1.1.0g)
+  n2: 63168 0x60B760B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 58272 0x60B78EC: ERR_load_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+    n0: 52152 in 58 places, all below massif's threshold (1.00%)
+    n1: 6120 0x5D3F5AA: ERR_load_SSL_strings (in /usr/lib64/libssl.so.1.1.0g)
+     n1: 6120 0x5D3F5D7: ??? (in /usr/lib64/libssl.so.1.1.0g)
+      n1: 6120 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+       n1: 6120 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 6120 0x5D3F9B3: OPENSSL_init_ssl (in /usr/lib64/libssl.so.1.1.0g)
+         n1: 6120 0x5D42E5C: SSL_CTX_new (in /usr/lib64/libssl.so.1.1.0g)
+          n1: 6120 0x4E90797: ??? (in /usr/lib64/libcurl.so.4.4.0)
+           n1: 6120 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+            n1: 6120 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+             n1: 6120 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 6120 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 6120 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 6120 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 6120 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 6120 0x400BA6: doit (curl2.c:40)
+                   n1: 6120 0x400C55: process (curl2.c:60)
+                    n0: 6120 0x400C97: main (curl2.c:70)
+   n0: 4896 in 4 places, all below massif's threshold (1.00%)
+  n1: 7320 0x60E9B48: OBJ_NAME_add (in /usr/lib64/libcrypto.so.1.1.0g)
+   n0: 7320 in 166 places, all below massif's threshold (1.00%)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 41856 0x4E53CBD: ??? (in /usr/lib64/libcurl.so.4.4.0)
+  n2: 41856 0x4E65472: curl_easy_init (in /usr/lib64/libcurl.so.4.4.0)
+   n1: 20928 0x400A91: doit (curl2.c:29)
+    n1: 20928 0x400C55: process (curl2.c:60)
+     n0: 20928 0x400C97: main (curl2.c:70)
+   n1: 20928 0x4E6C90F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+    n1: 20928 0x4E65795: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+     n1: 20928 0x400BA6: doit (curl2.c:40)
+      n1: 20928 0x400C55: process (curl2.c:60)
+       n0: 20928 0x400C97: main (curl2.c:70)
+ n1: 40412 0x601303E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 40412 0x600F85C: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 40412 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 40412 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 40412 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 40412 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+       n2: 40412 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 40412 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 40412 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 40412 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 40412 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 40412 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+             n1: 40412 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 40412 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 40412 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 40412 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 40412 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 40412 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 40412 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 40412 0x400BA6: doit (curl2.c:40)
+                     n1: 40412 0x400C55: process (curl2.c:60)
+                      n0: 40412 0x400C97: main (curl2.c:70)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 34840 0x5FFDD8C: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 34840 0x600EAF6: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 34840 0x600F5C8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 34840 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 34840 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n2: 34840 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 17768 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 17768 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 17768 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 17768 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 17768 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 17768 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 17768 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+              n2: 17768 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 17768 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 17768 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 17768 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 17768 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 17768 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 17768 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 17768 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 17768 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 17768 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 17768 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                         n1: 17768 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                          n1: 17768 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                           n1: 17768 0x400BA6: doit (curl2.c:40)
+                            n1: 17768 0x400C55: process (curl2.c:60)
+                             n0: 17768 0x400C97: main (curl2.c:70)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+       n1: 17072 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+        n2: 17072 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 17072 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 17072 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 17072 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 17072 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 17072 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 17072 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 17072 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 17072 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 17072 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 17072 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 17072 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 17072 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 17072 0x400BA6: doit (curl2.c:40)
+                      n1: 17072 0x400C55: process (curl2.c:60)
+                       n0: 17072 0x400C97: main (curl2.c:70)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 32770 0x4E53CF8: ??? (in /usr/lib64/libcurl.so.4.4.0)
+  n2: 32770 0x4E65472: curl_easy_init (in /usr/lib64/libcurl.so.4.4.0)
+   n1: 16385 0x400A91: doit (curl2.c:29)
+    n1: 16385 0x400C55: process (curl2.c:60)
+     n0: 16385 0x400C97: main (curl2.c:70)
+   n1: 16385 0x4E6C90F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+    n1: 16385 0x4E65795: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+     n1: 16385 0x400BA6: doit (curl2.c:40)
+      n1: 16385 0x400C55: process (curl2.c:60)
+       n0: 16385 0x400C97: main (curl2.c:70)
+ n0: 24625 in 100 places, all below massif's threshold (1.00%)
+ n2: 18432 0x60DDCDA: OPENSSL_LH_insert (in /usr/lib64/libcrypto.so.1.1.0g)
+  n2: 16384 0x60B760B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 16384 0x60B78EC: ERR_load_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 16384 0x604803A: ERR_load_CMS_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 16384 0x60B88DC: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 16384 0x60DBFC7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 16384 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+        n1: 16384 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 16384 0x60DC309: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 16384 0x60B7EC4: ERR_get_state (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 16384 0x60B7FFB: ERR_clear_error (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 16384 0x60DBEB7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 16384 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+              n1: 16384 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 16384 0x60DC55C: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 16384 0x4E9437C: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 16384 0x4E651D3: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n0: 16384 0x400C8D: main (curl2.c:69)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 3 places, all below massif's threshold (1.00%)
+  n0: 2048 in 3 places, all below massif's threshold (1.00%)
+ n2: 17448 0x603F026: BUF_MEM_grow (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 14904 0x614DE34: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 14904 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 14904 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 14904 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 14904 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 14904 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 14904 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 14904 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 14904 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n2: 14904 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 14904 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 14904 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 14904 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 14904 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 14904 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 14904 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 14904 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 14904 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 14904 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 14904 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 14904 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 14904 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 14904 0x400BA6: doit (curl2.c:40)
+                         n1: 14904 0x400C55: process (curl2.c:60)
+                          n0: 14904 0x400C97: main (curl2.c:70)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 2544 in 7 places, all below massif's threshold (1.00%)
+ n2: 13942 0x6007018: ASN1_STRING_set (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 13221 0x600ED1D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 13221 0x600F5C8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 13221 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 13221 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n2: 13221 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n2: 11701 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 6710 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 6710 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 6710 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 6710 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 6710 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 6710 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 6710 0x614DD8A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 6710 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 6710 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 6710 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 6710 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 6710 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 6710 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 6710 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 6710 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n2: 6710 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 6710 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 6710 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                          n1: 6710 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                           n1: 6710 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                            n1: 6710 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 6710 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 6710 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                        n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 4991 in 1 place, below massif's threshold (1.00%)
+       n0: 1520 in 1 place, below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 721 in 5 places, all below massif's threshold (1.00%)
+ n1: 10742 0x614DA68: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 10742 0x614DED8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 10742 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 10742 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 10742 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 10742 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 10742 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 10742 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 10742 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 10742 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n2: 10742 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 10742 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 10742 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 10742 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 10742 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 10742 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 10742 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 10742 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 10742 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 10742 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 10742 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 10742 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 10742 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 10742 0x400BA6: doit (curl2.c:40)
+                         n1: 10742 0x400C55: process (curl2.c:60)
+                          n0: 10742 0x400C97: main (curl2.c:70)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 7680 0x6134097: OPENSSL_sk_insert (in /usr/lib64/libcrypto.so.1.1.0g)
+  n0: 7680 in 8 places, all below massif's threshold (1.00%)
+ n1: 7320 0x60E9B12: OBJ_NAME_add (in /usr/lib64/libcrypto.so.1.1.0g)
+  n0: 7320 in 204 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=37
+#-----------
+time=10655897984
+mem_heap_B=836097
+mem_heap_extra_B=218887
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=10969536516
+mem_heap_B=615983
+mem_heap_extra_B=160953
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=11178628463
+mem_heap_B=433930
+mem_heap_extra_B=114950
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=11492196462
+mem_heap_B=537768
+mem_heap_extra_B=145808
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=11805786757
+mem_heap_B=691024
+mem_heap_extra_B=180688
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=12119361615
+mem_heap_B=414813
+mem_heap_extra_B=110747
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=12328451484
+mem_heap_B=234760
+mem_heap_extra_B=63192
+mem_stacks_B=0
+heap_tree=detailed
+n11: 234760 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 70488 0x60DDD34: OPENSSL_LH_insert (in /usr/lib64/libcrypto.so.1.1.0g)
+  n3: 63168 0x60B760B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n4: 58272 0x60B78EC: ERR_load_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+    n0: 43560 in 56 places, all below massif's threshold (1.00%)
+    n1: 6120 0x5D3F5AA: ERR_load_SSL_strings (in /usr/lib64/libssl.so.1.1.0g)
+     n1: 6120 0x5D3F5D7: ??? (in /usr/lib64/libssl.so.1.1.0g)
+      n1: 6120 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+       n1: 6120 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 6120 0x5D3F9B3: OPENSSL_init_ssl (in /usr/lib64/libssl.so.1.1.0g)
+         n1: 6120 0x5D42E5C: SSL_CTX_new (in /usr/lib64/libssl.so.1.1.0g)
+          n1: 6120 0x4E90797: ??? (in /usr/lib64/libcurl.so.4.4.0)
+           n1: 6120 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+            n1: 6120 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+             n1: 6120 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 6120 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 6120 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 6120 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 6120 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 6120 0x400BA6: doit (curl2.c:40)
+                   n1: 6120 0x400C55: process (curl2.c:60)
+                    n0: 6120 0x400C97: main (curl2.c:70)
+    n1: 5112 0x5D3F59C: ERR_load_SSL_strings (in /usr/lib64/libssl.so.1.1.0g)
+     n1: 5112 0x5D3F5D7: ??? (in /usr/lib64/libssl.so.1.1.0g)
+      n1: 5112 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+       n1: 5112 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 5112 0x5D3F9B3: OPENSSL_init_ssl (in /usr/lib64/libssl.so.1.1.0g)
+         n1: 5112 0x5D42E5C: SSL_CTX_new (in /usr/lib64/libssl.so.1.1.0g)
+          n1: 5112 0x4E90797: ??? (in /usr/lib64/libcurl.so.4.4.0)
+           n1: 5112 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+            n1: 5112 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+             n1: 5112 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 5112 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 5112 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 5112 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 5112 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 5112 0x400BA6: doit (curl2.c:40)
+                   n1: 5112 0x400C55: process (curl2.c:60)
+                    n0: 5112 0x400C97: main (curl2.c:70)
+    n1: 3480 0x606D44C: ERR_load_EC_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 3480 0x60B8840: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 3480 0x60DBFC7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 3480 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+        n1: 3480 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 3480 0x60DC309: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 3480 0x60B7EC4: ERR_get_state (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 3480 0x60B7FFB: ERR_clear_error (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 3480 0x60DBEB7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 3480 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+              n1: 3480 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 3480 0x60DC55C: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 3480 0x4E9437C: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 3480 0x4E651D3: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n0: 3480 0x400C8D: main (curl2.c:69)
+   n1: 3048 0x60B78B5: ERR_load_ERR_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 3048 0x60B87B7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 3048 0x60DBFC7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 3048 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+       n1: 3048 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 3048 0x60DC309: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 3048 0x60B7EC4: ERR_get_state (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 3048 0x60B7FFB: ERR_clear_error (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 3048 0x60DBEB7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 3048 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+             n1: 3048 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 3048 0x60DC55C: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 3048 0x4E9437C: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 3048 0x4E651D3: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n0: 3048 0x400C8D: main (curl2.c:69)
+   n0: 1848 in 3 places, all below massif's threshold (1.00%)
+  n1: 7320 0x60E9B48: OBJ_NAME_add (in /usr/lib64/libcrypto.so.1.1.0g)
+   n0: 7320 in 166 places, all below massif's threshold (1.00%)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 41856 0x4E53CBD: ??? (in /usr/lib64/libcurl.so.4.4.0)
+  n2: 41856 0x4E65472: curl_easy_init (in /usr/lib64/libcurl.so.4.4.0)
+   n1: 20928 0x400A91: doit (curl2.c:29)
+    n1: 20928 0x400C55: process (curl2.c:60)
+     n0: 20928 0x400C97: main (curl2.c:70)
+   n1: 20928 0x4E6C90F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+    n1: 20928 0x4E65795: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+     n1: 20928 0x400BA6: doit (curl2.c:40)
+      n1: 20928 0x400C55: process (curl2.c:60)
+       n0: 20928 0x400C97: main (curl2.c:70)
+ n1: 32770 0x4E53CF8: ??? (in /usr/lib64/libcurl.so.4.4.0)
+  n2: 32770 0x4E65472: curl_easy_init (in /usr/lib64/libcurl.so.4.4.0)
+   n1: 16385 0x400A91: doit (curl2.c:29)
+    n1: 16385 0x400C55: process (curl2.c:60)
+     n0: 16385 0x400C97: main (curl2.c:70)
+   n1: 16385 0x4E6C90F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+    n1: 16385 0x4E65795: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+     n1: 16385 0x400BA6: doit (curl2.c:40)
+      n1: 16385 0x400C55: process (curl2.c:60)
+       n0: 16385 0x400C97: main (curl2.c:70)
+ n2: 22344 0x60DFDF7: CRYPTO_zalloc (in /usr/lib64/libcrypto.so.1.1.0g)
+  n0: 16872 in 66 places, all below massif's threshold (1.00%)
+  n2: 5472 0x6011895: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 5080 0x600F35F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n0: 5080 in 2 places, all below massif's threshold (1.00%)
+   n0: 392 in 2 places, all below massif's threshold (1.00%)
+ n0: 20747 in 102 places, all below massif's threshold (1.00%)
+ n2: 18432 0x60DDCDA: OPENSSL_LH_insert (in /usr/lib64/libcrypto.so.1.1.0g)
+  n2: 16384 0x60B760B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 16384 0x60B78EC: ERR_load_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 16384 0x604803A: ERR_load_CMS_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 16384 0x60B88DC: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 16384 0x60DBFC7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 16384 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+        n1: 16384 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 16384 0x60DC309: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 16384 0x60B7EC4: ERR_get_state (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 16384 0x60B7FFB: ERR_clear_error (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 16384 0x60DBEB7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 16384 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+              n1: 16384 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 16384 0x60DC55C: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 16384 0x4E9437C: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 16384 0x4E651D3: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n0: 16384 0x400C8D: main (curl2.c:69)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 3 places, all below massif's threshold (1.00%)
+  n0: 2048 in 3 places, all below massif's threshold (1.00%)
+ n1: 7320 0x60E9B12: OBJ_NAME_add (in /usr/lib64/libcrypto.so.1.1.0g)
+  n0: 7320 in 204 places, all below massif's threshold (1.00%)
+ n1: 6041 0x601303E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 6041 0x600F85C: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 6041 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 6041 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 6041 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 6041 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+       n2: 6041 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 6041 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 6041 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 6041 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 6041 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 6041 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+             n1: 6041 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 6041 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 6041 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 6041 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 6041 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 6041 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 6041 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 6041 0x400BA6: doit (curl2.c:40)
+                     n1: 6041 0x400C55: process (curl2.c:60)
+                      n0: 6041 0x400C97: main (curl2.c:70)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 5730 0x5FFDD8C: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 5730 0x600EAF6: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 5730 0x600F5C8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 5730 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 5730 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 5730 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n0: 5730 in 2 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 5120 0x51295AA: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x5139597: _IO_doallocbuf (genops.c:389)
+   n2: 4096 0x5138472: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+    n1: 4096 0x5139610: _IO_default_uflow (genops.c:404)
+     n2: 4096 0x512B110: _IO_getline (iogetline.c:60)
+      n2: 4096 0x5129FEB: fgets (iofgets.c:53)
+       n2: 4096 0x6022003: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 4096 0x60F2036: PEM_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 4096 0x60F0490: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 4096 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 4096 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 4096 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 4096 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 4096 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 4096 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 4096 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 4096 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 4096 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 4096 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 4096 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 4096 0x400BA6: doit (curl2.c:40)
+                      n1: 4096 0x400C55: process (curl2.c:60)
+                       n0: 4096 0x400C97: main (curl2.c:70)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 1024 in 2 places, all below massif's threshold (1.00%)
+ n1: 3912 0x603F026: BUF_MEM_grow (in /usr/lib64/libcrypto.so.1.1.0g)
+  n0: 3912 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=44
+#-----------
+time=12642062345
+mem_heap_B=767051
+mem_heap_extra_B=198805
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=12955666152
+mem_heap_B=488149
+mem_heap_extra_B=129403
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=13373925607
+mem_heap_B=882939
+mem_heap_extra_B=222517
+mem_stacks_B=0
+heap_tree=detailed
+n12: 882939 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n9: 325928 0x60DFDF7: CRYPTO_zalloc (in /usr/lib64/libcrypto.so.1.1.0g)
+  n2: 97536 0x6011895: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 91936 0x600F35F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n2: 45968 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 25368 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 25368 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 25368 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 25368 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 25368 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 25368 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 25368 0x614DD8A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 25368 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 25368 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 25368 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 25368 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 25368 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 25368 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 25368 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 25368 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n2: 25368 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 24816 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 24816 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n1: 24816 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 24816 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 24816 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                          n1: 24816 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                           n1: 24816 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                            n1: 24816 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 24816 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 24816 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n0: 552 in 1 place, below massif's threshold (1.00%)
+     n1: 20600 0x600FDA4: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 20600 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 20600 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 20600 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 20600 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 20600 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n2: 20600 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 20240 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 20240 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 20240 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 20240 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 20240 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 20240 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 20240 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 20240 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 20240 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 20240 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 20240 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 20240 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 20240 0x400BA6: doit (curl2.c:40)
+                         n1: 20240 0x400C55: process (curl2.c:60)
+                          n0: 20240 0x400C97: main (curl2.c:70)
+            n0: 360 in 1 place, below massif's threshold (1.00%)
+    n1: 45968 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+     n2: 45968 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 45264 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 45264 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 45264 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 45264 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 45264 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+           n1: 45264 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+            n1: 45264 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+             n1: 45264 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 45264 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 45264 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 45264 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 45264 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 45264 0x400BA6: doit (curl2.c:40)
+                   n1: 45264 0x400C55: process (curl2.c:60)
+                    n0: 45264 0x400C97: main (curl2.c:70)
+      n0: 704 in 2 places, all below massif's threshold (1.00%)
+   n0: 5600 in 2 places, all below massif's threshold (1.00%)
+  n3: 57896 0x602DD6B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 44784 0x602E2BE: BN_bin2bn (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 44752 0x601355D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 44752 0x600E73F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 44752 0x600F5C8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 44752 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 44752 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 44752 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 44752 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 44752 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 44752 0x6107E9D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 44752 0x614E188: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 44752 0x614E283: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 44752 0x600F57F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 44752 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 44752 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 44752 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 44752 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 44752 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 44752 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 44752 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n2: 44752 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 43968 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 43968 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                          n1: 43968 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                           n1: 43968 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                            n1: 43968 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 43968 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 43968 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                        n0: 784 in 1 place, below massif's threshold (1.00%)
+    n0: 32 in 10 places, all below massif's threshold (1.00%)
+   n1: 12480 0x602DFD2: BN_copy (in /usr/lib64/libcrypto.so.1.1.0g)
+    n0: 12480 in 20 places, all below massif's threshold (1.00%)
+   n0: 632 in 11 places, all below massif's threshold (1.00%)
+  n0: 46040 in 59 places, all below massif's threshold (1.00%)
+  n2: 38928 0x600712B: ASN1_STRING_type_new (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 35448 0x60115A8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 35448 0x601183B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 35448 0x6011796: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n2: 35448 0x601190D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 25368 0x600F35F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 25368 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 25368 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 25368 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 25368 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 25368 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 25368 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 25368 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 25368 0x614DD8A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 25368 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 25368 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 25368 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 25368 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 25368 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 25368 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 25368 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n1: 25368 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n2: 25368 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 24816 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                          n1: 24816 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                           n1: 24816 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                            n1: 24816 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                             n1: 24816 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 24816 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                         n0: 552 in 1 place, below massif's threshold (1.00%)
+       n0: 10080 in 2 places, all below massif's threshold (1.00%)
+   n0: 3480 in 4 places, all below massif's threshold (1.00%)
+  n1: 24920 0x61346A5: CRYPTO_THREAD_lock_new (in /usr/lib64/libcrypto.so.1.1.0g)
+   n0: 24920 in 21 places, all below massif's threshold (1.00%)
+  n1: 20496 0x610AA2D: RSA_new_method (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 20496 0x61089EB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 20496 0x601186B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 20496 0x600F35F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 20496 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 20496 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 20496 0x6107E9D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 20496 0x614E188: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 20496 0x614E283: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 20496 0x600F57F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 20496 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 20496 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 20496 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 20496 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 20496 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 20496 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 20496 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n2: 20496 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 20160 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 20160 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 20160 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n1: 20160 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 20160 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                         n1: 20160 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                          n1: 20160 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                           n1: 20160 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                            n1: 20160 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 20160 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 20160 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                    n0: 336 in 1 place, below massif's threshold (1.00%)
+  n2: 17200 0x6133F8D: OPENSSL_sk_new (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 11200 0x614D60E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 11200 0x614DDAD: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 11200 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 11200 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 11200 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 11200 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 11200 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 11200 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 11200 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 11200 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 11200 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+              n0: 11200 in 2 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 6000 in 17 places, all below massif's threshold (1.00%)
+  n1: 11712 0x602D218: BN_new (in /usr/lib64/libcrypto.so.1.1.0g)
+   n0: 11712 in 13 places, all below massif's threshold (1.00%)
+  n2: 11200 0x614D5FD: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 11200 0x614DDAD: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 11200 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 11200 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 11200 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 11200 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 11200 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 11200 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 11200 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 11200 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 11200 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+             n0: 11200 in 2 places, all below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 107206 0x601303E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 107206 0x600F85C: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 107206 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 107206 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 107206 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 107206 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+       n2: 107206 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 105465 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 105465 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 105465 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 105465 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 105465 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+             n1: 105465 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 105465 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 105465 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 105465 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 105465 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 105465 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 105465 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 105465 0x400BA6: doit (curl2.c:40)
+                     n1: 105465 0x400C55: process (curl2.c:60)
+                      n0: 105465 0x400C97: main (curl2.c:70)
+        n0: 1741 in 1 place, below massif's threshold (1.00%)
+ n1: 92977 0x5FFDD8C: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 92977 0x600EAF6: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 92977 0x600F5C8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 92977 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 92977 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n2: 92977 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 47158 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 47158 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 47158 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 47158 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 47158 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 47158 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 47158 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+              n2: 47158 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 46362 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 46362 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 46362 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 46362 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 46362 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 46362 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 46362 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 46362 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 46362 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 46362 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                         n1: 46362 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                          n1: 46362 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                           n1: 46362 0x400BA6: doit (curl2.c:40)
+                            n1: 46362 0x400C55: process (curl2.c:60)
+                             n0: 46362 0x400C97: main (curl2.c:70)
+               n0: 796 in 1 place, below massif's threshold (1.00%)
+       n1: 45819 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+        n2: 45819 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 44795 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 44795 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 44795 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 44795 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 44795 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 44795 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 44795 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 44795 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 44795 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 44795 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 44795 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 44795 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 44795 0x400BA6: doit (curl2.c:40)
+                      n1: 44795 0x400C55: process (curl2.c:60)
+                       n0: 44795 0x400C97: main (curl2.c:70)
+         n0: 1024 in 1 place, below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 70488 0x60DDD34: OPENSSL_LH_insert (in /usr/lib64/libcrypto.so.1.1.0g)
+  n2: 63168 0x60B760B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 58272 0x60B78EC: ERR_load_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+    n0: 58272 in 59 places, all below massif's threshold (1.00%)
+   n0: 4896 in 4 places, all below massif's threshold (1.00%)
+  n0: 7320 in 3 places, all below massif's threshold (1.00%)
+ n3: 63184 0x603F026: BUF_MEM_grow (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 41336 0x614DE34: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 41336 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 41336 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 41336 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 41336 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 41336 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 41336 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 41336 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 41336 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n2: 41336 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 40648 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 40648 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 40648 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 40648 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 40648 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 40648 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 40648 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 40648 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 40648 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 40648 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 40648 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 40648 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 40648 0x400BA6: doit (curl2.c:40)
+                         n1: 40648 0x400C55: process (curl2.c:60)
+                          n0: 40648 0x400C97: main (curl2.c:70)
+            n0: 688 in 1 place, below massif's threshold (1.00%)
+  n1: 21848 0x5D4B9F1: ??? (in /usr/lib64/libssl.so.1.1.0g)
+   n1: 21848 0x5D4396F: SSL_do_handshake (in /usr/lib64/libssl.so.1.1.0g)
+    n1: 21848 0x4E91F2A: ??? (in /usr/lib64/libcurl.so.4.4.0)
+     n1: 21848 0x4E93F2E: ??? (in /usr/lib64/libcurl.so.4.4.0)
+      n1: 21848 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+       n1: 21848 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+        n1: 21848 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+         n1: 21848 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+          n1: 21848 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+           n1: 21848 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+            n1: 21848 0x400BA6: doit (curl2.c:40)
+             n1: 21848 0x400C55: process (curl2.c:60)
+              n0: 21848 0x400C97: main (curl2.c:70)
+  n0: 0 in 6 places, all below massif's threshold (1.00%)
+ n0: 47450 in 101 places, all below massif's threshold (1.00%)
+ n1: 41856 0x4E53CBD: ??? (in /usr/lib64/libcurl.so.4.4.0)
+  n2: 41856 0x4E65472: curl_easy_init (in /usr/lib64/libcurl.so.4.4.0)
+   n1: 20928 0x400A91: doit (curl2.c:29)
+    n1: 20928 0x400C55: process (curl2.c:60)
+     n0: 20928 0x400C97: main (curl2.c:70)
+   n1: 20928 0x4E6C90F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+    n1: 20928 0x4E65795: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+     n1: 20928 0x400BA6: doit (curl2.c:40)
+      n1: 20928 0x400C55: process (curl2.c:60)
+       n0: 20928 0x400C97: main (curl2.c:70)
+ n2: 36180 0x6007018: ASN1_STRING_set (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 34387 0x600ED1D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 34387 0x600F5C8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 34268 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 34268 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n2: 34268 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n2: 30340 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 19234 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 19234 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 19234 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 19234 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 19234 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 19234 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 19234 0x614DD8A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 19234 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 19234 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 19234 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 19234 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 19234 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 19234 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 19234 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 19234 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n2: 19234 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 18964 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 18964 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                          n1: 18964 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                           n1: 18964 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                            n1: 18964 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 18964 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 18964 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                        n0: 270 in 1 place, below massif's threshold (1.00%)
+        n1: 11106 0x600FDA4: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 11106 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 11106 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 11106 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 11106 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 11106 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 11106 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+               n0: 11106 in 2 places, all below massif's threshold (1.00%)
+       n0: 3928 in 1 place, below massif's threshold (1.00%)
+    n0: 119 in 2 places, all below massif's threshold (1.00%)
+  n0: 1793 in 5 places, all below massif's threshold (1.00%)
+ n1: 32770 0x4E53CF8: ??? (in /usr/lib64/libcurl.so.4.4.0)
+  n2: 32770 0x4E65472: curl_easy_init (in /usr/lib64/libcurl.so.4.4.0)
+   n1: 16385 0x400A91: doit (curl2.c:29)
+    n1: 16385 0x400C55: process (curl2.c:60)
+     n0: 16385 0x400C97: main (curl2.c:70)
+   n1: 16385 0x4E6C90F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+    n1: 16385 0x4E65795: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+     n1: 16385 0x400BA6: doit (curl2.c:40)
+      n1: 16385 0x400C55: process (curl2.c:60)
+       n0: 16385 0x400C97: main (curl2.c:70)
+ n1: 29828 0x614DA68: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 29828 0x614DED8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 29828 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 29828 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 29828 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 29828 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 29828 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 29828 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 29828 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 29828 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n2: 29828 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 29328 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 29328 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 29328 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 29328 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 29328 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 29328 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 29328 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 29328 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 29328 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 29328 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 29328 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 29328 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 29328 0x400BA6: doit (curl2.c:40)
+                         n1: 29328 0x400C55: process (curl2.c:60)
+                          n0: 29328 0x400C97: main (curl2.c:70)
+            n0: 500 in 1 place, below massif's threshold (1.00%)
+ n2: 18432 0x60DDCDA: OPENSSL_LH_insert (in /usr/lib64/libcrypto.so.1.1.0g)
+  n2: 16384 0x60B760B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 16384 0x60B78EC: ERR_load_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 16384 0x604803A: ERR_load_CMS_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 16384 0x60B88DC: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 16384 0x60DBFC7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 16384 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+        n1: 16384 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 16384 0x60DC309: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 16384 0x60B7EC4: ERR_get_state (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 16384 0x60B7FFB: ERR_clear_error (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 16384 0x60DBEB7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 16384 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+              n1: 16384 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 16384 0x60DC55C: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 16384 0x4E9437C: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 16384 0x4E651D3: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n0: 16384 0x400C8D: main (curl2.c:69)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 3 places, all below massif's threshold (1.00%)
+  n0: 2048 in 3 places, all below massif's threshold (1.00%)
+ n1: 16640 0x6134097: OPENSSL_sk_insert (in /usr/lib64/libcrypto.so.1.1.0g)
+  n0: 16640 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=47
+#-----------
+time=13792045593
+mem_heap_B=564114
+mem_heap_extra_B=147918
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=14105622358
+mem_heap_B=292725
+mem_heap_extra_B=78147
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=14523827563
+mem_heap_B=734942
+mem_heap_extra_B=191130
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=14670184847
+mem_heap_B=769278
+mem_heap_extra_B=199770
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=14816550305
+mem_heap_B=801636
+mem_heap_extra_B=207932
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=14962932140
+mem_heap_B=836081
+mem_heap_extra_B=216919
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=15109290550
+mem_heap_B=834529
+mem_heap_extra_B=218615
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=15255659051
+mem_heap_B=875078
+mem_heap_extra_B=220834
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=15402017677
+mem_heap_B=883026
+mem_heap_extra_B=222510
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=15548375027
+mem_heap_B=514525
+mem_heap_extra_B=139267
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=15694735190
+mem_heap_B=197740
+mem_heap_extra_B=54420
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=15841122917
+mem_heap_B=229308
+mem_heap_extra_B=61180
+mem_stacks_B=0
+heap_tree=detailed
+n11: 229308 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 70488 0x60DDD34: OPENSSL_LH_insert (in /usr/lib64/libcrypto.so.1.1.0g)
+  n3: 63168 0x60B760B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n4: 58272 0x60B78EC: ERR_load_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+    n0: 43560 in 56 places, all below massif's threshold (1.00%)
+    n1: 6120 0x5D3F5AA: ERR_load_SSL_strings (in /usr/lib64/libssl.so.1.1.0g)
+     n1: 6120 0x5D3F5D7: ??? (in /usr/lib64/libssl.so.1.1.0g)
+      n1: 6120 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+       n1: 6120 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 6120 0x5D3F9B3: OPENSSL_init_ssl (in /usr/lib64/libssl.so.1.1.0g)
+         n1: 6120 0x5D42E5C: SSL_CTX_new (in /usr/lib64/libssl.so.1.1.0g)
+          n1: 6120 0x4E90797: ??? (in /usr/lib64/libcurl.so.4.4.0)
+           n1: 6120 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+            n1: 6120 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+             n1: 6120 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 6120 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 6120 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 6120 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 6120 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 6120 0x400BA6: doit (curl2.c:40)
+                   n1: 6120 0x400C55: process (curl2.c:60)
+                    n0: 6120 0x400C97: main (curl2.c:70)
+    n1: 5112 0x5D3F59C: ERR_load_SSL_strings (in /usr/lib64/libssl.so.1.1.0g)
+     n1: 5112 0x5D3F5D7: ??? (in /usr/lib64/libssl.so.1.1.0g)
+      n1: 5112 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+       n1: 5112 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 5112 0x5D3F9B3: OPENSSL_init_ssl (in /usr/lib64/libssl.so.1.1.0g)
+         n1: 5112 0x5D42E5C: SSL_CTX_new (in /usr/lib64/libssl.so.1.1.0g)
+          n1: 5112 0x4E90797: ??? (in /usr/lib64/libcurl.so.4.4.0)
+           n1: 5112 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+            n1: 5112 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+             n1: 5112 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 5112 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 5112 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 5112 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 5112 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 5112 0x400BA6: doit (curl2.c:40)
+                   n1: 5112 0x400C55: process (curl2.c:60)
+                    n0: 5112 0x400C97: main (curl2.c:70)
+    n1: 3480 0x606D44C: ERR_load_EC_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 3480 0x60B8840: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 3480 0x60DBFC7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 3480 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+        n1: 3480 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 3480 0x60DC309: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 3480 0x60B7EC4: ERR_get_state (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 3480 0x60B7FFB: ERR_clear_error (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 3480 0x60DBEB7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 3480 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+              n1: 3480 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 3480 0x60DC55C: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 3480 0x4E9437C: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 3480 0x4E651D3: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n0: 3480 0x400C8D: main (curl2.c:69)
+   n1: 3048 0x60B78B5: ERR_load_ERR_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 3048 0x60B87B7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 3048 0x60DBFC7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 3048 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+       n1: 3048 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 3048 0x60DC309: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 3048 0x60B7EC4: ERR_get_state (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 3048 0x60B7FFB: ERR_clear_error (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 3048 0x60DBEB7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 3048 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+             n1: 3048 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 3048 0x60DC55C: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 3048 0x4E9437C: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 3048 0x4E651D3: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n0: 3048 0x400C8D: main (curl2.c:69)
+   n0: 1848 in 3 places, all below massif's threshold (1.00%)
+  n1: 7320 0x60E9B48: OBJ_NAME_add (in /usr/lib64/libcrypto.so.1.1.0g)
+   n0: 7320 in 166 places, all below massif's threshold (1.00%)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 41856 0x4E53CBD: ??? (in /usr/lib64/libcurl.so.4.4.0)
+  n2: 41856 0x4E65472: curl_easy_init (in /usr/lib64/libcurl.so.4.4.0)
+   n1: 20928 0x400A91: doit (curl2.c:29)
+    n1: 20928 0x400C55: process (curl2.c:60)
+     n0: 20928 0x400C97: main (curl2.c:70)
+   n1: 20928 0x4E6C90F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+    n1: 20928 0x4E65795: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+     n1: 20928 0x400BA6: doit (curl2.c:40)
+      n1: 20928 0x400C55: process (curl2.c:60)
+       n0: 20928 0x400C97: main (curl2.c:70)
+ n1: 32770 0x4E53CF8: ??? (in /usr/lib64/libcurl.so.4.4.0)
+  n2: 32770 0x4E65472: curl_easy_init (in /usr/lib64/libcurl.so.4.4.0)
+   n1: 16385 0x400A91: doit (curl2.c:29)
+    n1: 16385 0x400C55: process (curl2.c:60)
+     n0: 16385 0x400C97: main (curl2.c:70)
+   n1: 16385 0x4E6C90F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+    n1: 16385 0x4E65795: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+     n1: 16385 0x400BA6: doit (curl2.c:40)
+      n1: 16385 0x400C55: process (curl2.c:60)
+       n0: 16385 0x400C97: main (curl2.c:70)
+ n0: 20135 in 102 places, all below massif's threshold (1.00%)
+ n2: 18432 0x60DDCDA: OPENSSL_LH_insert (in /usr/lib64/libcrypto.so.1.1.0g)
+  n2: 16384 0x60B760B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 16384 0x60B78EC: ERR_load_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 16384 0x604803A: ERR_load_CMS_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 16384 0x60B88DC: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 16384 0x60DBFC7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 16384 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+        n1: 16384 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 16384 0x60DC309: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 16384 0x60B7EC4: ERR_get_state (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 16384 0x60B7FFB: ERR_clear_error (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 16384 0x60DBEB7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 16384 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+              n1: 16384 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 16384 0x60DC55C: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 16384 0x4E9437C: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 16384 0x4E651D3: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n0: 16384 0x400C8D: main (curl2.c:69)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 3 places, all below massif's threshold (1.00%)
+  n0: 2048 in 3 places, all below massif's threshold (1.00%)
+ n2: 18352 0x60DFDF7: CRYPTO_zalloc (in /usr/lib64/libcrypto.so.1.1.0g)
+  n0: 14096 in 66 places, all below massif's threshold (1.00%)
+  n2: 4256 0x6011895: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 4016 0x600F35F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n0: 4016 in 2 places, all below massif's threshold (1.00%)
+   n0: 240 in 2 places, all below massif's threshold (1.00%)
+ n1: 7320 0x60E9B12: OBJ_NAME_add (in /usr/lib64/libcrypto.so.1.1.0g)
+  n0: 7320 in 204 places, all below massif's threshold (1.00%)
+ n1: 5223 0x601303E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 5223 0x600F85C: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 5223 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 5223 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 5223 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 5223 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+       n2: 5223 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 5223 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 5223 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 5223 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 5223 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 5223 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+             n1: 5223 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 5223 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 5223 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 5223 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 5223 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 5223 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 5223 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 5223 0x400BA6: doit (curl2.c:40)
+                     n1: 5223 0x400C55: process (curl2.c:60)
+                      n0: 5223 0x400C97: main (curl2.c:70)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 5120 0x51295AA: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x5139597: _IO_doallocbuf (genops.c:389)
+   n2: 4096 0x5138472: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+    n1: 4096 0x5139610: _IO_default_uflow (genops.c:404)
+     n2: 4096 0x512B110: _IO_getline (iogetline.c:60)
+      n2: 4096 0x5129FEB: fgets (iofgets.c:53)
+       n2: 4096 0x6022003: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 4096 0x60F2036: PEM_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 4096 0x60F0490: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 4096 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 4096 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 4096 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 4096 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 4096 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 4096 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 4096 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 4096 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 4096 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 4096 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 4096 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 4096 0x400BA6: doit (curl2.c:40)
+                      n1: 4096 0x400C55: process (curl2.c:60)
+                       n0: 4096 0x400C97: main (curl2.c:70)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 1024 in 2 places, all below massif's threshold (1.00%)
+ n1: 4920 0x603F026: BUF_MEM_grow (in /usr/lib64/libcrypto.so.1.1.0g)
+  n0: 4920 in 8 places, all below massif's threshold (1.00%)
+ n1: 4692 0x5FFDD8C: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 4692 0x600EAF6: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 4692 0x600F5C8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 4692 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 4692 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 4692 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n0: 4692 in 2 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=59
+#-----------
+time=15987484878
+mem_heap_B=260782
+mem_heap_extra_B=70418
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=16133851547
+mem_heap_B=297524
+mem_heap_extra_B=79556
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=16280221868
+mem_heap_B=329137
+mem_heap_extra_B=87495
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=16426579571
+mem_heap_B=363328
+mem_heap_extra_B=96152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=16572936789
+mem_heap_B=396658
+mem_heap_extra_B=105270
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=16719294266
+mem_heap_B=428379
+mem_heap_extra_B=113717
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=16865653071
+mem_heap_B=460888
+mem_heap_extra_B=122176
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=17012013506
+mem_heap_B=492202
+mem_heap_extra_B=130846
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=17158371088
+mem_heap_B=527077
+mem_heap_extra_B=139779
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=17304753815
+mem_heap_B=559715
+mem_heap_extra_B=146837
+mem_stacks_B=0
+heap_tree=detailed
+n13: 559715 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n7: 181880 0x60DFDF7: CRYPTO_zalloc (in /usr/lib64/libcrypto.so.1.1.0g)
+  n2: 53936 0x6011895: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 50816 0x600F35F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 25584 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+     n2: 25584 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 25584 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 25584 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 25584 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 25584 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 25584 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+           n1: 25584 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+            n1: 25584 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+             n1: 25584 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 25584 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 25584 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 25584 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 25584 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 25584 0x400BA6: doit (curl2.c:40)
+                   n1: 25584 0x400C55: process (curl2.c:60)
+                    n0: 25584 0x400C97: main (curl2.c:70)
+      n0: 0 in 2 places, all below massif's threshold (1.00%)
+    n2: 25232 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 13632 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 13632 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 13632 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 13632 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 13632 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 13632 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 13632 0x614DD8A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 13632 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 13632 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 13632 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 13632 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 13632 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 13632 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 13632 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 13632 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n2: 13632 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 13632 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 13632 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n1: 13632 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 13632 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 13632 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                          n1: 13632 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                           n1: 13632 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                            n1: 13632 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 13632 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 13632 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n0: 0 in 1 place, below massif's threshold (1.00%)
+     n1: 11600 0x600FDA4: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 11600 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 11600 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 11600 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 11600 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 11600 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n2: 11600 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 11600 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 11600 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 11600 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 11600 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 11600 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 11600 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 11600 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 11600 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 11600 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 11600 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 11600 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 11600 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 11600 0x400BA6: doit (curl2.c:40)
+                         n1: 11600 0x400C55: process (curl2.c:60)
+                          n0: 11600 0x400C97: main (curl2.c:70)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 3120 in 2 places, all below massif's threshold (1.00%)
+  n0: 40184 in 61 places, all below massif's threshold (1.00%)
+  n3: 31792 0x602DD6B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 24336 0x602E2BE: BN_bin2bn (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 24336 0x601355D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 24336 0x600E73F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 24336 0x600F5C8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 24336 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 24336 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 24336 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 24336 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 24336 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 24336 0x6107E9D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 24336 0x614E188: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 24336 0x614E283: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 24336 0x600F57F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 24336 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 24336 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 24336 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 24336 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 24336 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 24336 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 24336 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n2: 24336 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 24336 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 24336 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                          n1: 24336 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                           n1: 24336 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                            n1: 24336 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 24336 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 24336 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                        n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 0 in 10 places, all below massif's threshold (1.00%)
+   n1: 7456 0x602DFD2: BN_copy (in /usr/lib64/libcrypto.so.1.1.0g)
+    n0: 7456 in 20 places, all below massif's threshold (1.00%)
+   n0: 0 in 11 places, all below massif's threshold (1.00%)
+  n2: 21120 0x600712B: ASN1_STRING_type_new (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 19248 0x60115A8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 19248 0x601183B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 19248 0x6011796: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n2: 19248 0x601190D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 13632 0x600F35F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 13632 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 13632 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 13632 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 13632 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 13632 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 13632 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 13632 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 13632 0x614DD8A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 13632 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 13632 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 13632 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 13632 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 13632 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 13632 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 13632 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n1: 13632 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n2: 13632 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 13632 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                          n1: 13632 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                           n1: 13632 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                            n1: 13632 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                             n1: 13632 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 13632 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                         n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 5616 in 2 places, all below massif's threshold (1.00%)
+   n0: 1872 in 4 places, all below massif's threshold (1.00%)
+  n1: 14000 0x61346A5: CRYPTO_THREAD_lock_new (in /usr/lib64/libcrypto.so.1.1.0g)
+   n0: 14000 in 21 places, all below massif's threshold (1.00%)
+  n1: 11088 0x610AA2D: RSA_new_method (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 11088 0x61089EB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 11088 0x601186B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 11088 0x600F35F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 11088 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 11088 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 11088 0x6107E9D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 11088 0x614E188: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 11088 0x614E283: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 11088 0x600F57F: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 11088 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 11088 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 11088 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 11088 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 11088 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 11088 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 11088 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n2: 11088 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 11088 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 11088 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 11088 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n1: 11088 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 11088 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                         n1: 11088 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                          n1: 11088 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                           n1: 11088 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                            n1: 11088 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 11088 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 11088 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                    n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 9760 0x6133F8D: OPENSSL_sk_new (in /usr/lib64/libcrypto.so.1.1.0g)
+   n0: 9760 in 18 places, all below massif's threshold (1.00%)
+ n3: 70488 0x60DDD34: OPENSSL_LH_insert (in /usr/lib64/libcrypto.so.1.1.0g)
+  n2: 63168 0x60B760B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 58272 0x60B78EC: ERR_load_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+    n0: 58272 in 59 places, all below massif's threshold (1.00%)
+   n0: 4896 in 4 places, all below massif's threshold (1.00%)
+  n1: 7320 0x60E9B48: OBJ_NAME_add (in /usr/lib64/libcrypto.so.1.1.0g)
+   n0: 7320 in 166 places, all below massif's threshold (1.00%)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 58908 0x601303E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 58908 0x600F85C: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 58908 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 58908 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 58908 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 58908 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+       n2: 58908 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 58908 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 58908 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 58908 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 58908 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 58908 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+             n1: 58908 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 58908 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 58908 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 58908 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 58908 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 58908 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 58908 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 58908 0x400BA6: doit (curl2.c:40)
+                     n1: 58908 0x400C55: process (curl2.c:60)
+                      n0: 58908 0x400C97: main (curl2.c:70)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 50802 0x5FFDD8C: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 50802 0x600EAF6: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 50802 0x600F5C8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 50802 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 50802 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n2: 50802 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 25826 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 25826 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 25826 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 25826 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 25826 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 25826 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 25826 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+              n2: 25826 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 25826 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 25826 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 25826 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 25826 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 25826 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 25826 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 25826 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 25826 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 25826 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 25826 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                         n1: 25826 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                          n1: 25826 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                           n1: 25826 0x400BA6: doit (curl2.c:40)
+                            n1: 25826 0x400C55: process (curl2.c:60)
+                             n0: 25826 0x400C97: main (curl2.c:70)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+       n1: 24976 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+        n2: 24976 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 24976 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 24976 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 24976 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 24976 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 24976 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+              n1: 24976 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+               n1: 24976 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                n1: 24976 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 24976 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 24976 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 24976 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 24976 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 24976 0x400BA6: doit (curl2.c:40)
+                      n1: 24976 0x400C55: process (curl2.c:60)
+                       n0: 24976 0x400C97: main (curl2.c:70)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 41856 0x4E53CBD: ??? (in /usr/lib64/libcurl.so.4.4.0)
+  n2: 41856 0x4E65472: curl_easy_init (in /usr/lib64/libcurl.so.4.4.0)
+   n1: 20928 0x400A91: doit (curl2.c:29)
+    n1: 20928 0x400C55: process (curl2.c:60)
+     n0: 20928 0x400C97: main (curl2.c:70)
+   n1: 20928 0x4E6C90F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+    n1: 20928 0x4E65795: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+     n1: 20928 0x400BA6: doit (curl2.c:40)
+      n1: 20928 0x400C55: process (curl2.c:60)
+       n0: 20928 0x400C97: main (curl2.c:70)
+ n1: 32770 0x4E53CF8: ??? (in /usr/lib64/libcurl.so.4.4.0)
+  n2: 32770 0x4E65472: curl_easy_init (in /usr/lib64/libcurl.so.4.4.0)
+   n1: 16385 0x400A91: doit (curl2.c:29)
+    n1: 16385 0x400C55: process (curl2.c:60)
+     n0: 16385 0x400C97: main (curl2.c:70)
+   n1: 16385 0x4E6C90F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+    n1: 16385 0x4E65795: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+     n1: 16385 0x400BA6: doit (curl2.c:40)
+      n1: 16385 0x400C55: process (curl2.c:60)
+       n0: 16385 0x400C97: main (curl2.c:70)
+ n0: 26457 in 100 places, all below massif's threshold (1.00%)
+ n2: 25496 0x603F026: BUF_MEM_grow (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 21912 0x614DE34: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 21912 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 21912 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 21912 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 21912 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 21912 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 21912 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 21912 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 21912 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n2: 21912 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 21912 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 21912 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 21912 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 21912 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 21912 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 21912 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 21912 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 21912 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 21912 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 21912 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 21912 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 21912 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 21912 0x400BA6: doit (curl2.c:40)
+                         n1: 21912 0x400C55: process (curl2.c:60)
+                          n0: 21912 0x400C97: main (curl2.c:70)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 3584 in 7 places, all below massif's threshold (1.00%)
+ n2: 19906 0x6007018: ASN1_STRING_set (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 18903 0x600ED1D: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 18903 0x600F5C8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 18903 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 18903 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n2: 18903 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n2: 16711 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 10108 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 10108 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 10108 0x600FA5A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 10108 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 10108 0x600F085: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 10108 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 10108 0x614DD8A: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 10108 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 10108 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                 n1: 10108 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                  n1: 10108 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                   n1: 10108 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                    n1: 10108 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                     n1: 10108 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                      n1: 10108 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                       n2: 10108 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+                        n1: 10108 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+                         n1: 10108 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+                          n1: 10108 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+                           n1: 10108 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                            n1: 10108 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                             n1: 10108 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                              n0: 10108 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                        n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 6603 in 1 place, below massif's threshold (1.00%)
+       n0: 2192 in 1 place, below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 1003 in 5 places, all below massif's threshold (1.00%)
+ n2: 18432 0x60DDCDA: OPENSSL_LH_insert (in /usr/lib64/libcrypto.so.1.1.0g)
+  n2: 16384 0x60B760B: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n2: 16384 0x60B78EC: ERR_load_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 16384 0x604803A: ERR_load_CMS_strings (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 16384 0x60B88DC: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 16384 0x60DBFC7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 16384 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+        n1: 16384 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 16384 0x60DC309: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 16384 0x60B7EC4: ERR_get_state (in /usr/lib64/libcrypto.so.1.1.0g)
+           n1: 16384 0x60B7FFB: ERR_clear_error (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 16384 0x60DBEB7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 16384 0x73FAB35: __pthread_once_slow (pthread_once.c:116)
+              n1: 16384 0x6134777: CRYPTO_THREAD_run_once (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 16384 0x60DC55C: OPENSSL_init_crypto (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 16384 0x4E9437C: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 16384 0x4E651D3: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n0: 16384 0x400C8D: main (curl2.c:69)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 3 places, all below massif's threshold (1.00%)
+  n0: 2048 in 3 places, all below massif's threshold (1.00%)
+ n1: 15800 0x614DA68: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+  n1: 15800 0x614DED8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+   n1: 15800 0x600F2E7: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+    n1: 15800 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+     n1: 15800 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+      n1: 15800 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+       n1: 15800 0x600FB33: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+        n1: 15800 0x600FD4E: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+         n1: 15800 0x600F4AB: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+          n1: 15800 0x600FE89: ASN1_item_ex_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+           n2: 15800 0x600FF09: ASN1_item_d2i (in /usr/lib64/libcrypto.so.1.1.0g)
+            n1: 15800 0x60F05B0: PEM_X509_INFO_read_bio (in /usr/lib64/libcrypto.so.1.1.0g)
+             n1: 15800 0x613F04D: X509_load_cert_crl_file (in /usr/lib64/libcrypto.so.1.1.0g)
+              n1: 15800 0x613F1E8: ??? (in /usr/lib64/libcrypto.so.1.1.0g)
+               n1: 15800 0x6141DDD: X509_STORE_load_locations (in /usr/lib64/libcrypto.so.1.1.0g)
+                n1: 15800 0x4E9139F: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                 n1: 15800 0x4E93F9D: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                  n1: 15800 0x4E953DF: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                   n1: 15800 0x4E469D0: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                    n1: 15800 0x4E59F04: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                     n1: 15800 0x4E6E904: ??? (in /usr/lib64/libcurl.so.4.4.0)
+                      n1: 15800 0x4E6F852: curl_multi_perform (in /usr/lib64/libcurl.so.4.4.0)
+                       n1: 15800 0x4E65698: curl_easy_perform (in /usr/lib64/libcurl.so.4.4.0)
+                        n1: 15800 0x400BA6: doit (curl2.c:40)
+                         n1: 15800 0x400C55: process (curl2.c:60)
+                          n0: 15800 0x400C97: main (curl2.c:70)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 9600 0x6134097: OPENSSL_sk_insert (in /usr/lib64/libcrypto.so.1.1.0g)
+  n0: 9600 in 8 places, all below massif's threshold (1.00%)
+ n1: 7320 0x60E9B12: OBJ_NAME_add (in /usr/lib64/libcrypto.so.1.1.0g)
+  n0: 7320 in 204 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=69
+#-----------
+time=17451112281
+mem_heap_B=595971
+mem_heap_extra_B=156037
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=17597484113
+mem_heap_B=629801
+mem_heap_extra_B=164151
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=17743842845
+mem_heap_B=661010
+mem_heap_extra_B=173142
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=17890203896
+mem_heap_B=696594
+mem_heap_extra_B=181718
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=18036561438
+mem_heap_B=731841
+mem_heap_extra_B=190815
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=18182924135
+mem_heap_B=766321
+mem_heap_extra_B=198551
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=18329281739
+mem_heap_B=797053
+mem_heap_extra_B=206739
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=18475639279
+mem_heap_B=831124
+mem_heap_extra_B=215604
+mem_stacks_B=0
+heap_tree=empty

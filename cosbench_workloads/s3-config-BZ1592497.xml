@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<workload name="s3-config-BZ1592497.xml" description="sample benchmark for s3">
+
+  <!-- SASL -->
+  <storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://172.16.0.7:8080;path_style_access=true" />
+  <!-- silvertip -->
+  <!-- <storage type="s3" config="accesskey=0555b35654ad1656d804;secretkey=h7GhxuBLTrlhVUyxSPUKUV8r/2EI4ngqJxD7iBdBYLhwluN30JaT3Q==;endpoint=http://192.168.39.252:8000;path_style_access=true" /> -->
+
+  <workflow>
+
+    <workstage name="init">
+      <work type="init" workers="4" config="cprefix=s3cosbench;containers=r(1,9000)" />
+    </workstage>
+
+    <workstage name="prepare">
+      <!-- <work type="prepare" workers="16" interval="5" rampup="5" config="content=zero;cprefix=s3cosbench;containers=r(1,9000);objects=r(1,2000);sizes=h(1|1|50,64|64|15,8192|8192|15,65536|65536|15,1048576|1048576|5)KB" /> -->
+      <work type="prepare" workers="16" interval="5" rampup="5" config="content=zero;cprefix=s3cosbench;containers=r(1,9000);objects=r(1,2000);sizes=c(4)KB" />
+    </workstage>
+
+    <!--
+    <workstage name="cleanup">
+      <work type="cleanup" workers="10" config="cprefix=s3cosbench;containers=r(1,1);objects=r(1,1000000)" />
+    </workstage>
+
+    <workstage name="dispose">
+      <work type="dispose" workers="1" config="cprefix=s3cosbench;containers=r(1,1)" />
+    </workstage>
+-->
+  </workflow>
+
+</workload>
