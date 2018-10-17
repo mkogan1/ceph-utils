@@ -16,8 +16,8 @@
     </workstage>
 
     <workstage name="prepare">
-      <!-- <work type="prepare" workers="90" config="content=zero; containers=r(1,5); objects=r(1,100000); sizes=c(4)KB" /> -->
-      <work type="prepare" workers="90" config="containers=r(1,5); objects=r(1,100000); sizes=c(4)KB" />
+      <!-- <work type="prepare" workers="90" config="content=zero; containers=r(1,5); objects=r(1,20000); sizes=c(4)KB" /> -->
+      <work type="prepare" workers="90" config="containers=r(1,5); objects=r(1,20000); sizes=c(4)KB" />
     </workstage>
 
   </workflow>
