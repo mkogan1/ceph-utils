@@ -22,8 +22,10 @@
       <!-- </workstage> -->
 
     <workstage name="main">
-	    <work name="main" workers="50"  totalOps="1000000">
-		    <operation type="write" ratio="100" config="content=zero; containers=u(1,5);objects=u(1,200000);sizes=c(4)KB" />
+	    <work name="main" workers="50"  totalOps="10000000">
+		    <!-- <operation type="write" ratio="100" config="content=zero; containers=u(1,5); objects=u(1,200000); sizes=c(4)KB" /> -->
+		    <!-- <operation type="write" ratio="100" config="content=zero; containers=u(1,5); objects=r(1,200001); sizes=c(4)KB" /> -->
+		    <operation type="write" ratio="100" config="content=zero; containers=u(1,5); objects=u(1,200001); sizes=c(4)KB" />
 	    </work>
     </workstage>
 
