@@ -4,8 +4,9 @@
 
 <!-- Initialization -->
   <storage type="swift" config="timeout=900000" retry="3"/>
-  <!-- <auth type="swauth" config="username=cosbench:operator; password=redhat; auth_url=http://192.168.141.71:8080/auth/1.0" /> -->
-  <auth type="swauth" config="username=cosbench:operator; password=redhat; auth_url=http://localhost:8000/auth/1.0" />
+  <auth type="swauth" config="username=cosbench:operator; password=redhat; auth_url=http://192.168.141.71:8080/auth/1.0" />
+  <!-- <auth type="swauth" config="username=cosbench:operator; password=redhat; auth_url=http://192.168.39.252:8000/auth/1.0" /> -->
+  <!-- <auth type="swauth" config="username=cosbench:operator; password=redhat; auth_url=http://localhost:8000/auth/1.0" /> -->
 
   <workflow>
 
@@ -16,8 +17,9 @@
     </workstage>
 
     <workstage name="prepare">
-      <!-- <work type="prepare" workers="90" config="content=zero; containers=r(1,5); objects=r(1,4000000); sizes=c(4)KB" /> -->
-      <work type="prepare" workers="90" config="containers=r(1,5); objects=r(1,4000000); sizes=c(4)KB" />
+      <!-- <work type="prepare" workers="90" config="content=zero; containers=r(1,5); objects=r(1,4000000); sizes=c(64)KB" /> -->
+      <!-- <work type="prepare" workers="90" config="containers=r(1,5); objects=r(1,4000000); sizes=c(64)KB" /> -->
+      <work type="prepare" workers="90" config="content=zero; containers=r(1,5); objects=r(20001,4000000); sizes=c(8)MB" />
     </workstage>
 
   </workflow>
