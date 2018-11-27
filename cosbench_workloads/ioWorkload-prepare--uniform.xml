@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<workload name="hybrid" description="RGW GCrate testing">
+
+
+<!-- Initialization -->
+  <storage type="swift" config="timeout=900000" retry="3"/>
+  <!-- <auth type="swauth" config="username=cosbench:operator; password=redhat; auth_url=http://192.168.141.71:8080/auth/1.0" /> -->
+  <auth type="swauth" config="username=cosbench:operator; password=redhat; auth_url=http://localhost:8000/auth/1.0" />
+
+  <workflow>
+
+<!-- PREPARE the objects for the Use operation mix & object sizes as defined in vars.shinc	 -->
+
+    <workstage name="init">
+      <work type="init" workers="90" config="containers=r(1,5)" />
+    </workstage>
+
+    <!-- <workstage name="prepare"> -->
+      <!-- <work type="prepare" workers="90" config="content=zero; containers=r(1,5); objects=r(1,4000000); sizes=c(4)KB" /> -->
+      <!-- <work type="prepare" workers="90" config="containers=r(1,5); objects=r(1,4000000); sizes=c(4)KB" /> -->
+      <!-- <work type="prepare" workers="50" config="content=zero; containers=r(1,5); objects=r(1,200000); sizes=c(4)KB" /> -->
+      <!-- </workstage> -->
+
+    <workstage name="main">
+	    <work name="main" workers="50"  totalOps="10000000">
+		    <!-- <operation type="write" ratio="100" config="content=zero; containers=u(1,5); objects=u(1,200000); sizes=c(4)KB" /> -->
+		    <!-- <operation type="write" ratio="100" config="content=zero; containers=u(1,5); objects=r(1,200001); sizes=c(4)KB" /> -->
+		    <operation type="write" ratio="100" config="content=zero; containers=u(1,5); objects=u(1,200001); sizes=c(4)KB" />
+	    </work>
+    </workstage>
+
+  </workflow>
+
+</workload>
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<workload name="hybrid" description="RGW GCrate testing">
+
+
+<!-- Initialization -->
+  <storage type="swift" config="timeout=900000" retry="3"/>
+  <auth type="swauth" config="username=cosbench:operator; password=redhat; auth_url=http://192.168.141.71:8080/auth/1.0" />
+
+  <workflow>
+
+<!-- Use operation mix & object sizes as defined in vars.shinc	 -->
+
+    <workstage name="MAIN">
+        <!--<work name="hybrid" workers="115" runtime="86400" >-->
+        <work name="hybrid" workers="90" runtime="86400" >
+
+          <operation name="writeOP" type="write" ratio="5" config="content=zero; containers=u(1,5);objects=u(400001,4000000);sizes=h(1|1|50,64|64|15,8192|8192|15,65536|65536|15,1048576|1048576|5)KB" />
+          <!-- <operation name="writeOP" type="write" ratio="20" config="content=zero; containers=u(1,5);objects=u(400001,4000000);sizes=c(4)KB" /> --><!-- 4KB objects do not require GC -->
+
+          <operation name="deleteOP" type="delete" ratio="95" config="containers=u(1,5);objects=u(400001,4000000)" />
+        </work>
+    </workstage>
+
+  </workflow>
+
+</workload>
+
