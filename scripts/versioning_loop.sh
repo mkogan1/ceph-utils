@@ -7,6 +7,9 @@ set -x
 #EPURL=http://localhost:8000
 EPURL=http://172.16.0.6:8000
 
+mkdir ~/tmp/
+dd if=/dev/urandom of=~/tmp/100MB-rand.dat bs=1M count=100
+
 while true; do
 
   ### - create bucket
