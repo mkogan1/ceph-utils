@@ -4,9 +4,9 @@ set -x
 # pip install awscli
 # aws configure
 
-#CHANCE=2
+CHANCE=2
 #CHANCE=4
-CHANCE=65536
+#CHANCE=65536
 
 #BKT=rXedhat_testing_bucket_bea48dac-e74a-11e8-8d41-f85971b8e3ef
 BKT=redhat_testing_bucket_$(uuidgen)
