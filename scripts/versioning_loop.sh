@@ -8,11 +8,12 @@ CHANCE=2
 #CHANCE=4
 #CHANCE=65536
 
-#BKT=rXedhat_testing_bucket_bea48dac-e74a-11e8-8d41-f85971b8e3ef
-BKT=redhat_testing_bucket_$(uuidgen)
+BKT=redhat_testing_bucket_bea48dac-e74a-11e8-8d41-f85971b8e3ef
+#BKT=redhat_testing_bucket_$(uuidgen)
 
+#EPURL=http://172.16.0.6:8000
 #EPURL=http://localhost:8000
-EPURL=http://172.16.0.6:8000
+EPURL="${EPURL:-http://localhost:8000}"
 
 mkdir ~/tmp/
 #dd if=/dev/urandom of=~/tmp/100MB-rand.dat bs=1M count=100
