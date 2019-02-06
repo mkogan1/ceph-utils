@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<workload name="registry1hr" description="RGW registry simulation test">
+
+
+<!-- Authorization -->
+  <storage type="s3" config="accesskey=W5G37JBGLMBJZNDA6PAC; secretkey=NKcszcQZkEPYOFOFoAQUr3OGXYA3dHYNzVFRDwl8; endpoint=http://ip-172-16-23-250.us-east-2.compute.internal:8080; path_style_access=true" retry="3"/>
+
+  <workflow>
+
+<!-- WORKLOAD DESCRIPTION
+     operation mix of 90% GET, 5% PUT and 5% DELETE
+     object sizes of 200MB and 1GB , evenly distributed (50%/50%)
+     five buckets/containers, GETs randomly access buckets 1 through 4
+     PUTs and DELETES randomly access objects within bucket 5
+     runtime is specified in seconds, so 1hr=3600 and 24hr=86400
+     NOTE: estimated number of workers here as "6". Adjust as needed to
+           achieve reasonable average response times (avg ~500ms).
+-->
+
+    <workstage name="MAIN">
+        <work name="registry" workers="6" runtime="3600" >
+	    <operation name="readOP" type="read" ratio="90" config="containers=u(1,4);objects=u(1,500)" />
+            <operation name="writeOP" type="write" ratio="5" config="containers=c(5);objects=u(1,500);sizes=h(200|200|50,1024|1024|50)MB" />
+            <operation name="deleteOP" type="delete" ratio="5" config="containers=c(5);objects=u(1,500)" />
+        </work>
+    </workstage>
+
+  </workflow>
+
+</workload>
+
