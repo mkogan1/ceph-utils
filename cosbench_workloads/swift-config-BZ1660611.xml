@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <workload name="swift-config-BZ1660611.xml" description="swift-config-BZ1660611.xml">
 
+  <storage type="swift" />
   <!-- SASL -->
   <auth type="swauth" config="username=cosbench:operator; password=redhat; auth_url=http://172.16.0.6:8000/auth/v1.0" />
 
   <workflow>
 
     <workstage name="init">
-      <work type="init" workers="8" config="cprefix=swcosbench;containers=r(1,5000)" />
+      <work type="init" workers="8" config="containers=r(1,5000)" />
     </workstage>
 
     <workstage name="prepare">
-      <!-- <work type="prepare" workers="16" interval="5" rampup="5" config="content=zero;cprefix=swcosbench;containers=r(1,9000);objects=r(1,2000);sizes=h(1|1|50,64|64|15,8192|8192|15,65536|65536|15,1048576|1048576|5)KB" /> -->
-      <work type="prepare" workers="8" interval="5" rampup="5" config="content=zero;cprefix=swcosbench;containers=r(1,5000);objects=r(1,100);sizes=c(4)KB" />
+      <!-- <work type="prepare" workers="16" interval="5" rampup="5" config="content=zero;containers=r(1,9000);objects=r(1,2000);sizes=h(1|1|50,64|64|15,8192|8192|15,65536|65536|15,1048576|1048576|5)KB" /> -->
+      <work type="prepare" workers="8" interval="5" rampup="5" config="content=zero;containers=r(1,5000);objects=r(1,100);sizes=c(4)KB" />
     </workstage>
 
     <!--
     <workstage name="cleanup">
-      <work type="cleanup" workers="10" config="cprefix=swcosbench;containers=r(1,1);objects=r(1,1000000)" />
+      <work type="cleanup" workers="10" config="containers=r(1,1);objects=r(1,1000000)" />
     </workstage>
 
     <workstage name="dispose">
-      <work type="dispose" workers="1" config="cprefix=swcosbench;containers=r(1,1)" />
+      <work type="dispose" workers="1" config="containers=r(1,1)" />
     </workstage>
 -->
   </workflow>
