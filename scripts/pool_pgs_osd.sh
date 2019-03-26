@@ -20,6 +20,7 @@ for OSD in $(ceph osd ls 2>/dev/null); do printf "osd.$OSD\tPGs number: " ; prin
 rm $TMPF
 echo 
 SIZE=$(ceph osd dump 2>/dev/null | grep "pool $POOL_NUM" | awk '{ print $6 }')
+SORTC=$(( SIZE + 4 ))
 NDEVS=`ceph osd ls 2>/dev/null | wc -l`
 echo -e "\n# PRIMARY and Replicated/EC PGs number per OSD sorted by total descending:"
 ceph pg dump 2>/dev/null | grep "^$POOL_NUM\." | awk "{ \
@@ -38,5 +39,5 @@ ceph pg dump 2>/dev/null | grep "^$POOL_NUM\." | awk "{ \
   sump+=dist[1][i]}; ratio=\"NaN\"; \
   if (min > 0){ratio=max/min}; \
   printf( \" Primary: Min=%d Max=%d Ratio=%s Average=%s Max/Ave=%s\n\", min,max,ratio,sump/$NDEVS,max/(sump/$NDEVS) )
-}" | sort -n -r -k 7,7
+}" | sort -n -r -k 3,3 | sort -n -r -s -k $SORTC,$SORTC
 
