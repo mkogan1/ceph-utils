@@ -30,8 +30,8 @@ ceph pg dump 2>/dev/null | grep "^$POOL_NUM\." | awk "{ \
   for (i = 0 ; i < $NDEVS ; i++) { 
     printf(\"osd.%d\tPGs: \", i); \
     tot = 0; \
-    for (s = 1 ; s <= $SIZE ; s++) { printf(\"% 4d \", dist[s][i]); tot+=dist[s][i]; }
-    printf(\" ,total=% 4d\n\", tot)
+    for (s = 1 ; s <= $SIZE ; s++) { printf(\"% 5d \", dist[s][i]); tot+=dist[s][i]; }
+    printf(\" ,total=% 5d\n\", tot)
     if (min > dist[1][i]) {min = dist[1][i]} \
     if (max < dist[1][i]) {max = dist[1][i] \
   } \
