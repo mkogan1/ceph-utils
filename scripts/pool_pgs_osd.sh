@@ -34,9 +34,9 @@ ceph pg dump 2>/dev/null | grep "^$POOL_NUM\." | awk "{ \
     for (s = 1 ; s <= $SIZE ; s++) { printf(\"% 5d \", dist[s][i]); tot+=dist[s][i]; }
     printf(\" ,total=% 5d\n\", tot)
     if (min > dist[1][i]) {min = dist[1][i]} \
-    if (max < dist[1][i]) {max = dist[1][i] \
-  } \
-  sump+=dist[1][i]}; ratio=\"NaN\"; \
+    if (max < dist[1][i]) {max = dist[1][i]} \
+    sump+=dist[1][i] \
+  }; ratio=\"NaN\"; \
   if (min > 0){ratio=max/min}; \
   printf( \" Primary: Min=%d Max=%d Ratio=%s Average=%s Max/Ave=%s\n\", min,max,ratio,sump/$NDEVS,max/(sump/$NDEVS) )
 }" | sort -n -r -k 3,3 | sort -n -r -s -k $SORTC,$SORTC
