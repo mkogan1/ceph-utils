@@ -1,5 +1,8 @@
 #!/usr/bin/env python 
 
+# pre-req fro action.py: 
+# pip install --user boto3
+
 import boto3
 import logging
 import sys

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# pre-req fro action.py: 
+# pip install --user boto3
+
 count=50
 
 for s in $(seq 100) ; do
