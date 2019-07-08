@@ -3,7 +3,12 @@
 # pre-req fro action.py: 
 # pip install --user boto3
 
+setenforce 0
+echo mq-deadline > /sys/block/nvme0n1/queue/scheduler
+
+
 count=50
+#count=150
 
 for s in $(seq 100) ; do
     echo "starting attempt $s"
@@ -19,6 +24,7 @@ for s in $(seq 100) ; do
     ###  ZONE 1  ###
     #OSD=5 MON=1 MDS=0 MGR=0 RGW=1 ../src/vstart.sh -n -d -l --short 
     MON=3 OSD=1 MDS=0 MGR=1 RGW=1 ../src/mstart.sh c1 -n --bluestore --short -o "bluestore_block_size=536870912000"
+    #MON=3 OSD=1 MDS=0 MGR=0 RGW=1 ../src/mstart.sh c1 -n --bluestore --short -o "bluestore_block_size=536870912000"
     ../src/mrun c1 radosgw-admin realm create --rgw-realm=gold --default
     ../src/mrun c1 radosgw-admin zonegroup create --rgw-zonegroup=us --endpoints=http://localhost:8000 --master --default
     ../src/mrun c1 radosgw-admin zone create --rgw-zonegroup=us --rgw-zone=us-east --endpoints=http://localhost:8000 --access-key a2345678901234567890 --secret a234567890123456789012345678901234567890 --master --default
@@ -39,6 +45,7 @@ for s in $(seq 100) ; do
 
     ###  ZONE 2  ###
     MON=3 OSD=1 MDS=0 MGR=1 RGW=1 ../src/mstart.sh c2 -n --bluestore --short -o "bluestore_block_size=536870912000"
+    #MON=3 OSD=1 MDS=0 MGR=0 RGW=1 ../src/mstart.sh c2 -n --bluestore --short -o "bluestore_block_size=536870912000"
     ../src/mrun c2 radosgw-admin realm pull --url=http://localhost:8000 --access-key a2345678901234567890 --secret a234567890123456789012345678901234567890 --default
     ../src/mrun c2 radosgw-admin period pull --url=http://localhost:8000 --access-key a2345678901234567890 --secret a234567890123456789012345678901234567890 --default
     ../src/mrun c2 radosgw-admin zone create --rgw-zonegroup=us --rgw-zone=us-west  --endpoints=http://localhost:8001 --access-key=a2345678901234567890 --secret=a234567890123456789012345678901234567890 --default
@@ -90,11 +97,14 @@ for s in $(seq 100) ; do
 
     b=$(s3cmd ls | wc -l)
     if [ "$b" -gt 0 ] ;then
-      break
+      #break
+      echo "!!! REPRODUCED , EXIT !!!"
+      exit 1
     fi
 
     echo "$(date) attempt $s complete"
-    exit 1
+
+    #exit 1
 done
 
 echo "$(date) done"
