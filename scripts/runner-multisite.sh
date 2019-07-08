@@ -15,6 +15,10 @@ for s in $(seq 100) ; do
 
     echo stopping previous cluster
     pkill -9 radosgw
+    # kill log tails, etc....
+    kill $(ps -ef | grep radosgw | grep 8000 | awk '{ print $2 }') 2>/dev/null
+    kill $(ps -ef | grep radosgw | grep 8001 | awk '{ print $2 }') 2>/dev/null
+    kill $(ps -ef | grep radosgw | grep 8002 | awk '{ print $2 }') 2>/dev/null
     ../src/mstop.sh c1
     ../src/mstop.sh c2
     sleep 2
@@ -31,7 +35,7 @@ for s in $(seq 100) ; do
     ../src/mrun c1 radosgw-admin user create --uid=realm.admin --display-name=RealmAdmin --access-key a2345678901234567890 --secret a234567890123456789012345678901234567890 --system
     ../src/mrun c1 radosgw-admin period update --commit
     # action.py reproducer user
-    ../src/mrun c1 radosgw-admin user create --display-name="Test Id" --uid=testid --access-key 0555b35654ad1656d804 --secret h7GhxuBLTrlhVUyxSPUKUV8r/2EI4ngqJxD7iBdBYLhwluN30JaT3Q==
+    ../src/mrun c1 radosgw-admin user create --display-name="Test Id" --uid=testid --access-key "0555b35654ad1656d804" --secret "h7GhxuBLTrlhVUyxSPUKUV8r/2EI4ngqJxD7iBdBYLhwluN30JaT3Q=="
     ../src/mrun c1 radosgw-admin user modify --uid=testid --max-buckets=0
     # restart radosgw
     kill $(ps -ef | grep radosgw | grep 8000 | awk '{ print $2 }')
@@ -104,7 +108,7 @@ for s in $(seq 100) ; do
 
     echo "$(date) attempt $s complete"
 
-    #exit 1
+    exit 1
 done
 
 echo "$(date) done"
