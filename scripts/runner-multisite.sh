@@ -6,6 +6,9 @@
 setenforce 0
 echo mq-deadline > /sys/block/nvme0n1/queue/scheduler
 
+pkill -f action.py
+rm /tmp/out-*
+
 
 count=50
 #count=150
