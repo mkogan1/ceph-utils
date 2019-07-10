@@ -13,7 +13,7 @@
     </workstage>
 
     <workstage name="prepare">
-      <work type="prepare" workers="8" interval="5" rampup="5" config="content=zero;cprefix=s3cosbench;containers=r(1,1);objects=r(1,10000000);sizes=c(4)KB" />
+      <work type="prepare" workers="16" interval="5" rampup="5" config="content=zero;cprefix=s3cosbench;containers=r(1,1);objects=r(1,10000000);sizes=c(4)KB" />
     </workstage>
 
     <!--
