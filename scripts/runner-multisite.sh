@@ -30,7 +30,7 @@ for s in $(seq 100) ; do
     echo starting cluster
     ###  ZONE 1  ###
     #OSD=5 MON=1 MDS=0 MGR=0 RGW=1 ../src/vstart.sh -n -d -l --short 
-    MON=3 OSD=1 MDS=0 MGR=1 RGW=1 ../src/mstart.sh c1 -n --bluestore --short -o "bluestore_block_size=536870912000"
+    MON=3 OSD=1 MDS=0 MGR=1 RGW=1 ../src/mstart.sh c1 -n --nolockdep --bluestore --short -o "bluestore_block_size=536870912000"
     #MON=3 OSD=1 MDS=0 MGR=0 RGW=1 ../src/mstart.sh c1 -n --bluestore --short -o "bluestore_block_size=536870912000"
     ../src/mrun c1 radosgw-admin realm create --rgw-realm=gold --default
     ../src/mrun c1 radosgw-admin zonegroup create --rgw-zonegroup=us --endpoints=http://localhost:8000 --master --default
@@ -51,7 +51,7 @@ for s in $(seq 100) ; do
 
 
     ###  ZONE 2  ###
-    MON=3 OSD=1 MDS=0 MGR=1 RGW=1 ../src/mstart.sh c2 -n --bluestore --short -o "bluestore_block_size=536870912000"
+    MON=3 OSD=1 MDS=0 MGR=1 RGW=1 ../src/mstart.sh c2 -n --nolockdep --bluestore --short -o "bluestore_block_size=536870912000"
     #MON=3 OSD=1 MDS=0 MGR=0 RGW=1 ../src/mstart.sh c2 -n --bluestore --short -o "bluestore_block_size=536870912000"
     ../src/mrun c2 radosgw-admin realm pull --url=http://localhost:8000 --access-key a2345678901234567890 --secret a234567890123456789012345678901234567890 --default
     ../src/mrun c2 radosgw-admin period pull --url=http://localhost:8000 --access-key a2345678901234567890 --secret a234567890123456789012345678901234567890 --default
