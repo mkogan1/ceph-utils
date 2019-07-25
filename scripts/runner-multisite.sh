@@ -10,7 +10,9 @@ pkill -f action.py
 rm /tmp/out-*
 
 
-count=50
+#count=50
+count=75
+#count=100
 #count=150
 
 for s in $(seq 100) ; do
