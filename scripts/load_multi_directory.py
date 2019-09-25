@@ -20,14 +20,13 @@ conn = boto.connect_s3(
         calling_format = boto.s3.connection.OrdinaryCallingFormat(),
         )
 
-my_8mb = str(bytearray(os.urandom(1024*1024*8)))
-my_5mb = str(bytearray(os.urandom(1024*1024*5)))
-my_10mb = str(bytearray(os.urandom(1024*1024*10)))
-my_1mb = str(bytearray(os.urandom(1024*1024*1)))
-my_4mb = str(bytearray(os.urandom(1024*1024*4)))
-
-my_4k = str(bytearray(os.urandom(1024*4)))
-my_1k = str(bytearray(os.urandom(1024*1)))
+my_8mb = str(bytearray(1024*1024*8))
+my_5mb = str(bytearray(1024*1024*5))
+my_10mb = str(bytearray(1024*1024*10))
+my_1mb = str(bytearray(1024*1024*1))
+my_4mb = str(bytearray(1024*1024*4))
+my_4k = str(bytearray(1024*4))
+my_1k = str(bytearray(1024*1))
 
 array_of_obj =  [  my_4k , my_4k , my_4k ]
 
