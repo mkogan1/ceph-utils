@@ -3,6 +3,7 @@
 
   <!-- SASL -->
   <storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://127.0.0.1:8000;path_style_access=true;timeout=60000;retry=3"/>
+  <!-- <storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://127.0.0.1:8080;path_style_access=true" /> -->
   <!-- <storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://rhs-cli-06:8000;path_style_access=true" /> -->
   <!-- <storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://10.8.152.6:8000;path_style_access=true" /> -->
   <!-- <storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://rhs-cli-07:8000;path_style_access=true" /> -->
