@@ -23,14 +23,14 @@
     -->
 
     <workstage name="read">
-      <work name="hybrid" workers="32" runtime="240" >
-        <operation name="readOP" type="read" ratio="100" config="containers=u(1,1);objects=u(1,1000000)" />
+      <work name="wrk-read" workers="32" runtime="240" >
+        <operation name="readOP" type="read" ratio="100" config="cprefix=s3cosbench;containers=r(1,1);objects=r(1,1000000)" />
       </work>
     </workstage>
-        
+    <!--    
     <workstage name="list">
-      <work name="hybrid" workers="32" runtime="240" >
-        <operation name="listOP" type="list" ratio="100" config="containers=u(1,1);objects=u(1,1000000)" />
+      <work name="wrk-list" workers="32" runtime="240" >
+        <operation name="listOP" type="list" ratio="100" config="cprefix=s3cosbench;containers=r(1,1);objects=r(1,1000000)" />
       </work>
     </workstage>
 
@@ -42,6 +42,6 @@
     <workstage name="dispose">
       <work type="dispose" workers="1" config="cprefix=s3cosbench;containers=r(1,1)" />
     </workstage>
+    -->
   </workflow>
-
 </workload>
