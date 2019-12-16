@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<workload name="bb-600w-250op-fill" description="RGW testing">
-<!-- COSbench xml used for Bloomberg workload mimic ... --> 
+<workload name="bb-fill" description="RGW testing">
 
 <!-- Initialization -->
   <storage type="swift" config="timeout=900000" retry="3"/>
   <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://localhost:8000/auth/1.0" />
- 
+
   <workflow>
- 
+
 <!-- Initialization -->
     <workstage name="init_containers">
         <work type="init" workers="1" config="containers=r(1,5)"/>
     </workstage>
- 
+
 <!-- Prepare using container counts, object counts and object sizes from vars.shinc -->
     <workstage name="preparing_cluster">
       <!--  <work type="prepare" workers="30" config="containers=r(1,5);objects=r(1,17280000);sizes=h(1|2|25,2|4|40,4|8|25,8|256|10)KB"/>  -->
         <work type="prepare" workers="600" config="containers=r(1,5);objects=r(1,50000000);sizes=h(1|2|25,2|4|40,4|8|25,8|256|10)KB"/>
     </workstage>
- 
+
   </workflow>
- 
+
 </workload>
 
