@@ -15,7 +15,7 @@
 
     <workstage name="prepare">
       <work type="prepare" workers="50" config="content=zero; cprefix=s3cosbench; containers=r(1,5); objects=r(1,200000); sizes=c(4)KB" />
-      <!-- <work type="prepare" workers="90" config="cprefix=s3cosbench; containers=r(1,5); objects=r(1,20000); sizes=c(4)KB" /> -->
+      <!-- <work type="prepare" workers="50" config="content=zero; cprefix=s3cosbench; containers=r(1,5); objects=r(1,20000); sizes=c(4)KB" /> -->
     </workstage>
 
   </workflow>

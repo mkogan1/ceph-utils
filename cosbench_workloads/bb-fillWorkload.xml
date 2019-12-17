@@ -3,7 +3,8 @@
 
 <!-- Initialization -->
   <storage type="swift" config="timeout=900000" retry="3"/>
-  <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://localhost:8001/auth/1.0" />
+  <!-- <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://localhost:8001/auth/1.0" /> -->
+  <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://rhs-cli-07:8000/auth/1.0" />
 
   <workflow>
 
@@ -16,7 +17,8 @@
     <workstage name="preparing_cluster">
         <!--  <work type="prepare" workers="30" config="containers=r(1,5);objects=r(1,17280000);sizes=h(1|2|25,2|4|40,4|8|25,8|256|10)KB"/>  -->
         <!-- <work type="prepare" workers="600" config="containers=r(1,5);objects=r(1,50000000);sizes=h(1|2|25,2|4|40,4|8|25,8|256|10)KB"/> -->
-        <work type="prepare" workers="10" config="content=zero; containers=r(1,5); objects=r(1,500000); sizes=c(64)KB"/>
+        <!-- <work type="prepare" workers="10" config="content=zero; containers=r(1,5); objects=r(1,500000); sizes=c(64)KB"/> -->
+        <work type="prepare" workers="10" config="content=zero; containers=r(1,5); objects=r(1,150000); sizes=c(4)KB"/>
     </workstage>
 
   </workflow>

@@ -3,7 +3,7 @@
 
   <storage type="swift" />
   <!-- SASL -->
-  <auth type="swauth" config="username=cosbench:operator; password=redhat; auth_url=http://172.16.0.6:8000/auth/v1.0" />
+  <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://172.16.0.6:8000/auth/v1.0" />
 
   <workflow>
 
