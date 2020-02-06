@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<workload name="s3-config-BZ1660611.xml" description="sample benchmark for s3">
+
+  <!-- SASL -->
+  <storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://127.0.0.1:8000;path_style_access=true;timeout=10000;retry=10"/>
+  <!-- <storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://127.0.0.1:8080;path_style_access=true" /> -->
+  <!-- <storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://rhs-cli-06:8000;path_style_access=true" /> -->
+  <!-- <storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://10.8.152.6:8000;path_style_access=true" /> -->
+  <!-- <storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://rhs-cli-07:8000;path_style_access=true" /> -->
+
+  <!-- silvertip -->
+  <!-- <storage type="s3" config="accesskey=0555b35654ad1656d804;secretkey=h7GhxuBLTrlhVUyxSPUKUV8r/2EI4ngqJxD7iBdBYLhwluN30JaT3Q==;endpoint=http://192.168.39.252:8000;path_style_access=true" /> -->
+
+  <workflow>
+    <workstage name="init">
+      <work type="init" workers="1" config="cprefix=s3cosbench;containers=r(1,1)" />
+    </workstage>
+    <!--
+    <workstage name="prepare">
+      <work type="prepare" workers="32" interval="5" rampup="5" afr="0" config="content=zero;cprefix=s3cosbench;containers=r(1,1);objects=r(1,1000000);sizes=c(4)KB" />
+    </workstage>
+    -->
+
+    <workstage name="write">
+      <!-- <work name="wrk-write" workers="1" totalOps="1000000" > -->
+      <work name="wrk-write" workers="32" totalOps="1000000" >
+        <operation name="writeOP" type="write" ratio="100" afr="2000" config="content=zero;cprefix=s3cosbench;containers=r(1,1);objects=r(1,1000000);sizes=c(4)KB" />
+      </work>
+    </workstage>
+    <workstage name="read">
+      <!-- <work name="wrk-read" workers="1" runtime="240" > -->
+      <!-- <work name="wrk-read" workers="1000" runtime="240" > -->
+      <work name="wrk-read" workers="32" runtime="240" >
+        <operation name="readOP" type="read" ratio="100" afr="2000" config="cprefix=s3cosbench;containers=r(1,1);objects=r(1,1000000)" />
+      </work>
+    </workstage>
+    <!--    
+    <workstage name="list">
+      <work name="wrk-list" workers="32" runtime="240" >
+        <operation name="listOP" type="list" ratio="100" afr="0" config="cprefix=s3cosbench;containers=r(1,1);objects=r(1,1000000)" />
+      </work>
+    </workstage>
+
+
+    <workstage name="cleanup">
+      <work type="cleanup" workers="32" afr="0" config="cprefix=s3cosbench;containers=r(1,1);objects=r(1,1000000)" />
+    </workstage>
+
+    <workstage name="dispose">
+      <work type="dispose" workers="1" config="cprefix=s3cosbench;containers=r(1,1)" />
+    </workstage>
+    -->
+  </workflow>
+</workload>

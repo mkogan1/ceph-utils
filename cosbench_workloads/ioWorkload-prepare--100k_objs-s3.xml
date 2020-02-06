@@ -3,7 +3,7 @@
 
 
 <!-- Initialization -->
-  <storage type="s3" config="accesskey=0555b35654ad1656d804;secretkey=h7GhxuBLTrlhVUyxSPUKUV8r/2EI4ngqJxD7iBdBYLhwluN30JaT3Q==;endpoint=http://192.168.39.252:8000;path_style_access=true" />
+  <storage type="s3" config="accesskey=0555b35654ad1656d804;secretkey=h7GhxuBLTrlhVUyxSPUKUV8r/2EI4ngqJxD7iBdBYLhwluN30JaT3Q==;endpoint=http://localhost:8000;path_style_access=true" />
 
   <workflow>
 
@@ -14,8 +14,8 @@
     </workstage>
 
     <workstage name="prepare">
-      <!-- <work type="prepare" workers="90" config="content=zero; cprefix=s3cosbench; containers=r(1,5); objects=r(1,20000); sizes=c(4)KB" /> -->
-      <work type="prepare" workers="90" config="cprefix=s3cosbench; containers=r(1,5); objects=r(1,20000); sizes=c(4)KB" />
+      <work type="prepare" workers="50" config="content=zero; cprefix=s3cosbench; containers=r(1,5); objects=r(1,20000); sizes=c(4)KB" />
+      <!-- <work type="prepare" workers="90" config="cprefix=s3cosbench; containers=r(1,5); objects=r(1,20000); sizes=c(4)KB" /> -->
     </workstage>
 
   </workflow>
