@@ -1,8 +1,8 @@
 #!/bin/bash
 
-./bin/radosgw-admin caps add --uid=cosbench --caps="users=read, write" | jq
-./bin/radosgw-admin caps add --uid=cosbench --caps="usage=read, write" | jq
-./bin/radosgw-admin caps add --uid=cosbench --caps="buckets=read, write" | jq
+#./bin/radosgw-admin caps add --uid=cosbench --caps="users=read, write" | jq
+#./bin/radosgw-admin caps add --uid=cosbench --caps="usage=read, write" | jq
+#./bin/radosgw-admin caps add --uid=cosbench --caps="buckets=read, write" | jq
 
 token=b2345678901234567890 ## USER_TOKEN
 secret=b234567890123456789012345678901234567890 ## USER_SECRET
