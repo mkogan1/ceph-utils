@@ -4,7 +4,8 @@
 
 <!-- Initialization -->
   <storage type="swift" config="timeout=900000" retry="3"/>
-  <auth type="swauth" config="username=johndoe:swift;password=P98vb8xrCQv9FBS9GY2BElvTAd5JErgis9D5Qcdz;auth_url=http://localhost:5000/auth/1.0" /> 
+  <!-- <auth type="swauth" config="username=johndoe:swift;password=P98vb8xrCQv9FBS9GY2BElvTAd5JErgis9D5Qcdz;auth_url=http://localhost:8000/auth/1.0" />  -->
+  <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://localhost:8000/auth/1.0" />
 
   <workflow>
 
@@ -12,16 +13,22 @@
 
     <workstage name="MAIN">
      <!--   <work name="hybridSS" workers="30" runtime="3600" >
-	    <operation name="readOP" type="read" ratio="60" config="containers=u(3,5);objects=u(1,8640000)" />
+            <operation name="readOP" type="read" ratio="60" config="containers=u(3,5);objects=u(1,8640000)" />
             <operation name="listOP" type="list" ratio="10" config="containers=u(3,5);objects=u(1,8640000)" />
             <operation name="writeOP" type="write" ratio="16" config="containers=u(1,2);objects=u(1,8640000);sizes=h(1|2|25,2|4|40,4|8|25,8|256|10)KB" />
             <operation name="deleteOP" type="delete" ratio="14" config="containers=u(1,2);objects=u(1,8640000)" />
         </work>   -->
-        <work name="hybridSS" workers="600" runtime="3600" >
-	    <operation name="readOP" type="read" ratio="44" config="containers=u(3,5);objects=u(1,50000000)" />
-            <operation name="listOP" type="list" ratio="15" config="containers=u(3,5);objects=u(1,50000000)" />
-            <operation name="writeOP" type="write" ratio="36" config="containers=u(1,2);objects=u(1,50000000);sizes=h(1|2|25,2|4|40,4|8|25,8|256|10)KB" />
-            <operation name="deleteOP" type="delete" ratio="5" config="containers=u(1,2);objects=u(1,50000000)" />
+        <!-- <work name="hybridSS" workers="600" runtime="3600" > -->
+          <!-- <operation name="readOP" type="read" ratio="44" config="containers=u(3,5);objects=u(1,50000000)" /> -->
+          <!-- <operation name="listOP" type="list" ratio="15" config="containers=u(3,5);objects=u(1,50000000)" /> -->
+          <!-- <operation name="writeOP" type="write" ratio="36" config="containers=u(1,2);objects=u(1,50000000);sizes=h(1|2|25,2|4|40,4|8|25,8|256|10)KB" /> -->
+          <!-- <operation name="deleteOP" type="delete" ratio="5" config="containers=u(1,2);objects=u(1,50000000)" /> -->
+        <!-- </work> -->
+        <work name="hybridSS" workers="60" runtime="3600" >
+          <operation name="readOP" type="read" ratio="44" config="containers=u(3,5);objects=u(1,5000000)" />
+          <operation name="listOP" type="list" ratio="15" config="containers=u(3,5);objects=u(1,5000000)" />
+          <operation name="writeOP" type="write" ratio="36" config="containers=u(1,2);objects=u(1,5000000);sizes=h(1|2|25,2|4|40,4|8|25,8|256|10)KB" />
+          <operation name="deleteOP" type="delete" ratio="5" config="containers=u(1,2);objects=u(1,5000000)" />
         </work>
     </workstage>
 
