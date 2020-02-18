@@ -3,8 +3,8 @@
 
 <!-- Initialization -->
   <storage type="swift" config="timeout=900000" retry="3"/>
-  <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://localhost:8001/auth/1.0" />
-  <!-- <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://localhost:8000/auth/1.0" /> -->
+  <!-- <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://localhost:8001/auth/1.0" /> -->
+  <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://localhost:8000/auth/1.0" />
   <!-- <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://rhs-cli-07:8000/auth/1.0" /> -->
 
   <workflow>
