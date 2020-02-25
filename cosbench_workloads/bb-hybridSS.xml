@@ -25,7 +25,7 @@
           <!-- <operation name="deleteOP" type="delete" ratio="5" config="containers=u(1,2);objects=u(1,50000000)" /> -->
         <!-- </work> -->
         <!-- 5M obj == 1,000,000 * 5 buckets -->  
-        <work name="hybridSS" workers="60" runtime="3600" >
+        <work name="hybridSS" workers="600" runtime="3600" >
           <operation name="readOP" type="read" ratio="44" config="containers=u(3,5);objects=u(1,1000000)" />
           <operation name="listOP" type="list" ratio="15" config="containers=u(3,5);objects=u(1,1000000)" />
           <operation name="writeOP" type="write" ratio="36" config="containers=u(1,2);objects=u(1,1000000);sizes=h(1|2|25,2|4|40,4|8|25,8|256|10)KB" />
