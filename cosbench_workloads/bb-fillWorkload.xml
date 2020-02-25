@@ -4,7 +4,8 @@
 <!-- Initialization -->
   <storage type="swift" config="timeout=900000" retry="3"/>
   <!-- <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://localhost:8001/auth/1.0" /> -->
-  <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://localhost:8000/auth/1.0" />
+  <!-- <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://localhost:8000/auth/1.0" /> -->
+  <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://172.18.96.20:8000/auth/1.0" />
   <!-- <auth type="swauth" config="username=cosbench:operator;password=redhat;auth_url=http://rhs-cli-07:8000/auth/1.0" /> -->
 
   <workflow>
@@ -22,7 +23,7 @@
         <!-- <work type="prepare" workers="10" config="content=zero; containers=r(1,5); objects=r(1,150000); sizes=c(4)KB"/> -->
         <!-- <work type="prepare" workers="8" config="content=zero;containers=r(1,5);objects=r(1,150000);sizes=h(1|2|25,2|4|40,4|8|25,8|256|10)KB"/> -->
         <!-- 5M obj == 1,000,000 * 5 buckets -->  
-        <work type="prepare" workers="10" config="content=zero;containers=r(1,5);objects=r(1,1000000);sizes=h(1|2|25,2|4|40,4|8|25,8|256|10)KB"/>
+        <work type="prepare" workers="60" config="content=zero;containers=r(1,5);objects=r(1,1000000);sizes=h(1|2|25,2|4|40,4|8|25,8|256|10)KB"/>
     </workstage>
 
   </workflow>
