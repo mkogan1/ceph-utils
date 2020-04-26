@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# ref: http://lists.ceph.com/pipermail/ceph-users-ceph.com/2018-October/030681.html
+
 for bucket in `./bin/radosgw-admin metadata list bucket 2>/dev/null | jq -r '.[]' | sort`
 do
    actual_id=`./bin/radosgw-admin bucket stats --bucket=${bucket} 2>/dev/null | jq -r '.id'`
