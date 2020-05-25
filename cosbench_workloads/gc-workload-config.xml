@@ -10,13 +10,13 @@
                 interval="5" division="none" runtime="43200" rampup="0"
                 rampdown="0" afr="200000" totalOps="0" totalBytes="0" config="">
                 <operation type="read" ratio="60" division="none"
-                    config="containers=u(2,3);objects=u(1,90000)" id="op1"/>
+                    config="containers=u(2,3);objects=u(1,20000)" id="op1"/>
                 <operation type="list" ratio="10" division="none"
-                    config="containers=u(2,3);objects=u(1,90000)" id="op2"/>
+                    config="containers=u(2,3);objects=u(1,20000)" id="op2"/>
                 <operation type="write" ratio="20" division="none"
-                    config="containers=u(6,6);objects=u(50001,100000);sizes=h(1|1|50,64|64|15,8192|8192|15,65536|65536|15,1048576|1048576|5)KB" id="op3"/>
+                    config="content=zero;containers=u(6,6);objects=u(10001,20000);sizes=h(1|1|50,64|64|15,128|128|15,256|256|15,512|512|5)KB" id="op3"/>
                 <operation type="delete" ratio="10" division="none"
-                    config="containers=u(6,6);objects=u(50001,100000)" id="op4"/>
+                    config="containers=u(6,6);objects=u(10001,20000)" id="op4"/>
             </work>
         </workstage>
     </workflow>
