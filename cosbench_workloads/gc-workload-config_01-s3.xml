@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workload name="hybridSS"
+    description="RGW release based workload testing" config="">
+    <storage type="s3" config="accesskey=b2345678901234567890;secretkey=b234567890123456789012345678901234567890;endpoint=http://127.0.0.1:8000;path_style_access=true;timeout=900000;retry=100"/>
+    <workflow config="">
+        <!-- <workstage name="MAIN" closuredelay="0" config=""> -->
+        <workstage name="MAIN">
+            <work name="hybrid" type="normal" workers="10"
+                interval="5" division="none" runtime="43200" rampup="0" >
+                <operation type="read" ratio="10" division="none" afr="2000"
+                    config="containers=u(6,6);objects=u(1,400000)" id="op1"/>
+                <operation type="list" ratio="10" division="none" afr="2000"
+                    config="containers=u(6,6);objects=u(1,700000)" id="op2"/>
+                <operation type="write" ratio="50" division="none" afr="2000"
+                    config="content=zero;containers=u(6,6);objects=u(300001,700000);sizes=c(512)KB" id="op3"/>
+                <operation type="delete" ratio="30" division="none" afr="2000"
+                    config="containers=u(6,6);objects=u(300001,700000)" id="op4"/>
+            </work>
+        </workstage>
+    </workflow>
+</workload>
